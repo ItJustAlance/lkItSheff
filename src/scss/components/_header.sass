@@ -3,7 +3,7 @@
   padding: 29px 0
   background: $baseBg
   position: relative
-  z-index: 2
+  z-index: 100
   +r($lg)
     padding: 18px 0
     height: 56px
@@ -14,7 +14,199 @@
   .all
     display: flex
     align-items: center
+    gap: 40px
     position: relative
     +r($lg)
       z-index: 101
+      gap: 20px
+      padding: 0 20px
   
+  .logo
+    display: flex
+    align-items: center
+    flex-shrink: 0
+    img
+      height: 40px
+      width: auto
+      +r($lg)
+        height: 32px
+  
+  .nav
+    flex: 1 1 auto
+    +r($lg)
+      display: none
+    ul
+      display: flex
+      align-items: center
+      gap: 32px
+      list-style: none
+      margin: 0
+      padding: 0
+      +r($xxl)
+        gap: 24px
+    
+    .nav-item
+      position: relative
+      display: inline-block
+      
+      > a
+        font-size: 16px
+        font-weight: 500
+        color: $black700
+        text-decoration: none
+        transition: color $transitionSpeed $ease
+        display: flex
+        align-items: center
+        gap: 8px
+        padding: 8px 0
+        &:hover
+          color: $orangeMain500
+        
+        &.link-arr
+          &::after
+            content: ''
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 4px 4px 0 4px
+            border-color: $black700 transparent transparent transparent
+            transition: transform $transitionSpeed $ease
+            display: inline-block
+            margin-left: 4px
+          &:hover::after
+            transform: rotate(180deg)
+            border-color: $orangeMain500 transparent transparent transparent
+      
+      &:hover .submenu
+        opacity: 1
+        visibility: visible
+        transform: translateY(0)
+  
+  .submenu
+    position: absolute
+    top: calc(100% + 8px)
+    left: -20px
+    background: #fff
+    border-radius: 10px
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+    padding: 24px 32px
+    min-width: 800px
+    opacity: 0
+    visibility: hidden
+    transform: translateY(-10px)
+    transition: all $transitionSpeed $ease
+    z-index: 1000
+    display: flex
+    gap: 32px
+    
+    +r($lg)
+      display: none
+    
+    .col
+      flex: 1 1 auto
+      min-width: 0
+      
+      &.--col1
+        flex: 0 0 240px
+      &.--col2
+        flex: 0 0 280px
+      &.--col3
+        flex: 0 0 200px
+      &.--col4
+        flex: 0 0 200px
+    
+    .submenu-title
+      margin-bottom: 16px
+      
+      &__link
+        font-size: 18px
+        font-weight: 600
+        color: $black700
+        text-decoration: none
+        display: block
+        padding-bottom: 8px
+        border-bottom: 1px solid $black100
+        &:hover
+          color: $orangeMain500
+    
+    .submenu-list
+      list-style: none
+      margin: 0
+      padding: 0
+      display: flex
+      flex-direction: column
+      gap: 12px
+      
+      .submenu-item
+        display: block
+        
+        &__col
+          display: inline-block
+          width: 50%
+          vertical-align: top
+          padding-right: 8px
+        
+        a
+          font-size: 14px
+          color: $black700
+          text-decoration: none
+          line-height: 1.5
+          transition: color $transitionSpeed $ease
+          display: block
+          &:hover
+            color: $orangeMain500
+  
+  &__phone
+    flex-shrink: 0
+    +r($lg)
+      display: none
+    
+    a
+      font-size: 16px
+      font-weight: 600
+      color: $black700
+      text-decoration: none
+      white-space: nowrap
+      transition: color $transitionSpeed $ease
+      &:hover
+        color: $orangeMain500
+  
+  &__balance
+    display: flex
+    align-items: center
+    gap: 12px
+    flex-shrink: 0
+    +r($lg)
+      display: none
+    
+    &-amount
+      font-size: 18px
+      font-weight: 600
+      color: $black700
+  
+  &__right
+    display: flex
+    align-items: center
+    gap: 12px
+    flex-shrink: 0
+  
+  &__lk
+    display: flex
+    align-items: center
+    gap: 8px
+    font-size: 16px
+    font-weight: 500
+    color: $black700
+    text-decoration: none
+    transition: color $transitionSpeed $ease
+    +r($lg)
+      font-size: 14px
+      gap: 6px
+    
+    .svg-icon
+      width: 20px
+      height: 20px
+      fill: currentColor
+    
+    &:hover
+      color: $orangeMain500

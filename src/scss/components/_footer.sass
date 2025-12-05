@@ -1,9 +1,248 @@
 .footer
   background: #fff
+  padding: 0
+  margin-top: 60px
+
+  
+  .all
+    display: flex
+    gap: 60px
+    padding-bottom: 40px
+    padding-top: 58px
+    position: relative
+    &:before
+      content: ""
+      height: 2px
+      width: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background: radial-gradient(96.63% 96.72% at 100% 100%, #F26135 0%, #FF9950 100%)
+
+    +r($lg)
+      flex-direction: column
+      gap: 40px
+      padding-bottom: 30px
+  
+  &-left
+    flex: 1 1 auto
+    min-width: 0
+  
+  &-right
+    flex: 0 0 320px
+    +r($lg)
+      flex: 1 1 auto
+  
+  &-nav
+    list-style: none
+    margin: 0 0 70px
+    padding: 0
+    display: flex
+    flex-wrap: wrap
+    gap: 52px
+    font-size: 15px
+    li
+      display: inline-block
+      
+      a
+        color: $black700
+        text-decoration: none
+        transition: color $transitionSpeed $ease
+        &:hover
+          color: $black1000
+  
+  &-submenu
+    display: flex
+    gap: 24px
+    
+    .col
+      flex: 1 1 calc(33.333% - 24px)
+      min-width: 0
+      
+    .submenu-title
+      padding: 17px 0
+      font-size: 20px
+      font-weight: 600
+      &:first-child
+        margin-top: 0
+      
+      &__link
+        
+        color: $black700
+        text-decoration: none
+        display: block
+        padding-bottom: 8px
+        border-bottom: 1px solid $black100
+        &:hover
+          color: $orangeMain500
+    
+    .submenu-list
+      list-style: none
+      margin: 0
+      padding: 0
+      display: flex
+      flex-direction: column
+      gap: 12px
+      
+      .submenu-item
+        display: block
+        
+        &__col
+          display: inline-block
+          width: 50%
+          vertical-align: top
+          padding-right: 8px
+          +r($md)
+            width: 100%
+            padding-right: 0
+        
+        a
+          font-size: 14px
+          color: $black400
+          text-decoration: none
+          line-height: 1.5
+          transition: color $transitionSpeed $ease
+          display: block
+          &:hover
+            color: $orangeMain500
+  
+  &-support
+    margin-bottom: 32px
+    
+    &__title
+      font-size: 14px
+      color: $black400
+      margin-bottom: 12px
+    
+    &__phone
+      font-size: 20px
+      font-weight: 600
+      color: $black700
+      margin-bottom: 16px
+      
+      a
+        color: $black700
+        text-decoration: none
+        transition: color $transitionSpeed $ease
+        &:hover
+          color: $orangeMain500
+    
+    &__btn
+      .btn
+        width: 100%
+  
+  &-local
+    font-size: 14px
+    color: $black400
+    line-height: 1.6
+    margin-bottom: 24px
+    
+    strong
+      font-weight: 600
+      color: $black700
+  
+  &-email
+    margin-bottom: 32px
+    
+    &__title
+      font-size: 14px
+      color: $black400
+      margin-bottom: 8px
+    
+    &__link
+      a
+        font-size: 16px
+        color: $black700
+        text-decoration: none
+        transition: color $transitionSpeed $ease
+        &:hover
+          color: $orangeMain500
+  
+  &-socs
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    gap: 16px
+    
+    li
+      display: inline-block
+      
+      a
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        background: $black25
+        transition: all $transitionSpeed $ease
+        color: $black700
+        
+        .svg-icon
+          width: 20px
+          height: 20px
+        
+        &:hover
+          background: $orangeMain500
+          color: #fff
+          transform: translateY(-2px)
+  
+  &-bottom
+    background: $baseBg
+    padding: 24px 0
+    border-top: 1px solid $black100
+    
+    .all
+      display: flex
+      align-items: center
+      justify-content: space-between
+      gap: 20px
+      padding-bottom: 0
+      +r($md)
+        flex-direction: column
+        align-items: flex-start
+        gap: 16px
+    
+    &__left
+      display: flex
+      align-items: center
+      gap: 24px
+      +r($md)
+        flex-direction: column
+        align-items: flex-start
+        gap: 12px
+    
+    &__logo
+      display: flex
+      align-items: center
+      
+      img
+        height: 32px
+        width: auto
+    
+    &__copyright
+      font-size: 14px
+      color: $black400
+    
+    &__right
+      display: flex
+      gap: 24px
+      +r($md)
+        flex-direction: column
+        gap: 12px
+    
+    &__link
+      font-size: 14px
+      color: $black400
+      text-decoration: none
+      transition: color $transitionSpeed $ease
+      &:hover
+        color: $orangeMain500
+  
   &-wrapper
     padding: 40px 0 30px
     background: $baseBg
     margin-top: 140px
     +r($md)
       margin-top: 80px
-  
