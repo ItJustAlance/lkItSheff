@@ -1,0 +1,82 @@
+
+
+
+// buttons
+button
+  -webkit-appearance: none
+  border: 0
+  box-shadow: none
+  cursor: pointer
+  background: none
+  &:focus
+    outline: none
+
+.btn
+  display: inline-flex
+  position: relative
+  align-items: center
+  justify-content: center
+  text-align: center
+  cursor: pointer
+  transition: all $transitionSpeed $ease
+  color: #fff
+  background: $orangeMain500
+  border-radius: 40px
+  padding: 5px 20px 7px
+  font-weight: 600
+  border: 2px solid $orangeMain500
+  text-decoration: none
+  white-space: nowrap
+  font-size: 14px
+  height: 36px
+  gap: 12px
+  span.svg-icon
+    margin-right: 4px
+  .svg-icon, .icon
+    margin-right: 0
+    fill: currentColor
+    display: inline-block
+    vertical-align: top
+  &.--outline
+    background: #fff
+    color: $orangeMain500
+    border-color: $orangeMain500
+  &.--full
+    width: 100%
+  &:focus, &:active
+    outline: none
+  &:hover
+    background: $orangeMain600
+    border-color: $orangeMain600
+    box-shadow: none
+    color: #fff
+  &:focus
+    color: #fff
+    background: $orangeMain600
+    border-color: #fff
+    box-shadow: 0 0 0 2px $orangeMain600
+    -webkit-tap-highlight-color: transparent
+  &:active
+    box-shadow: none
+    color: #fff
+    border-color: $orangeMain700
+    background: $orangeMain700
+  
+  
+  
+  
+  
+.btn-link-icon
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  padding: 4px 12px
+  border-radius: 16px
+  border: 1px solid $clrPrimaryMain
+  color: $clrPrimaryMain
+  &:hover
+    color: $clrPrimaryHover
+    border-color: $clrPrimaryHover
+  .svg-icon
+    width: 15px
+    height: 15px

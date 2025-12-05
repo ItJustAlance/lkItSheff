@@ -1,0 +1,249 @@
+@charset "utf-8"
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;900&display=swap')
+// created front-end developer by Roman, Skype: ItJustAlance
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  max-height: 9001em
+  outline: none
+
+img
+  border: none
+  max-width: 100%
+  vertical-align: top
+
+html
+  -webkit-text-size-adjust: none
+  -ms-text-size-adjust: none
+  +r($lg)
+    // font-size: .234vw
+
+a[href^="tel"]
+  color: inherit
+  text-decoration: none
+
+p
+  padding: 0 0 10px
+
+a
+  color: $orangeMain500
+  text-decoration: none
+  transition: all 0.3s ease
+  &:hover, &:focus
+    text-decoration: none
+    color: $orangeMain600
+
+.over
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  width: 100%
+  min-height: 100vh
+  overflow: hidden
+  position: relative
+  &-wrapper
+    overflow: hidden
+    max-width: 100%
+    width: 100%
+
+
+input, textarea
+  &::-webkit-input-placeholder
+    opacity: 1 !important
+    color: rgba(48,48,48, 0.5)
+
+  &:-moz-placeholder
+    opacity: 1 !important
+    color: rgba(48,48,48, 0.5)
+
+  &::-moz-placeholder
+    opacity: 1 !important
+    color: rgba(48,48,48, 0.5)
+
+  &:-ms-input-placeholder
+    opacity: 1 !important
+    color: rgba(48,48,48, 0.5)
+
+.clearfix
+  *zoom: 1
+
+  &:before
+    content: " "
+    display: table
+
+  &:after
+    content: " "
+    display: table
+    clear: both
+
+input[type='submit']::-moz-focus-inner, button::-moz-focus-inner
+  padding: 0
+  border: 0
+
+input, textarea, button
+  font-family: $baseFont
+  color: rgba(48,48,48, 1)
+
+
+strong, b
+  font-weight: bold
+
+i, em
+  font-style: italic
+
+table p
+  padding: 0 !important
+
+
+
+
+// FOUC like fix (prevent transition from default browser values)
+body:not(.is-ready)
+  // padding: 0
+
+
+
+ul
+  list-style: none
+  li
+    display: inline-block
+
+body, html
+
+  min-width: 320px
+  min-height: 100%
+  max-width: 100%
+  margin: 0
+  overflow-x: hidden
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+::selection
+  color: white
+  background: $clrPrimarySecond
+
+body
+  font-size: 15px
+  font-weight: 400
+  line-height: 1.35
+  letter-spacing: -0.005em
+  background: #F0F2F4
+  color: $black700
+  font-family: $baseFont
+  +r($lg)
+    padding-top: 55px
+  +r($xss)
+    font-size: 14px
+.is-ios
+  cursor: pointer
+  *
+    cursor: pointer
+
+.body-lock
+  height: 100%
+  overflow: hidden
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  &.is-mobile
+    overflow: visible
+
+.title-page
+  padding-bottom: 32px
+.all
+  width: 100%
+  max-width: 1440px
+  padding: 0
+  margin: 0 auto
+  +r($lg)
+    overflow: hidden
+    max-width: 100vw
+
+    
+.container-main
+  display: flex
+  width: 100%
+  gap: 24px
+  .content
+    order: 1
+    flex: 1 1 auto
+    background: #fff
+    padding: 24px 28px 28px
+    border-radius: 10px
+  .aside-left
+    order: 0
+    min-width: 220px
+    max-width: 220px
+  .aside-right
+    order: 2
+    min-width: 220px
+    max-width: 220px
+    
+// REMOVE FOR PRODUCTION !
+.dev-bp-debug
+  background: black
+  position: fixed
+  top: 0
+  right: 0
+  z-index: 9999
+  color: white
+  padding: 5px
+  font-size: 12px
+  border-bottom-left-radius: 5px
+  + .dev-bp-debug
+    top: 25px
+    + .dev-bp-debug
+      top: 50px
+      + .dev-bp-debug
+        top: 75px
+        + .dev-bp-debug
+          top: 100px
+
+
+
+.title-page
+  font-size: 24px
+  
+.main-section-list
+  display: flex
+  flex-direction: column
+  gap: 28px
+  
+  .section-box
+    border: 1px solid #E1E4E7
+    background: #F8F8F8
+    border-radius: 16px
+    padding: 12px
+    display: flex
+    flex-direction: column
+    gap: 12px
+    
+    &__header
+      position: relative
+      overflow: hidden
+      border-radius: 10px
+      display: flex
+      &.--red-bg
+        background: radial-gradient(105.85% 568.67% at 103.28% 615%, #D7181F 10%, #F8F8F8 100%)
+      &.--blue-bg
+        background: radial-gradient(105.85% 568.67% at 103.28% 615%, #009DFF 10%, #F8F8F8 100%)
+      
+      &-title
+        font-size: 20px
+        color: #424242
+        font-weight: 450
+        display: flex
+        align-items: center
+        padding-left: 20px
+        gap: 20px
+        
+      &-icon
+        margin-left: auto
+        min-width: 114px
+        display: flex
+        align-items: flex-end
