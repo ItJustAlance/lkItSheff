@@ -2,7 +2,7 @@
   background: #fff
   padding: 0
   margin-top: 60px
-
+  letter-spacing: 0
   
   .all
     display: flex
@@ -18,11 +18,6 @@
       top: 0
       left: 0
       background: radial-gradient(96.63% 96.72% at 100% 100%, #F26135 0%, #FF9950 100%)
-
-    +r($lg)
-      flex-direction: column
-      gap: 40px
-      padding-bottom: 30px
   
   &-left
     flex: 1 1 auto
@@ -30,8 +25,9 @@
   
   &-right
     flex: 0 0 320px
-    +r($lg)
-      flex: 1 1 auto
+    display: flex
+    flex-direction: column
+    gap: 80px
   
   &-nav
     list-style: none
@@ -53,11 +49,14 @@
   
   &-submenu
     display: flex
-    gap: 24px
+    gap: 28px
     
     .col
-      flex: 1 1 calc(33.333% - 24px)
-      min-width: 0
+      flex: 1 1 calc(33% - 28px)
+      max-width: calc(33% - 28px)
+      display: flex
+      flex-direction: column
+      gap: 32px
       
     .submenu-title
       padding: 17px 0
@@ -67,50 +66,49 @@
         margin-top: 0
       
       &__link
-        
         color: $black700
         text-decoration: none
-        display: block
-        padding-bottom: 8px
-        border-bottom: 1px solid $black100
+        display: flex
+        align-items: center
+        gap: 14px
+        svg
+          opacity: 1
+          stroke: #D9D9D9
         &:hover
-          color: $orangeMain500
-    
+          color: $black1000
+          svg
+            stroke: #F26135
     .submenu-list
       list-style: none
       margin: 0
       padding: 0
       display: flex
       flex-direction: column
-      gap: 12px
+      gap: 14px
       
       .submenu-item
-        display: block
+        display: flex
         
         &__col
           display: inline-block
           width: 50%
           vertical-align: top
           padding-right: 8px
-          +r($md)
-            width: 100%
-            padding-right: 0
         
         a
-          font-size: 14px
-          color: $black400
+          font-size: 15px
+          color: $black700
           text-decoration: none
-          line-height: 1.5
-          transition: color $transitionSpeed $ease
           display: block
           &:hover
-            color: $orangeMain500
+            color: $black1000
   
   &-support
-    margin-bottom: 32px
+    &__btn
+      max-width: 280px
     
     &__title
-      font-size: 14px
+      font-size: 16px
       color: $black400
       margin-bottom: 12px
     
@@ -119,7 +117,11 @@
       font-weight: 600
       color: $black700
       margin-bottom: 16px
-      
+      position: relative
+      svg
+        position: absolute
+        top: 4px
+        left: -32px
       a
         color: $black700
         text-decoration: none
@@ -132,38 +134,51 @@
         width: 100%
   
   &-local
-    font-size: 14px
-    color: $black400
+    font-size: 16px
+    color: $black700
     line-height: 1.6
     margin-bottom: 24px
     
     strong
       font-weight: 600
       color: $black700
+      font-size: 20px
+      display: block
+      position: relative
+      svg
+        position: absolute
+        top: 9px
+        left: -32px
   
   &-email
     margin-bottom: 32px
     
     &__title
-      font-size: 14px
-      color: $black400
+      font-size: 16px
+      color: $black700
       margin-bottom: 8px
     
     &__link
       a
-        font-size: 16px
+        font-size: 20px
         color: $black700
         text-decoration: none
         transition: color $transitionSpeed $ease
+        display: block
+        position: relative
+        svg
+          position: absolute
+          top: 6px
+          left: -32px
         &:hover
-          color: $orangeMain500
+          color: $black1000
   
   &-socs
     list-style: none
-    margin: 0
+    margin: 0 0 0 -32px
     padding: 0
     display: flex
-    gap: 16px
+    gap: 36px
     
     li
       display: inline-block
@@ -172,50 +187,41 @@
         display: flex
         align-items: center
         justify-content: center
-        width: 40px
-        height: 40px
-        border-radius: 50%
-        background: $black25
+        width: 36px
+        height: 36px
         transition: all $transitionSpeed $ease
         color: $black700
         
         .svg-icon
-          width: 20px
-          height: 20px
-        
+          width: 36px
+          height: 36px
+          fill: $orangeMain500
         &:hover
-          background: $orangeMain500
-          color: #fff
-          transform: translateY(-2px)
+          .svg-icon
+            fill: $orangeMain600
   
   &-bottom
-    background: $baseBg
-    padding: 24px 0
-    border-top: 1px solid $black100
-    
     .all
       display: flex
-      align-items: center
+      align-items: flex-end
       justify-content: space-between
       gap: 20px
-      padding-bottom: 0
-      +r($md)
-        flex-direction: column
-        align-items: flex-start
-        gap: 16px
+      padding: 28px 0
+      margin-top: 28px
+      border-top: 1px solid #E1E4E7
+      &:before
+        display: none
     
     &__left
       display: flex
-      align-items: center
+      align-items: flex-end
       gap: 24px
-      +r($md)
-        flex-direction: column
-        align-items: flex-start
-        gap: 12px
     
     &__logo
       display: flex
       align-items: center
+      position: relative
+      top: -3px
       
       img
         height: 32px
@@ -223,22 +229,19 @@
     
     &__copyright
       font-size: 14px
-      color: $black400
+      color: $black700
     
     &__right
       display: flex
-      gap: 24px
-      +r($md)
-        flex-direction: column
-        gap: 12px
+      gap: 36px
     
     &__link
       font-size: 14px
-      color: $black400
+      color: $black700
       text-decoration: none
       transition: color $transitionSpeed $ease
       &:hover
-        color: $orangeMain500
+        color: $black1000
   
   &-wrapper
     padding: 40px 0 30px

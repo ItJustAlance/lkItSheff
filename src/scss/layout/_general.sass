@@ -169,6 +169,7 @@ body
   display: flex
   width: 100%
   gap: 24px
+  align-items: flex-start
   +r($lg)
     flex-direction: column
     gap: 20px
@@ -193,21 +194,16 @@ body
     order: 2
     min-width: 220px
     max-width: 220px
-    +r($lg)
-      order: 2
-      min-width: 100%
-      max-width: 100%
 
 .aside-left
-  +r($lg)
-    display: none
+  position: sticky
+  top: 0
+  left: 0
 
 .aside-nav
-  background: #fff
-  border-radius: 10px
+
   padding: 20px 0
-  border: 1px solid #E1E4E7
-  box-shadow: 0px 1px 2px 0px #0000001A
+
   
   &__title
     font-size: 18px
@@ -223,28 +219,31 @@ body
     padding: 0
     display: flex
     flex-direction: column
-  
+    gap: 8px
+    & + .aside-nav__list
+      border-top: 1px solid #CBD2D9
+      margin-top: 20px
+      padding-top: 20px
   &__item
     display: block
     
     &.--active
       .aside-nav__link
-        background: $baseBg
-        color: $orangeMain500
-        border-left: 3px solid $orangeMain500
-        padding-left: 13px
+        background: #fff
+        
+        
   
   &__link
     display: flex
     align-items: center
     gap: 12px
-    padding: 12px 16px
+    padding: 8px 12px
+    border-radius: 10px
     color: $black700
     text-decoration: none
-    font-size: 15px
-    font-weight: 500
+    font-size: 16px
+    font-weight: 400
     transition: all $transitionSpeed $ease
-    border-left: 3px solid transparent
     position: relative
     
     .svg-icon
@@ -264,14 +263,15 @@ body
     
     &:hover
       background: $baseBg
-      color: $orangeMain500
+      color: $black1000
   
   &__badge
-    background: #F26135
+    background: url(/img/menu-label.svg) 0 0 no-repeat
+    background-size: contain
     color: #fff
     font-size: 12px
     font-weight: 600
-    padding: 2px 8px
+    padding: 3px 8px 1px 10px
     border-radius: 12px
     min-width: 24px
     text-align: center
@@ -280,62 +280,63 @@ body
 .aside-right
   display: flex
   flex-direction: column
-  gap: 20px
-  +r($lg)
-    flex-direction: row
-    flex-wrap: wrap
-    gap: 16px
+  gap: 24px
+
 
 .aside-box
   background: #fff
   border-radius: 10px
-  padding: 20px
-  border: 1px solid #E1E4E7
-  box-shadow: 0px 1px 2px 0px #0000001A
-  +r($lg)
-    flex: 1 1 calc(50% - 8px)
-    min-width: 0
+  line-height: 1.3
   
   &__image
     text-align: center
-    margin-bottom: 16px
     
     img
       max-width: 100%
       height: auto
-  
-  &__title
-    font-size: 18px
+  &__body
+    padding: 17px 20px
+    display: flex
+    flex-direction: column
+    gap: 17px
+  &__h-title
     font-weight: 600
+    padding: 14px 20px
+    font-size: 16px
+    border-bottom: 1px solid #E1E4E7
+    margin-bottom: 4px
+  &__title
+    font-size: 20px
+    font-weight: 400
     color: $black700
-    margin-bottom: 16px
-    padding-bottom: 12px
-    border-bottom: 1px solid $black100
+    margin-top: 6px
   
   &__content
     font-size: 14px
-    color: $black400
-    line-height: 1.6
-    
+    display: flex
+    flex-direction: column
+    gap: 18px
+
     p
-      margin: 0 0 12px 0
+      margin: 0
       padding: 0
-      color: $black700
       
-      &:last-child
-        margin-bottom: 0
-  
   &__days
-    font-size: 16px
-    font-weight: 600
-    color: $orangeMain500
-    margin-bottom: 16px
+    font-size: 14px
+    display: flex
+    color: #5C5C5C
+    .day
+      font-size: 36px
+      font-weight: bold
+      background: radial-gradient(96.63% 96.72% at 100% 100%, #F26135 0%, #FF9950 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      line-height: 1
+    .text
+      display: block
+      padding-left: 16px
+      padding-right: 16px
   
-  &.--congrats
-    background: linear-gradient(136.72deg, rgba(255, 238, 107, 0.2) 0%, rgba(255, 166, 0, 0.2) 100%)
-  
-  &.--upgrade
-    background: linear-gradient(136.72deg, rgba(159, 212, 255, 0.2) 0%, rgba(0, 86, 229, 0.2) 100%)
 
 .aside-db-list
   list-style: none
@@ -343,59 +344,66 @@ body
   padding: 0
   display: flex
   flex-direction: column
-  gap: 12px
   
   .aside-db-item
     display: block
-    
-    a
+    padding: 4px
+    .b-btn
+      padding: 0 16px
+    .date
+      padding: 0 16px
       font-size: 14px
+      color: #8C8C8C
+    a.link
+      font-size: 16px
       color: $black700
       text-decoration: none
-      line-height: 1.5
-      transition: color $transitionSpeed $ease
+      padding: 7px 16px
       display: block
+      border-radius: 5px
       &:hover
-        color: $orangeMain500
+        color: $black1000
+        background: #F0F2F4
 
+      
 .aside-invoices-list
   list-style: none
-  margin: 0 0 16px 0
+  margin: 0
   padding: 0
   display: flex
   flex-direction: column
-  gap: 16px
+  gap: 7px 16px
   
-  .aside-invoice-item
-    display: flex
-    flex-direction: column
-    gap: 8px
-    padding-bottom: 16px
-    border-bottom: 1px solid $black100
-    
-    &:last-child
-      border-bottom: none
-      padding-bottom: 0
-    
-    &__date
-      font-size: 12px
-      color: $black400
-    
-    &__text
+  .aside-invoices-item
+    display: block
+    padding: 12px 5px
+    .b-btn
+      padding: 0 16px
+    .date
+      padding: 0 16px
       font-size: 14px
+      color: #8C8C8C
+    a.link
+      font-size: 16px
       color: $black700
-      line-height: 1.5
+      text-decoration: none
+      padding: 8px 16px 12px
+      display: block
+      border-radius: 5px
+      letter-spacing: -0.015em
+      line-height: 20px
+  .all-checout
+    font-size: 16px
+    color: $black700
+    text-decoration: none
+    padding: 12px 16px
+    display: block
+    border-radius: 5px
+    margin: 0 4px 4px
+    &:hover
+      color: $black1000
+      background: #F0F2F4
 
-.aside-invoices-more
-  display: block
-  text-align: center
-  font-size: 14px
-  color: $orangeMain500
-  text-decoration: none
-  font-weight: 500
-  transition: color $transitionSpeed $ease
-  &:hover
-    color: $orangeMain600
     
 // REMOVE FOR PRODUCTION !
 .dev-bp-debug
