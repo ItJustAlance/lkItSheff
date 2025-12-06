@@ -41,7 +41,7 @@ a
   flex-wrap: wrap
   width: 100%
   min-height: 100vh
-  overflow: hidden
+  // overflow: hidden
   position: relative
   &-wrapper
     overflow: hidden
@@ -116,7 +116,7 @@ body, html
   min-height: 100%
   max-width: 100%
   margin: 0
-  overflow-x: hidden
+  // overflow-x: hidden
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
@@ -186,10 +186,8 @@ body
     order: 0
     min-width: 220px
     max-width: 220px
-    +r($lg)
-      order: 1
-      min-width: 100%
-      max-width: 100%
+    .aside-nav
+      padding-top: 0
   .aside-right
     order: 2
     min-width: 220px
@@ -197,14 +195,12 @@ body
 
 .aside-left
   position: sticky
-  top: 0
+  top: 20px
   left: 0
 
 .aside-nav
-
   padding: 20px 0
 
-  
   &__title
     font-size: 18px
     font-weight: 600
@@ -230,6 +226,7 @@ body
     &.--active
       .aside-nav__link
         background: #fff
+        color: $black1000
         
         
   
@@ -262,7 +259,7 @@ body
       flex: 1 1 auto
     
     &:hover
-      background: $baseBg
+      background: #fff
       color: $black1000
   
   &__badge

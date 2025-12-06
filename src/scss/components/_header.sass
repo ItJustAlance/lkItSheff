@@ -1,17 +1,12 @@
 .header
   width: 100%
-  padding: 17px 0
+  padding: 9px 0 11px
   background: #fff
   position: relative
   z-index: 100
   margin-bottom: 24px
-  +r($lg)
-    padding: 18px 0
-    height: 56px
-    position: fixed
-    top: 0
-    left: 0
-    z-index: 101
+  max-height: 56px
+  border-bottom: 1px solid #E5E5E5
   .all
     display: flex
     align-items: center
@@ -26,20 +21,19 @@
     display: flex
     align-items: center
     flex-shrink: 0
+    margin-top: -3px
     img
-      height: 40px
+      height: 30px
       width: auto
-      +r($lg)
-        height: 32px
+    
   
   .nav
-    flex: 1 1 auto
     +r($lg)
       display: none
     ul
       display: flex
       align-items: center
-      gap: 32px
+      gap: 35px
       list-style: none
       margin: 0
       padding: 0
@@ -47,12 +41,12 @@
         gap: 24px
     
     .nav-item
-      position: relative
       display: inline-block
-      
+      padding: 0 0 20px
+      margin: 0 0 -20px
       > a
         font-size: 16px
-        font-weight: 500
+        font-weight: 400
         color: $black700
         text-decoration: none
         transition: color $transitionSpeed $ease
@@ -60,36 +54,52 @@
         align-items: center
         gap: 8px
         padding: 8px 0
-        &:hover
-          color: $orangeMain500
+        position: relative
+        &::before
+          content: ""
+          height: 3px
+          width: 100%
+          background: $orangeMain500
+          display: block
+          position: absolute
+          top: calc(100% + 9px)
+          left: 0
+          transition: all $transitionSpeed $ease
+          opacity: 0
+        &:hover, &.--active
+          color: $black1000
+          &::before
+            opacity: 1
+            top: calc(100% + 6px)
         
         &.link-arr
-          &::after
-            content: ''
-            width: 0
-            height: 0
-            border-style: solid
-            border-width: 4px 4px 0 4px
-            border-color: $black700 transparent transparent transparent
+          .svg-icon
+            width: 12px
             transition: transform $transitionSpeed $ease
             display: inline-block
             margin-left: 4px
-          &:hover::after
+          &:hover .svg-icon
             transform: rotate(180deg)
-            border-color: $orangeMain500 transparent transparent transparent
-      
-      &:hover .submenu
-        opacity: 1
-        visibility: visible
-        transform: translateY(0)
+            
+      &:hover
+        > a::before
+          opacity: 1
+          top: calc(100% + 6px)
+        .submenu
+          opacity: 1
+          visibility: visible
+          transform: translateY(0)
+        
   
   .submenu
     position: absolute
-    top: calc(100% + 8px)
-    left: -20px
+    top: calc(100% + 9px)
+    left: 0
+    right: 0
     background: #fff
     border-radius: 10px
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+    border: 1px solid #D9D9D9
+    box-shadow: 0px 4px 12px 0px #0000001A
     padding: 24px 32px
     min-width: 800px
     opacity: 0
@@ -99,48 +109,57 @@
     z-index: 1000
     display: flex
     gap: 32px
+    text-align: left
     
     +r($lg)
       display: none
     
     .col
-      flex: 1 1 auto
-      min-width: 0
-      
-      &.--col1
-        flex: 0 0 240px
-      &.--col2
-        flex: 0 0 280px
-      &.--col3
-        flex: 0 0 200px
-      &.--col4
-        flex: 0 0 200px
-    
+      flex: 1 1 calc(33% - 28px)
+      max-width: calc(33% - 28px)
+      display: flex
+      flex-direction: column
+      gap: 32px
+      &.--col3, &.--col4
+        flex: 1 1 calc(16% - 28px)
+        max-width: calc(16% - 28px)
+        
     .submenu-title
-      margin-bottom: 16px
+      padding: 0 0 18px
+      font-size: 20px
+      font-weight: 600
+      
       
       &__link
-        font-size: 18px
-        font-weight: 600
         color: $black700
         text-decoration: none
-        display: block
-        padding-bottom: 8px
-        border-bottom: 1px solid $black100
+        display: flex
+        align-items: center
+        gap: 14px
+        svg
+          opacity: 1
+          stroke: #D9D9D9
+          transition: all 0.3s ease
+          transform: translateX(0px)
         &:hover
-          color: $orangeMain500
-    
+          color: $black1000
+          svg
+            stroke: #F26135
+            transform: translateX(3px)
+            
     .submenu-list
       list-style: none
       margin: 0
       padding: 0
       display: flex
       flex-direction: column
-      gap: 12px
-      
+      gap: 14px
+      align-items: flex-start
+      letter-spacing: 0
       .submenu-item
-        display: block
-        
+        display: flex
+        width: 100%
+        padding: 5px 0
         &__col
           display: inline-block
           width: 50%
@@ -148,49 +167,48 @@
           padding-right: 8px
         
         a
-          font-size: 14px
+          font-size: 15px
           color: $black700
           text-decoration: none
-          line-height: 1.5
-          transition: color $transitionSpeed $ease
           display: block
           &:hover
-            color: $orangeMain500
+            color: $black1000
   
   &__phone
-    flex-shrink: 0
-    +r($lg)
-      display: none
+    border-left: 1px solid #D9D9D9
+    padding-left: 40px
+    font-size: 16px
     
     a
-      font-size: 16px
-      font-weight: 600
       color: $black700
       text-decoration: none
       white-space: nowrap
       transition: color $transitionSpeed $ease
       &:hover
-        color: $orangeMain500
+        color: $black1000
   
   &__balance
     display: flex
     align-items: center
-    gap: 12px
+    gap: 16px
     flex-shrink: 0
+    margin-left: 30px
     +r($lg)
       display: none
     
     &-amount
-      font-size: 18px
-      font-weight: 600
+      font-size: 16px
       color: $black700
   
   &__right
     display: flex
     align-items: center
-    gap: 12px
+    gap: 32px
     flex-shrink: 0
-  
+    margin-left: auto
+  &__notice
+    width: 56px
+    text-align: center
   &__lk
     display: flex
     align-items: center
