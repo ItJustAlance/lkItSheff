@@ -8,12 +8,45 @@
 
 <div class="container">
   <div class="all container-main">
+    <div class="content-wrapper">
+      <div class="mobile-banners">
+        <div class="aside-box --banner --congrats">
+          <div class="aside-box__image">
+            <img class="img-desktop" style="margin-top: -6px;" src="img/info1.png" alt="">
+            <img class="img-mobile" src="img/info1-mob.png" alt="">
+          </div>
+          <div class="aside-box__body">
+            <div class="aside-box__title">Поздравляем!</div>
+            <div class="aside-box__content">
+              <p class="desc-text">Мы активировали платный тариф в подарок</p>
+              <div class="aside-box__days"><span class="day">14</span> <span class="text">дней<br>осталось</span></div>
+              <button class="btn --outline --full">Подробнее</button>
+            </div>
+          </div>
+        </div>
+        <div class="aside-box --banner">
+          <div class="aside-box__image">
+            <img class="img-desktop" style="margin-top: -10px;" src="img/info2.png" alt="">
+            <img class="img-mobile" src="img/info2-mob.png" alt="">
+          </div>
+          <div class="aside-box__body">
+            <div class="aside-box__title">Пора переходить
+              на тариф</div>
+            <div class="aside-box__content">
+              
+              <button class="btn --full">Подробнее</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <main class="content">
+      
       <div class="title-page">Мои подписки</div>
       <div class="main-section-list">
         <section class="section-box">
           <div class="section-box__header">
-            <div class="section-box__header-title">1С Онлайн
+            <div class="section-box__header-title">
+              <div class="section-box__header-title-text">1С Онлайн</div>
               <div class="label-status">Активна</div>
             </div>
             <div class="section-box__header-icon">
@@ -24,7 +57,7 @@
             <div class="main-info-boxes">
               <div class="box-row">
                 <div class="box-col2">
-                  <div class="main-info-box --user">
+                  <div class="main-info-box">
                     <div class="num">8</div>
                     <div class="text">
                       <div class="title">Пользователей</div>
@@ -37,8 +70,13 @@
                         </a>
                       </div>
                     </div>
+                    <div class="icon-bg">
+                      <svg class="svg-icon">
+                        <use xlink:href="#icon-users-profiles-variant"></use>
+                      </svg>
+                    </div>
                   </div><!--end main-info-box -->
-                  <div class="main-info-box --bd">
+                  <div class="main-info-box">
                     <div class="num">6</div>
                     <div class="text">
                       <div class="title">Количество БД</div>
@@ -51,10 +89,15 @@
                         </a>
                       </div>
                     </div>
+                    <div class="icon-bg">
+                      <svg class="svg-icon">
+                        <use xlink:href="#icon-databases"></use>
+                      </svg>
+                    </div>
                   </div><!--end main-info-box -->
                 </div>
                 <div class="box-col2">
-                  <div class="main-info-box --consul">
+                  <div class="main-info-box">
                     <div class="num">2</div>
                     <div class="text">
                       <div class="title">Доступно бесплатных консультаций из 2</div>
@@ -64,9 +107,14 @@
                           <svg class="svg-icon ic16">
                             <use xlink:href="#icon-ic-plus"></use>
                           </svg>
-                          Добавить пользователя
+                          Оставить заявку
                         </a>
                       </div>
+                    </div>
+                    <div class="icon-bg">
+                      <svg class="svg-icon stroke-none">
+                        <use xlink:href="#icon-support-human"></use>
+                      </svg>
                     </div>
                   </div><!--end main-info-box -->
                 </div>
@@ -104,7 +152,7 @@
         <section class="section-box">
           <div class="section-box__header --red-bg">
             <div class="section-box__header-title">
-              1С Хостинг
+              <div class="section-box__header-title-text">1С Хостинг</div>
               <div class="label-status --stop">Остановлена</div>
             </div>
             <div class="section-box__header-icon">
@@ -116,7 +164,7 @@
             <div class="main-info-boxes">
               <div class="box-row">
                 <div class="box-col2">
-                  <div class="main-info-box --user">
+                  <div class="main-info-box">
                     <div class="num">8</div>
                     <div class="text">
                       <div class="title">Пользователей</div>
@@ -129,8 +177,13 @@
                         </a>
                       </div>
                     </div>
+                    <div class="icon-bg">
+                      <svg class="svg-icon">
+                        <use xlink:href="#icon-users-profiles-variant"></use>
+                      </svg>
+                    </div>
                   </div><!--end main-info-box -->
-                  <div class="main-info-box --bd">
+                  <div class="main-info-box">
                     <div class="num">6</div>
                     <div class="text">
                       <div class="title">Количество БД</div>
@@ -143,10 +196,15 @@
                         </a>
                       </div>
                     </div>
+                    <div class="icon-bg">
+                      <svg class="svg-icon">
+                        <use xlink:href="#icon-databases"></use>
+                      </svg>
+                    </div>
                   </div><!--end main-info-box -->
                 </div>
                 <div class="box-col2">
-                  <div class="main-info-box --consul">
+                  <div class="main-info-box">
                     <div class="num">2</div>
                     <div class="text">
                       <div class="title">Доступно бесплатных консультаций из 2</div>
@@ -159,6 +217,11 @@
                           Добавить пользователя
                         </a>
                       </div>
+                    </div>
+                    <div class="icon-bg">
+                      <svg class="svg-icon stroke-none">
+                        <use xlink:href="#icon-support-human"></use>
+                      </svg>
                     </div>
                   </div><!--end main-info-box -->
                 </div>
@@ -211,7 +274,8 @@
         </section>
         <section class="section-box">
           <div class="section-box__header --red-bg">
-            <div class="section-box__header-title">1С Фреш - Базовый
+            <div class="section-box__header-title">
+              <div class="section-box__header-title-text">1С Фреш - Базовый</div>
               <div class="label-status">Активна</div>
             </div>
             <div class="section-box__header-icon">
@@ -256,7 +320,8 @@
         </section>
         <section class="section-box">
           <div class="section-box__header --red-bg">
-            <div class="section-box__header-title">1С Фреш - Базовый
+            <div class="section-box__header-title">
+              <div class="section-box__header-title-text">1С Фреш - Базовый</div>
               <div class="label-status">Активна</div>
             </div>
             <div class="section-box__header-icon">
@@ -297,7 +362,8 @@
         </section>
         <section class="section-box">
           <div class="section-box__header --blue-bg">
-            <div class="section-box__header-title">Текст в две строки Текст в две строкиТекст в две строки Текст в две строки без
+            <div class="section-box__header-title">
+              <div class="section-box__header-title-text">Текст в две строки Текст в две строкиТекст в две строки Текст в две строки без</div>
               <div class="label-status">Активна</div>
             </div>
             <div class="section-box__header-icon">
@@ -338,7 +404,8 @@
         </section>
         <section class="section-box">
           <div class="section-box__header">
-            <div class="section-box__header-title">Noname product без логотипа
+            <div class="section-box__header-title">
+              <div class="section-box__header-title-text">Noname product без логотипа</div>
             </div>
             
           </div>
@@ -376,7 +443,8 @@
         </section>
         <section class="section-box">
           <div class="section-box__header --blue-bg">
-            <div class="section-box__header-title">Подписки Microsoft
+            <div class="section-box__header-title">
+              <div class="section-box__header-title-text">Подписки Microsoft</div>
             </div>
             <div class="section-box__header-icon">
               <img src="img/microsoft.svg" alt="">
@@ -663,6 +731,7 @@
       </div><!--end section-list -->
       
     </main>
+    </div>
     <aside class="aside-left">
       <div class="aside-nav">
         <ul class="aside-nav__list">
@@ -713,12 +782,14 @@
               <svg class="svg-icon">
                 <use xlink:href="#icon-ic-menu-store"></use>
               </svg>
+              <span class="aside-nav__link-label">
               <span>Услуги+</span>
               <span class="aside-nav__badge">243</span>
+                </span>
             </a>
           </li>
         </ul>
-        <ul class="aside-nav__list">
+        <ul class="aside-nav__list xl-hidden">
           <li class="aside-nav__item">
             <a href="#" class="aside-nav__link">
               <img src="img/ic-menu-dw.svg" alt="1C" class="aside-nav__icon-img">
@@ -729,20 +800,21 @@
       </div>
     </aside>
     <aside class="aside-right">
-      <div class="aside-box --congrats">
+      <div class="aside-box --banner --congrats">
         <div class="aside-box__image">
-          <img style="margin-top: -6px;" src="img/info1.png" alt="">
+          <img class="img-desktop" style="margin-top: -6px;" src="img/info1.png" alt="">
+          <img class="img-mobile" src="img/info1-mob.png" alt="">
         </div>
         <div class="aside-box__body">
           <div class="aside-box__title">Поздравляем!</div>
           <div class="aside-box__content">
-            <p>Мы активировали платный тариф в подарок</p>
+            <p class="desc-text">Мы активировали платный тариф в подарок</p>
             <div class="aside-box__days"><span class="day">14</span> <span class="text">дней<br>осталось</span></div>
             <button class="btn --outline --full">Подробнее</button>
           </div>
         </div>
       </div>
-      <div class="aside-box">
+      <div class="aside-box xl-hidden">
         <div class="aside-box__h-title">Часто <br>используемые БД:</div>
         <div class="aside-box__content">
           <ul class="aside-db-list">
@@ -758,7 +830,7 @@
           </ul>
         </div>
       </div>
-      <div class="aside-box">
+      <div class="aside-box xl-hidden">
         <div class="aside-box__h-title">Неоплаченные счета:</div>
         <div class="aside-box__content">
           <ul class="aside-invoices-list">
@@ -777,9 +849,10 @@
           </ul>
         </div>
       </div>
-      <div class="aside-box">
+      <div class="aside-box --banner">
         <div class="aside-box__image">
-          <img style="margin-top: -10px;" src="img/info2.png" alt="">
+          <img class="img-desktop" style="margin-top: -10px;" src="img/info2.png" alt="">
+          <img class="img-mobile" src="img/info2-mob.png" alt="">
         </div>
         <div class="aside-box__body">
           <div class="aside-box__title">Пора переходить
@@ -790,7 +863,7 @@
           </div>
         </div>
       </div>
-      <div class="aside-box">
+      <div class="aside-box xl-hidden">
         <div class="aside-box__h-title">Неоплаченные счета:</div>
         <div class="aside-box__content">
           <ul class="aside-invoices-list">

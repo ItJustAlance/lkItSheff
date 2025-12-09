@@ -3,13 +3,19 @@
   padding: 0
   margin-top: 60px
   letter-spacing: 0
-  
+  position: relative
+  z-index: 2
+  +r($xl)
+    display: none
   .all
     display: flex
     gap: 60px
     padding-bottom: 40px
     padding-top: 58px
     position: relative
+    +r($xl)
+      flex-direction: column
+      padding-top: 48px
     &:before
       content: ""
       height: 2px
@@ -18,7 +24,11 @@
       top: 0
       left: 0
       background: radial-gradient(96.63% 96.72% at 100% 100%, #F26135 0%, #FF9950 100%)
-  
+      +r($xl)
+        left: 30px
+        right: 30px
+        width: auto
+        
   &-left
     flex: 1 1 auto
     min-width: 0
@@ -28,15 +38,24 @@
     display: flex
     flex-direction: column
     gap: 80px
-  
+    +r($xl)
+      flex: 1 1 auto
+      width: 100%
+      flex-direction: row
+      flex-wrap: wrap
+      gap: 24px
+      padding-top: 64px
+      
   &-nav
     list-style: none
-    margin: 0 0 70px
+    margin: 0 0 53px
     padding: 0
     display: flex
     flex-wrap: wrap
     gap: 52px
     font-size: 15px
+    +r($xl)
+      gap: 26px
     li
       display: inline-block
       
@@ -91,13 +110,17 @@
       
       .submenu-item
         display: flex
-        
+        +r($xl)
+          flex-direction: column
+          gap: 14px
+          line-height: 1.4
         &__col
           display: inline-block
           width: 50%
           vertical-align: top
           padding-right: 8px
-        
+          +r($xl)
+            width: 100%
         a
           font-size: 15px
           color: $black700
@@ -107,24 +130,37 @@
             color: $black1000
   
   &-support
+    position: relative
+    +r($xl)
+      width: calc(33.333% - 24px)
     &__btn
       max-width: 280px
     
     &__title
       font-size: 16px
       color: $black400
-      margin-bottom: 12px
-    
+      margin-bottom: 10px
+      +r($xl)
+        color: $black700
+        font-size: 15px
     &__phone
       font-size: 20px
       font-weight: 600
       color: $black700
       margin-bottom: 16px
       position: relative
+      +r($xl)
+        position: static
+        font-size: 16px
+        
       svg
         position: absolute
         top: 4px
         left: -32px
+        +r($xl)
+          top: -40px
+          left: 0
+          
       a
         color: $black700
         text-decoration: none
@@ -135,44 +171,63 @@
     &__btn
       .btn
         width: 100%
-  
+        +r($xl)
+          width: auto
   &-local
     font-size: 16px
     color: $black700
     line-height: 1.6
     margin-bottom: 24px
-    
+    +r($xl)
+      position: relative
+      width: calc(33.333% - 24px)
+      font-size: 15px
     strong
       font-weight: 600
       color: $black700
       font-size: 20px
       display: block
       position: relative
+      +r($xl)
+        position: static
+        font-size: 16px
       svg
         position: absolute
         top: 9px
         left: -32px
-  
+        +r($xl)
+          top: -40px
+          left: 0
   &-email
     margin-bottom: 32px
-    
+    +r($xl)
+      position: relative
+      width: calc(33.333% - 24px)
     &__title
       font-size: 16px
       color: $black700
       margin-bottom: 8px
-    
+      +r($xl)
+        font-size: 15px
     &__link
       a
         font-size: 20px
         color: $black700
+        font-weight: 600
         text-decoration: none
         transition: color $transitionSpeed $ease
         display: block
         position: relative
+        +r($xl)
+          position: static
+          font-size: 16px
         svg
           position: absolute
           top: 6px
           left: -32px
+          +r($xl)
+            top: -40px
+            left: 0
         &:hover
           color: $black1000
   
@@ -182,7 +237,14 @@
     padding: 0
     display: flex
     gap: 36px
-    
+    +r($xl)
+      width: 100%
+      justify-content: center
+      border-top: 1px solid #E1E4E7
+      border-bottom: 1px solid #E1E4E7
+      padding: 20px 0
+      margin: 40px 0 0
+      gap: 66px
     li
       display: inline-block
       
@@ -212,14 +274,26 @@
       padding: 28px 0
       margin-top: 28px
       border-top: 1px solid #E1E4E7
+      +r($xl)
+        padding-left: 35px
+        padding-right: 35px
+        align-items: normal
+        border: none
+        margin-top: 0
+        padding-top: 0
+        flex-direction: row
+        gap: 24px
       &:before
         display: none
-    
+      
     &__left
       display: flex
       align-items: flex-end
       gap: 24px
-    
+      +r($xl)
+        flex-direction: column
+        align-items: flex-start
+        width: calc(33.333% + 36px)
     &__logo
       display: flex
       align-items: center
@@ -237,6 +311,7 @@
     &__right
       display: flex
       gap: 36px
+      align-items: flex-end
     
     &__link
       font-size: 14px

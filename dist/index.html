@@ -1,66 +1,1017 @@
-<!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
-    <link rel="shortcut icon" href="img/favicon.ico" />
-    <title>Заголовок сайта</title>
-    <link href="css/style.bundle.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header class="header">
-      <img src="img/logo.png" id="logo" /> <svg class="svg-item"><use xlink:href="#icon-logo"></use></svg>
-    </header>
-    <script src="js/runtime.js"></script>
-    <script src="js/vendors.js"></script>
-    <script src="js/main.js"></script>
-  </body>
-</html>
-<div class="container">
-  <br /><br />
-  <div class="btns"><a class="btn js-btn-modal" href="#" data-modal="modal-support">Модальное окно</a></div>
-  <br /><br />
-  <pre>
-    для запуска модального окна,
-    добавляем класс "js-btn-modal"
-    для указания id модального окна пишем аттрибут data-modal="modal-support"
-    &#706;a class="js-btn-modal" href="#" data-modal="modal-support"&#707;Модальное окно&#706;/a&#707;
-  </pre>
-  Контент.
-</div>
-<footer>itJustAlance</footer>
-<div class="just-modal undefined" id="modal-support">
-  <div class="just-modal__wrapper">
-    <div class="just-modal__overlay"></div>
-    <div class="just-modal__container">
-      <div class="just-modal__body">
-        <div class="just-modal__header">
-          <div class="just-modal-title h2-title">служба поддержки</div>
-          <div class="just-modal-subtitle">Опишите вашу проблему.</div>
-        </div>
-        <div class="just-modal-form">
-          <div class="just-modal-form__row"><label class="label">Имя</label> <input class="input" /></div>
-          <div class="just-modal-form__row"><label class="label">E-mail</label> <input class="input" /></div>
-          <div class="just-modal-form__row">
-            <label class="label">Ваша проблема</label> <textarea class="textarea"></textarea>
+<div class="over">
+  <!doctype html>
+  <html lang="ru">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+      <title>Заголовок сайта</title>
+      <link href="css/style.bundle.css" rel="stylesheet" />
+    </head>
+    <body>
+      <header class="header">
+        <div class="all">
+          <a href="#" class="logo"><img src="img/logo.svg" /></a>
+          <nav class="nav">
+            <ul>
+              <li class="nav-item">
+                <a class="link-arr" href="#"
+                  >1С Продукты <svg class="svg-icon"><use xlink:href="#icon-drop-downa-rrow"></use></svg
+                ></a>
+                <div class="submenu">
+                  <div class="col --col1">
+                    <div class="submenu-box">
+                      <div class="submenu-title">
+                        <a class="submenu-title__link" href="#"
+                          ><span class="submenu-title__link-label">1С Онлайн</span>
+                          <svg class="svg-icon"><use xlink:href="#icon-next-go"></use></svg
+                        ></a>
+                      </div>
+                      <ul class="submenu-list">
+                        <li class="submenu-item">
+                          <div class="submenu-item__col"><a href="#">Облачная 1С</a></div>
+                          <div class="submenu-item__col"><a href="#">1C облако что это?</a></div>
+                        </li>
+                        <li class="submenu-item"><a href="#">Для бухгалтеров и бухгалтерских компаний</a></li>
+                        <li class="submenu-item"><a href="#">1C Онлайн – сервис для Предпринимателей</a></li>
+                        <li class="submenu-item"><a href="#">Удаленная работа в 1С</a></li>
+                        <li class="submenu-item"><a href="#">Аренда 1С</a></li>
+                        <li class="submenu-item"><a href="#">ИТС</a></li>
+                        <li class="submenu-item"><a href="#">Тарифы 1С онлайн</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col --col2">
+                    <div class="submenu-box">
+                      <div class="submenu-title">
+                        <a class="submenu-title__link" href="#"
+                          ><span class="submenu-title__link-label">Купить 1С</span>
+                          <svg class="svg-icon"><use xlink:href="#icon-next-go"></use></svg
+                        ></a>
+                      </div>
+                      <ul class="submenu-list">
+                        <li class="submenu-item"><a href="#">1С Аптека для Казахстана</a></li>
+                        <li class="submenu-item"><a href="#">1С Бухгалтерия для Казахстана</a></li>
+                        <li class="submenu-item"><a href="#">1С Управление торговлей для Казахстана</a></li>
+                        <li class="submenu-item"><a href="#">1С Управление торговым предприятием для Казахстана</a></li>
+                        <li class="submenu-item"><a href="#">1С Бухгалтерия сельскохозяйственного предприятия</a></li>
+                        <li class="submenu-item"><a href="#">1С Комплексная автоматизация</a></li>
+                        <li class="submenu-item">
+                          <div class="submenu-item__col"><a href="#">1С УНФ</a></div>
+                          <div class="submenu-item__col"><a href="#">1С ЗУП</a></div>
+                        </li>
+                        <li class="submenu-item">
+                          <div class="submenu-item__col"><a href="#">1С Документооборот</a></div>
+                          <div class="submenu-item__col"><a href="#">1С Розница</a></div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col --col3">
+                    <div class="submenu-box">
+                      <div class="submenu-title">
+                        <a class="submenu-title__link" href="#"
+                          ><span class="submenu-title__link-label">1С Фреш </span
+                          ><svg class="svg-icon"><use xlink:href="#icon-next-go"></use></svg
+                        ></a>
+                      </div>
+                      <ul class="submenu-list">
+                        <li class="submenu-item"><a href="#">1С: Фреш для конфигураций</a></li>
+                        <li class="submenu-item">
+                          <a href="#">1С: Бухгалтерия ОСИ, ПТ, УК, СК, КСК для Казахстана</a>
+                        </li>
+                        <li class="submenu-item"><a href="#">1С: Управление нашей фирмой для Казахстана</a></li>
+                        <li class="submenu-item"><a href="#">1С: Фреш Кассир</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col --col4">
+                    <div class="submenu-box">
+                      <div class="submenu-title">
+                        <a class="submenu-title__link" href="#"
+                          ><span class="submenu-title__link-label">1С Хостинг </span
+                          ><svg class="svg-icon"><use xlink:href="#icon-next-go"></use></svg
+                        ></a>
+                      </div>
+                    </div>
+                    <div class="submenu-box">
+                      <div class="submenu-title">
+                        <a class="submenu-title__link" href="#"
+                          ><span class="submenu-title__link-label">1С Сервер </span
+                          ><svg class="svg-icon"><use xlink:href="#icon-next-go"></use></svg
+                        ></a>
+                      </div>
+                      <ul class="submenu-list">
+                        <li class="submenu-item"><a href="#">Аренда тарифы</a></li>
+                        <li class="submenu-item"><a href="#">1С Бухгалтерия для Казахстана</a></li>
+                        <li class="submenu-item"><a href="#">1С Сервер на Linux c PostgreSQL</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item"><a class="--active" href="#">Поддержка</a></li>
+              <li class="nav-item"><a href="#">Блог</a></li>
+              <li class="nav-item"><a href="#">Услуги+</a></li>
+            </ul>
+          </nav>
+          <div class="header__phone"><a href="tel:+77470945199">+7 747 094 51 99</a></div>
+          <div class="header__balance">
+            <div class="header__balance-amount">21 500 〒</div>
+            <div class="header__balance-btn"><a href="#" class="btn --outline">Пополнить</a></div>
           </div>
-          <div class="just-modal-form__row pb-32">
-            <div class="b-checkbox">
-              <input type="checkbox" id="fff" />
-              <label class="b-checkbox__label" for="fff"
-                ><span class="checked"
-                  ><svg class="svg-icon svg-icon--check"><use xlink:href="#icon-check"></use></svg> </span
-                ><span class="b-checkbox__text">Согласен на <a href="#">обработку персональных данных</a></span></label
+          <div class="header__right">
+            <div class="header__notice">
+              <a href="#"
+                ><svg class="svg-icon ic24"><use xlink:href="#icon-i-notice"></use></svg
+              ></a>
+            </div>
+            <a href="#" class="header__lk"><span>Личный кабинет</span></a>
+          </div>
+        </div>
+      </header>
+      <script src="js/runtime.js"></script>
+      <script src="js/vendors.js"></script>
+      <script src="js/main.js"></script>
+    </body>
+  </html>
+  <div class="container">
+    <div class="all container-main">
+      <main class="content">
+        <div class="title-page">Мои подписки</div>
+        <div class="main-section-list">
+          <section class="section-box">
+            <div class="section-box__header">
+              <div class="section-box__header-title">
+                1С Онлайн
+                <div class="label-status">Активна</div>
+              </div>
+              <div class="section-box__header-icon"><img src="img/logo-1c.svg" alt="" /></div>
+            </div>
+            <div class="section-box__body">
+              <div class="main-info-boxes">
+                <div class="box-row">
+                  <div class="box-col2">
+                    <div class="main-info-box">
+                      <div class="num">8</div>
+                      <div class="text">
+                        <div class="title">Пользователей</div>
+                        <div class="b-link">
+                          <a class="link-plus" href="#"
+                            ><svg class="svg-icon ic16"><use xlink:href="#icon-ic-plus"></use></svg> Добавить
+                            пользователя</a
+                          >
+                        </div>
+                      </div>
+                      <div class="icon-bg">
+                        <svg class="svg-icon"><use xlink:href="#icon-users-profiles-variant"></use></svg>
+                      </div>
+                    </div>
+                    <div class="main-info-box">
+                      <div class="num">6</div>
+                      <div class="text">
+                        <div class="title">Количество БД</div>
+                        <div class="b-link">
+                          <a class="link-plus" href="#"
+                            ><svg class="svg-icon ic16"><use xlink:href="#icon-ic-plus"></use></svg> Добавить базу</a
+                          >
+                        </div>
+                      </div>
+                      <div class="icon-bg">
+                        <svg class="svg-icon"><use xlink:href="#icon-databases"></use></svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-col2">
+                    <div class="main-info-box">
+                      <div class="num">2</div>
+                      <div class="text">
+                        <div class="title">Доступно бесплатных консультаций из 2</div>
+                        <p>Количество консультаций обновиться чере 27 дней</p>
+                        <div class="b-link">
+                          <a class="link-plus" href="#"
+                            ><svg class="svg-icon ic16"><use xlink:href="#icon-ic-plus"></use></svg> Оставить заявку</a
+                          >
+                        </div>
+                      </div>
+                      <div class="icon-bg">
+                        <svg class="svg-icon stroke-none"><use xlink:href="#icon-support-human"></use></svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box-row">
+                  <div class="box-col1">
+                    <div class="main-info-box">
+                      <div class="box-price">
+                        <div class="box-price__header">
+                          <div class="price">
+                            <div class="price-wrap">
+                              <div class="price-label">58 200 ₸‬</div>
+                              в месяц
+                            </div>
+                          </div>
+                          <div class="info-text">
+                            <div class="b-text">Коротко, как происходит списывание каждый месяц или другая инфа.</div>
+                            <div class="b-right"><button class="btn --outline">Детализация</button></div>
+                          </div>
+                        </div>
+                        <div class="box-price__toggler"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section-box">
+            <div class="section-box__header --red-bg">
+              <div class="section-box__header-title">
+                1С Хостинг
+                <div class="label-status --stop">Остановлена</div>
+              </div>
+              <div class="section-box__header-icon"><img src="/img/logo-1c.svg" alt="" /></div>
+            </div>
+            <div class="section-box__body">
+              <div class="main-info-boxes">
+                <div class="box-row">
+                  <div class="box-col2">
+                    <div class="main-info-box">
+                      <div class="num">8</div>
+                      <div class="text">
+                        <div class="title">Пользователей</div>
+                        <div class="b-link">
+                          <a class="link-plus" href="#"
+                            ><svg class="svg-icon ic16"><use xlink:href="#icon-ic-plus"></use></svg> Добавить
+                            пользователя</a
+                          >
+                        </div>
+                      </div>
+                      <div class="icon-bg">
+                        <svg class="svg-icon"><use xlink:href="#icon-users-profiles-variant"></use></svg>
+                      </div>
+                    </div>
+                    <div class="main-info-box">
+                      <div class="num">6</div>
+                      <div class="text">
+                        <div class="title">Количество БД</div>
+                        <div class="b-link">
+                          <a class="link-plus" href="#"
+                            ><svg class="svg-icon ic16"><use xlink:href="#icon-ic-plus"></use></svg> Добавить базу</a
+                          >
+                        </div>
+                      </div>
+                      <div class="icon-bg">
+                        <svg class="svg-icon"><use xlink:href="#icon-databases"></use></svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-col2">
+                    <div class="main-info-box">
+                      <div class="num">2</div>
+                      <div class="text">
+                        <div class="title">Доступно бесплатных консультаций из 2</div>
+                        <p>Количество консультаций обновиться чере 27 дней</p>
+                        <div class="b-link">
+                          <a class="link-plus" href="#"
+                            ><svg class="svg-icon ic16"><use xlink:href="#icon-ic-plus"></use></svg> Добавить
+                            пользователя</a
+                          >
+                        </div>
+                      </div>
+                      <div class="icon-bg">
+                        <svg class="svg-icon stroke-none"><use xlink:href="#icon-support-human"></use></svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box-row">
+                  <div class="box-col1">
+                    <div class="main-info-box">
+                      <div class="box-price">
+                        <div class="box-price__header">
+                          <div class="price">
+                            <div class="price-wrap">
+                              <div class="price-label">58 200 ₸‬</div>
+                              в месяц
+                            </div>
+                          </div>
+                          <div class="info-text">
+                            <div class="b-text">Коротко, как происходит списывание каждый месяц или другая инфа.</div>
+                            <div class="b-right"><button class="btn --outline">Свернуть</button></div>
+                          </div>
+                        </div>
+                        <div class="box-price__toggler --active">
+                          <div class="table-table">
+                            <div class="row">
+                              <div class="col first">39 200 ₸</div>
+                              <div class="col text">
+                                <strong>1С Онлайн:</strong> 4900 x 8 (1 пользователь - 500₸) = 39200₸
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col first">0 ₸</div>
+                              <div class="col text"><strong>Платная консультация:</strong> 0 ₸</div>
+                            </div>
+                            <div class="row">
+                              <div class="col first">6 000 ₸</div>
+                              <div class="col text">
+                                <strong>Доступ RDP:</strong> 2 (1 - пользователь 3000₸) = 6000 ₸
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section-box">
+            <div class="section-box__header --red-bg">
+              <div class="section-box__header-title">
+                1С Фреш - Базовый
+                <div class="label-status">Активна</div>
+              </div>
+              <div class="section-box__header-icon"><img src="img/logo-1c.svg" alt="" /></div>
+            </div>
+            <div class="section-box__body">
+              <div class="main-info-boxes">
+                <div class="box-row">
+                  <div class="box-col1">
+                    <div class="main-info-box">
+                      <div class="box-dates">
+                        <div class="box-dates__header">
+                          <div class="dates">
+                            <div class="dates-wrap">
+                              <div class="date-label">Дата активации</div>
+                              14.02.24
+                            </div>
+                          </div>
+                          <div class="dates">
+                            <div class="dates-wrap">
+                              <div class="date-label">Дата завершения</div>
+                              14.02.25
+                            </div>
+                          </div>
+                          <div class="dates">
+                            <div class="dates-wrap">
+                              <div class="date-label">Осталось</div>
+                              68 дней
+                            </div>
+                          </div>
+                          <div class="b-right"><button class="btn">Продлить</button></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section-box">
+            <div class="section-box__header --red-bg">
+              <div class="section-box__header-title">
+                1С Фреш - Базовый
+                <div class="label-status">Активна</div>
+              </div>
+              <div class="section-box__header-icon"><img src="img/logo-1c.svg" alt="" /></div>
+            </div>
+            <div class="section-box__body">
+              <div class="main-info-boxes">
+                <div class="box-row">
+                  <div class="box-col1">
+                    <div class="main-info-box">
+                      <div class="box-price">
+                        <div class="box-price__header">
+                          <div class="price">
+                            <div class="price-wrap">
+                              <div class="price-label">58 200 ₸‬</div>
+                              в месяц
+                            </div>
+                          </div>
+                          <div class="info-text">
+                            <div class="b-text">Коротко, как происходит списывание каждый месяц или другая инфа.</div>
+                            <div class="b-right"><button class="btn --outline">Детализация</button></div>
+                          </div>
+                        </div>
+                        <div class="box-price__toggler"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section-box">
+            <div class="section-box__header --blue-bg">
+              <div class="section-box__header-title">
+                Текст в две строки Текст в две строкиТекст в две строки Текст в две строки без
+                <div class="label-status">Активна</div>
+              </div>
+              <div class="section-box__header-icon"><img src="img/kaspersky.svg" alt="" /></div>
+            </div>
+            <div class="section-box__body">
+              <div class="main-info-boxes">
+                <div class="box-row">
+                  <div class="box-col1">
+                    <div class="main-info-box">
+                      <div class="box-price">
+                        <div class="box-price__header">
+                          <div class="price">
+                            <div class="price-wrap"><div class="price-label">58 200 ₸‬</div></div>
+                          </div>
+                          <div class="info-text">
+                            <div class="b-text">Коротко, как происходи</div>
+                            <div class="b-right"><button class="btn --outline">Продлить</button></div>
+                          </div>
+                        </div>
+                        <div class="box-price__toggler"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section-box">
+            <div class="section-box__header">
+              <div class="section-box__header-title">Noname product без логотипа</div>
+            </div>
+            <div class="section-box__body">
+              <div class="main-info-boxes">
+                <div class="box-row">
+                  <div class="box-col1">
+                    <div class="main-info-box">
+                      <div class="box-price">
+                        <div class="box-price__header">
+                          <div class="price">
+                            <div class="price-wrap">
+                              <div class="price-label">58 200 ₸‬</div>
+                              в месяц
+                            </div>
+                          </div>
+                          <div class="info-text">
+                            <div class="b-text">Коротко, как происх</div>
+                            <div class="b-right"><button class="btn --outline">Продлить</button></div>
+                          </div>
+                        </div>
+                        <div class="box-price__toggler"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section-box">
+            <div class="section-box__header --blue-bg">
+              <div class="section-box__header-title">Подписки Microsoft</div>
+              <div class="section-box__header-icon"><img src="img/microsoft.svg" alt="" /></div>
+            </div>
+            <div class="section-box__body">
+              <div class="main-subscribe-list">
+                <div class="main-subscribe-box">
+                  <div class="main-subscribe-box__wrapper">
+                    <div class="label-status">Активна</div>
+                    <div class="main-subscribe-box__image"><img src="img/subs-1.svg" alt="" /></div>
+                    <div class="main-subscribe-box__bottom">
+                      <div class="main-subscribe-box__text">Количество 37</div>
+                      <div class="main-subscribe-box__title">Exchange Online (Plan 1)</div>
+                    </div>
+                    <div class="main-subscribe-box__float">
+                      <div class="float-header">
+                        <div class="float-title">Exchange Online (Plan 1)</div>
+                        <div class="float-text">
+                          <div class="b-stop"><a href="#" class="link-stop">Остановить подписку</a></div>
+                          Остерегающий сопроводительный текст
+                        </div>
+                      </div>
+                      <div class="float-bottom">
+                        <div class="number-checker">
+                          <button class="number-checker__btn">
+                            <svg class="svg-icon"><use xlink:href="#icon-ic-plus"></use></svg>
+                          </button>
+                          <input class="number-checker__input" value="1" />
+                          <button class="number-checker__btn">
+                            <svg class="svg-icon"><use xlink:href="#icon-ic-minus"></use></svg>
+                          </button>
+                        </div>
+                        <div class="b-btn"><button class="btn --full">Сохранить</button></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-subscribe-box --bg2">
+                  <div class="main-subscribe-box__wrapper">
+                    <div class="label-status">Активна</div>
+                    <div class="main-subscribe-box__image"><img src="img/subs-2.svg" alt="" /></div>
+                    <div class="main-subscribe-box__bottom">
+                      <div class="main-subscribe-box__text">Количество 37</div>
+                      <div class="main-subscribe-box__title">Power BI Pro</div>
+                    </div>
+                    <div class="main-subscribe-box__float">
+                      <div class="float-header">
+                        <div class="float-title">Exchange Online (Plan 1)</div>
+                        <div class="float-text">
+                          <div class="b-stop"><a href="#" class="link-stop">Остановить подписку</a></div>
+                          Остерегающий сопроводительный текст
+                        </div>
+                      </div>
+                      <div class="float-bottom">
+                        <div class="number-checker">
+                          <button class="number-checker__btn">
+                            <svg class="svg-icon"><use xlink:href="#icon-ic-plus"></use></svg>
+                          </button>
+                          <input class="number-checker__input" value="1" />
+                          <button class="number-checker__btn">
+                            <svg class="svg-icon"><use xlink:href="#icon-ic-minus"></use></svg>
+                          </button>
+                        </div>
+                        <div class="b-btn"><button class="btn --full">Сохранить</button></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-subscribe-box --bg3">
+                  <div class="main-subscribe-box__wrapper">
+                    <div class="label-status">Активна</div>
+                    <div class="main-subscribe-box__image"><img src="img/subs-3.svg" alt="" /></div>
+                    <div class="main-subscribe-box__bottom">
+                      <div class="main-subscribe-box__text">Количество 37</div>
+                      <div class="main-subscribe-box__title">Хранилище блочных Blob-объектов, обще...</div>
+                    </div>
+                    <div class="main-subscribe-box__float">
+                      <div class="float-header">
+                        <div class="float-title">Exchange Online (Plan 1)</div>
+                        <div class="float-text">
+                          <div class="b-stop"><a href="#" class="link-stop">Остановить подписку</a></div>
+                          Остерегающий сопроводительный текст
+                        </div>
+                      </div>
+                      <div class="float-bottom">
+                        <div class="number-checker">
+                          <button class="number-checker__btn">
+                            <svg class="svg-icon"><use xlink:href="#icon-ic-plus"></use></svg>
+                          </button>
+                          <input class="number-checker__input" value="1" />
+                          <button class="number-checker__btn">
+                            <svg class="svg-icon"><use xlink:href="#icon-ic-minus"></use></svg>
+                          </button>
+                        </div>
+                        <div class="b-btn"><button class="btn --full">Сохранить</button></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-subscribe-box --bg4">
+                  <div class="main-subscribe-box__wrapper">
+                    <div class="label-status">Активна</div>
+                    <div class="main-subscribe-box__image"><img src="img/subs-4.svg" alt="" /></div>
+                    <div class="main-subscribe-box__bottom">
+                      <div class="main-subscribe-box__text">Количество 37</div>
+                      <div class="main-subscribe-box__title">Приложения Microsoft Business 365</div>
+                    </div>
+                    <div class="main-subscribe-box__float">
+                      <div class="float-header">
+                        <div class="float-title">Exchange Online (Plan 1)</div>
+                        <div class="float-text">
+                          <div class="b-stop"><a href="#" class="link-stop">Остановить подписку</a></div>
+                          Остерегающий сопроводительный текст
+                        </div>
+                      </div>
+                      <div class="float-bottom">
+                        <div class="number-checker">
+                          <button class="number-checker__btn">
+                            <svg class="svg-icon"><use xlink:href="#icon-ic-plus"></use></svg>
+                          </button>
+                          <input class="number-checker__input" value="1" />
+                          <button class="number-checker__btn">
+                            <svg class="svg-icon"><use xlink:href="#icon-ic-minus"></use></svg>
+                          </button>
+                        </div>
+                        <div class="b-btn"><button class="btn --full">Сохранить</button></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-subscribe-box --bg5">
+                  <div class="main-subscribe-box__wrapper">
+                    <div class="label-status">Активна</div>
+                    <div class="main-subscribe-box__image"><img src="img/subs-5.svg" alt="" /></div>
+                    <div class="main-subscribe-box__bottom">
+                      <div class="main-subscribe-box__text">Количество 37</div>
+                      <div class="main-subscribe-box__title">Microsoft решения для корпоративного</div>
+                    </div>
+                    <div class="main-subscribe-box__float">
+                      <div class="float-header">
+                        <div class="float-title">Exchange Online (Plan 1)</div>
+                        <div class="float-text">
+                          <div class="b-stop"><a href="#" class="link-stop">Остановить подписку</a></div>
+                          Остерегающий сопроводительный текст
+                        </div>
+                      </div>
+                      <div class="float-bottom">
+                        <div class="number-checker">
+                          <button class="number-checker__btn">
+                            <svg class="svg-icon"><use xlink:href="#icon-ic-plus"></use></svg>
+                          </button>
+                          <input class="number-checker__input" value="1" />
+                          <button class="number-checker__btn">
+                            <svg class="svg-icon"><use xlink:href="#icon-ic-minus"></use></svg>
+                          </button>
+                        </div>
+                        <div class="b-btn"><button class="btn --full">Сохранить</button></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-subscribe-box --bg7">
+                  <div class="main-subscribe-box__wrapper">
+                    <div class="label-status">Активна</div>
+                    <div class="main-subscribe-box__image"><img src="img/subs-5.svg" alt="" /></div>
+                    <div class="main-subscribe-box__bottom">
+                      <div class="main-subscribe-box__text">Количество 37</div>
+                      <div class="main-subscribe-box__title">Заглушка для любой продукции Microsoft</div>
+                    </div>
+                    <div class="main-subscribe-box__float">
+                      <div class="float-header">
+                        <div class="float-title">Exchange Online (Plan 1)</div>
+                        <div class="float-text">
+                          <div class="b-stop"><a href="#" class="link-stop">Остановить подписку</a></div>
+                          Остерегающий сопроводительный текст
+                        </div>
+                      </div>
+                      <div class="float-bottom">
+                        <div class="number-checker">
+                          <button class="number-checker__btn">
+                            <svg class="svg-icon"><use xlink:href="#icon-ic-plus"></use></svg>
+                          </button>
+                          <input class="number-checker__input" value="1" />
+                          <button class="number-checker__btn">
+                            <svg class="svg-icon"><use xlink:href="#icon-ic-minus"></use></svg>
+                          </button>
+                        </div>
+                        <div class="b-btn"><button class="btn --full">Сохранить</button></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-subscribe-box">
+                  <div class="main-subscribe-box__wrapper">
+                    <div class="label-status">Активна</div>
+                    <div class="main-subscribe-box__image"><img src="img/subs-1.svg" alt="" /></div>
+                    <div class="main-subscribe-box__bottom">
+                      <div class="main-subscribe-box__text">Количество 37</div>
+                      <div class="main-subscribe-box__title">Exchange Online (Plan 1)</div>
+                    </div>
+                    <div class="main-subscribe-box__float">
+                      <div class="float-header">
+                        <div class="float-title">Exchange Online (Plan 1)</div>
+                        <div class="float-text">
+                          <div class="b-stop"><a href="#" class="link-stop">Остановить подписку</a></div>
+                          Остерегающий сопроводительный текст
+                        </div>
+                      </div>
+                      <div class="float-bottom">
+                        <div class="number-checker">
+                          <button class="number-checker__btn">
+                            <svg class="svg-icon"><use xlink:href="#icon-ic-plus"></use></svg>
+                          </button>
+                          <input class="number-checker__input" value="1" />
+                          <button class="number-checker__btn">
+                            <svg class="svg-icon"><use xlink:href="#icon-ic-minus"></use></svg>
+                          </button>
+                        </div>
+                        <div class="b-btn"><button class="btn --full">Сохранить</button></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <aside class="aside-left">
+        <div class="aside-nav">
+          <ul class="aside-nav__list">
+            <li class="aside-nav__item --active">
+              <a href="#" class="aside-nav__link"
+                ><svg class="svg-icon"><use xlink:href="#icon-ic-menu-lk"></use></svg> <span>Личный кабинет</span></a
               >
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__link"
+                ><svg class="svg-icon"><use xlink:href="#icon-ic-menu-doc"></use></svg> <span>Счета, документы</span></a
+              >
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__link"
+                ><svg class="svg-icon"><use xlink:href="#icon-ic-menu-bd"></use></svg> <span>Базы данных</span></a
+              >
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__link"
+                ><svg class="svg-icon"><use xlink:href="#icon-ic-menu-user"></use></svg> <span>Пользователи</span></a
+              >
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__link"
+                ><svg class="svg-icon"><use xlink:href="#icon-ic-menu-support"></use></svg> <span>Поддержка</span></a
+              >
+            </li>
+          </ul>
+          <ul class="aside-nav__list">
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__link"
+                ><svg class="svg-icon"><use xlink:href="#icon-ic-menu-store"></use></svg> <span>Услуги+</span>
+                <span class="aside-nav__badge">243</span></a
+              >
+            </li>
+          </ul>
+          <ul class="aside-nav__list">
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__link"
+                ><img src="img/ic-menu-dw.svg" alt="1C" class="aside-nav__icon-img" />
+                <span>Программа для входа 1С</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <aside class="aside-right">
+        <div class="aside-box --congrats">
+          <div class="aside-box__image"><img style="margin-top: -6px" src="img/info1.png" alt="" /></div>
+          <div class="aside-box__body">
+            <div class="aside-box__title">Поздравляем!</div>
+            <div class="aside-box__content">
+              <p>Мы активировали платный тариф в подарок</p>
+              <div class="aside-box__days">
+                <span class="day">14</span> <span class="text">дней<br />осталось</span>
+              </div>
+              <button class="btn --outline --full">Подробнее</button>
             </div>
           </div>
-          <div class="just-modal-form__row"><button class="btn btn--full" type="submit">Отправить</button></div>
+        </div>
+        <div class="aside-box">
+          <div class="aside-box__h-title">Часто<br />используемые БД:</div>
+          <div class="aside-box__content">
+            <ul class="aside-db-list">
+              <li class="aside-db-item"><a class="link" href="#">Учет и поставки «ТОО Тулпар»</a></li>
+              <li class="aside-db-item">
+                <a class="link" href="#">Бухгалтерия и склад «ТОО Алматы Логистик» длинны....</a>
+              </li>
+              <li class="aside-db-item"><a class="link" href="#">Налоговый учет «ТОО НурКапитал»</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="aside-box">
+          <div class="aside-box__h-title">Неоплаченные счета:</div>
+          <div class="aside-box__content">
+            <ul class="aside-invoices-list">
+              <li class="aside-invoices-item">
+                <div class="date">14.30.56</div>
+                <a class="link" href="#">Бухгалтерия и склад «ТОО Алматы Логистик» длинны текст до 4 строк оста...</a>
+                <div class="b-btn"><a href="#" class="btn --outline --full">Оплатить</a></div>
+              </li>
+              <li class="aside-invoices-item">
+                <div class="date">14.30.56</div>
+                <a class="link" href="#">Бухгалтерия и склад «ТОО Алматы Логистик» длинны текст до 4 строк оста...</a>
+                <div class="b-btn"><a href="#" class="btn --outline --full">Оплатить</a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="aside-box">
+          <div class="aside-box__image"><img style="margin-top: -10px" src="img/info2.png" alt="" /></div>
+          <div class="aside-box__body">
+            <div class="aside-box__title">Пора переходить на тариф</div>
+            <div class="aside-box__content"><button class="btn --full">Подробнее</button></div>
+          </div>
+        </div>
+        <div class="aside-box">
+          <div class="aside-box__h-title">Неоплаченные счета:</div>
+          <div class="aside-box__content">
+            <ul class="aside-invoices-list">
+              <li class="aside-invoices-item">
+                <div class="date">14.30.56</div>
+                <a class="link" href="#">Бухгалтерия и склад «ТОО Алматы Логистик» длинны текст до 4 строк оста...</a>
+                <div class="b-btn"><a href="#" class="btn --outline --full">Оплатить</a></div>
+              </li>
+              <li class="aside-invoices-item">
+                <div class="date">14.30.56</div>
+                <a class="link" href="#">Бухгалтерия и склад «ТОО Алматы Логистик» длинны текст до 4 строк оста...</a>
+                <div class="b-btn"><a href="#" class="btn --outline --full">Оплатить</a></div>
+              </li>
+              <li><a class="all-checout" href="#">Все счета +2</a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="all">
+      <div class="footer-left">
+        <ul class="footer-nav">
+          <li><a href="">Поддержка</a></li>
+          <li><a href="">Блог</a></li>
+          <li><a href="">Инструкции</a></li>
+          <li><a href="">О компании</a></li>
+          <li><a href="">Отзывы</a></li>
+          <li><a href="">Акции</a></li>
+          <li><a href="">Написать директору</a></li>
+        </ul>
+        <div class="footer-submenu">
+          <div class="col --col1">
+            <div class="footer-submenu__box">
+              <div class="submenu-title">
+                <a class="submenu-title__link" href="#"
+                  ><span class="submenu-title__link-label">1С Онлайн</span>
+                  <svg class="svg-icon"><use xlink:href="#icon-next-go"></use></svg
+                ></a>
+              </div>
+              <ul class="submenu-list">
+                <li class="submenu-item">
+                  <div class="submenu-item__col"><a href="#">Облачная 1С</a></div>
+                  <div class="submenu-item__col"><a href="#">1C облако что это?</a></div>
+                </li>
+                <li class="submenu-item"><a href="#">Для бухгалтеров и бухгалтерских компаний</a></li>
+                <li class="submenu-item"><a href="#">1C Онлайн – сервис для Предпринимателей</a></li>
+                <li class="submenu-item"><a href="#">Удаленная работа в 1С</a></li>
+                <li class="submenu-item"><a href="#">Аренда 1С</a></li>
+                <li class="submenu-item"><a href="#">ИТС</a></li>
+                <li class="submenu-item"><a href="#">Тарифы 1С онлайн</a></li>
+              </ul>
+            </div>
+            <div class="footer-submenu__box">
+              <div class="submenu-title">
+                <a class="submenu-title__link" href="#"
+                  ><span class="submenu-title__link-label">Услуги+</span>
+                  <svg class="svg-icon"><use xlink:href="#icon-next-go"></use></svg
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col --col2">
+            <div class="footer-submenu__box">
+              <div class="submenu-title">
+                <a class="submenu-title__link" href="#"
+                  ><span class="submenu-title__link-label">Купить 1С</span>
+                  <svg class="svg-icon"><use xlink:href="#icon-next-go"></use></svg
+                ></a>
+              </div>
+              <ul class="submenu-list">
+                <li class="submenu-item"><a href="#">1С Аптека для Казахстана</a></li>
+                <li class="submenu-item"><a href="#">1С Бухгалтерия для Казахстана</a></li>
+                <li class="submenu-item"><a href="#">1С Управление торговлей для Казахстана</a></li>
+                <li class="submenu-item"><a href="#">1С Управление торговым предприятием для Казахстана</a></li>
+                <li class="submenu-item"><a href="#">1С Бухгалтерия сельскохозяйственного предприятия</a></li>
+                <li class="submenu-item"><a href="#">1С Комплексная автоматизация</a></li>
+                <li class="submenu-item"><a href="#">1С Управление нашей фирмой</a></li>
+                <li class="submenu-item"><a href="#">1С Зарплата и Управление Персоналом</a></li>
+                <li class="submenu-item"><a href="#">1С Документооборот</a></li>
+                <li class="submenu-item"><a href="#">1С Розница</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col --col3">
+            <div class="footer-submenu__box">
+              <div class="submenu-title">
+                <a class="submenu-title__link" href="#"
+                  ><span class="submenu-title__link-label">1С Фреш</span>
+                  <svg class="svg-icon"><use xlink:href="#icon-next-go"></use></svg
+                ></a>
+              </div>
+              <ul class="submenu-list">
+                <li class="submenu-item"><a href="#">1С: Фреш для конфигураций</a></li>
+                <li class="submenu-item"><a href="#">1С: Бухгалтерия ОСИ, ПТ, УК, СК, КСК для Казахстана</a></li>
+                <li class="submenu-item"><a href="#">1С: Управление нашей фирмой для Казахстана</a></li>
+                <li class="submenu-item"><a href="#">1С: Фреш Кассир</a></li>
+              </ul>
+            </div>
+            <div class="footer-submenu__box">
+              <div class="submenu-title">
+                <a class="submenu-title__link" href="#"
+                  ><span class="submenu-title__link-label">1С Хостинг</span>
+                  <svg class="svg-icon"><use xlink:href="#icon-next-go"></use></svg
+                ></a>
+              </div>
+            </div>
+            <div class="footer-submenu__box">
+              <div class="submenu-title">
+                <a class="submenu-title__link" href="#"
+                  ><span class="submenu-title__link-label">1С Сервер</span>
+                  <svg class="svg-icon"><use xlink:href="#icon-next-go"></use></svg
+                ></a>
+              </div>
+              <ul class="submenu-list">
+                <li class="submenu-item"><a href="#">Аренда тарифы</a></li>
+                <li class="submenu-item"><a href="#">1С Бухгалтерия для Казахстана</a></li>
+                <li class="submenu-item"><a href="#">1С Сервер на Linux c PostgreSQL</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="just-modal__close-wrapper">
-        <button class="just-modal__close js-just-modal__close" type="button">
-          <svg class="svg-icon svg-icon--close"><use xlink:href="#icon-close"></use></svg>
-        </button>
+      <div class="footer-right">
+        <div class="footer-support">
+          <div class="footer-support__title">Служба поддержки пользователей:</div>
+          <div class="footer-support__phone">
+            <svg class="svg-icon"><use xlink:href="#icon-i-phone"></use></svg>
+            <a href="tel:+7 747 150-40-81">+7 747 150-40-81</a>
+          </div>
+          <div class="footer-support__btn"><a href="#" class="btn --outline --full">Поддержка</a></div>
+        </div>
+        <div class="footer-local">
+          100024, Казахстан Караганда
+          <strong
+            ><svg class="svg-icon"><use xlink:href="#icon-i-addr"></use></svg> мкр. Степной-2, стр. 6/1,</strong
+          >
+          офис 200
+        </div>
+        <div class="footer-email">
+          <div class="footer-email__title">По всем вопросам:</div>
+          <div class="footer-email__link">
+            <a href="#"
+              ><svg class="svg-icon"><use xlink:href="#icon-i-mail"></use></svg> info@itsheff.kz</a
+            >
+          </div>
+        </div>
+        <ul class="footer-socs">
+          <li>
+            <a href="#"
+              ><svg class="svg-icon"><use xlink:href="#icon-soc-fb"></use></svg
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><svg class="svg-icon"><use xlink:href="#icon-soc-in"></use></svg
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><svg class="svg-icon"><use xlink:href="#icon-soc-lin"></use></svg
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><svg class="svg-icon"><use xlink:href="#icon-soc-you"></use></svg
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="all">
+        <div class="footer-bottom__left">
+          <a href="#" class="footer-bottom__logo"><img src="img/logo-foot.svg" alt="SHEFF" /></a>
+          <div class="footer-bottom__copyright">© 2011-2024 ITSheff. Все права защищены</div>
+        </div>
+        <div class="footer-bottom__right">
+          <a href="#" class="footer-bottom__link">Соглашение публичной оферты ТОО "ITsheff.kz"</a>
+          <a href="#" class="footer-bottom__link">Соглашение публичной оферты ИП SAAS</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="just-modal" id="modal-support">
+    <div class="just-modal__wrapper">
+      <div class="just-modal__overlay"></div>
+      <div class="just-modal__container">
+        <div class="just-modal__body">
+          <div class="just-modal__header">
+            <div class="just-modal-title h2-title">служба поддержки</div>
+            <div class="just-modal-subtitle">Опишите вашу проблему.</div>
+          </div>
+          <div class="just-modal-form">
+            <div class="just-modal-form__row"><label class="label">Имя</label> <input class="input" /></div>
+            <div class="just-modal-form__row"><label class="label">E-mail</label> <input class="input" /></div>
+            <div class="just-modal-form__row">
+              <label class="label">Ваша проблема</label> <textarea class="textarea"></textarea>
+            </div>
+            <div class="just-modal-form__row pb-32">
+              <div class="b-checkbox">
+                <input type="checkbox" id="fff" />
+                <label class="b-checkbox__label" for="fff"
+                  ><span class="checked"
+                    ><svg class="svg-icon svg-icon--check"><use xlink:href="#icon-check"></use></svg> </span
+                  ><span class="b-checkbox__text"
+                    >Согласен на <a href="#">обработку персональных данных</a></span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="just-modal-form__row"><button class="btn btn--full" type="submit">Отправить</button></div>
+          </div>
+        </div>
+        <div class="just-modal__close-wrapper">
+          <button class="just-modal__close js-just-modal__close" type="button">
+            <svg class="svg-icon svg-icon--close"><use xlink:href="#icon-close"></use></svg>
+          </button>
+        </div>
       </div>
     </div>
   </div>

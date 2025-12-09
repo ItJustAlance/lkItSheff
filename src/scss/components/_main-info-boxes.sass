@@ -6,6 +6,8 @@
   .box-row
     display: flex
     gap: 12px
+    +r($md - 1)
+      flex-wrap: wrap
   .box-col1
     display: flex
     flex-direction: column
@@ -16,24 +18,53 @@
     flex-direction: column
     gap: 12px
     flex: 0 0 calc(50% - 6px)
+    +r($md - 1)
+      flex: 0 0 100%
     
 .main-info-box
   background: #fff
   border: 1px solid #E1E4E7
   border-radius: 10px
-  padding: 28px 24px 28px 28px
+  padding: 24px 24px 24px 28px
   display: flex
   gap: 24px
   font-size: 16px
   flex: 1 1 auto
   box-shadow: 0px 1px 2px 0px #0000001A
-  &.--user
-    background: #fff url(/img/users-profiles-variant.svg) calc(100% - 28px) 100% no-repeat
-    
-  &.--bd
-    background: #fff url(/img/databases.svg) calc(100% - 28px) 100% no-repeat
-  &.--consul
-    background: #fff url(/img/support-human.svg) calc(100% - 28px) 100% no-repeat
+  line-height: 1.2
+  position: relative
+  transition: all $transitionSpeed $ease
+  & > *
+    z-index: 2
+  
+  .icon-bg
+    position: absolute
+    bottom: 0
+    right: 28px
+    color: #F0F2F4
+    overflow: hidden
+    z-index: 1
+    svg
+      width: 64px
+      height: 64px
+      stroke: currentColor
+      transition: all 0.3s $ease
+      &.stroke-none
+        stroke: none
+
+  &:hover
+    box-shadow: 0px 1px 2px 0px #0000001A
+    border-color: #CBD2D9
+    background: #E1E4E7
+    +r($sm)
+      background: inherit
+      box-shadow: 0px 1px 2px 0px #0000001A
+    .icon-bg
+      color: #CBD2D9
+      svg
+        margin-bottom: 5px
+        +r($sm)
+          margin-bottom: 0
   .num
     color: $black700
     font-size: 56px
@@ -43,20 +74,23 @@
   .title
     font-size: 18px
     color: $black700
-    
+    font-weight: 450
+    +r($sm)
+      font-size: 17px
   p
     margin: 0
     color: #8C8C8C
     padding: 20px 0 4px
   .b-link
-    margin-top: 16px
+    margin-top: 10px
   .link-plus
     color: $orangeMain500
     font-size: 16px
     display: flex
     align-items: center
     gap: 8px
-
+    svg
+      stroke: currentColor
 .box-dates
   display: flex
   gap: 24px
@@ -66,7 +100,16 @@
     display: flex
     gap: 24px
     width: 100%
+    +r($xl)
+      flex-wrap: wrap
+    
   .dates
+    +r($xl)
+      min-width: calc(50% - 24px)
+      max-width: calc(50% - 24px)
+      &:nth-child(2n - 2)
+        .dates-wrap
+          border: none
     &-wrap
       border-right: 1px solid $black100
       padding-right: 24px
@@ -79,6 +122,8 @@
       font-weight: 450
   .b-right
     margin-left: auto
+    +r($xl)
+      margin-left: 0
     
 .box-price
   display: flex
@@ -89,6 +134,8 @@
     display: flex
     gap: 24px
     width: 100%
+    +r($xl)
+      flex-direction: column
   &__toggler
     display: none
     &.--active
@@ -98,6 +145,8 @@
     font-size: 14px
     display: flex
     align-items: center
+    +r($xl)
+    
     &-wrap
       border-right: 1px solid $black100
       padding-right: 24px
@@ -105,6 +154,10 @@
       display: flex
       flex-direction: column
       gap: 6px
+      +r($xl)
+        border: none
+        padding: 0
+        flex-direction: row
     &-label
       font-size: 20px
       font-weight: 600
@@ -115,8 +168,19 @@
     display: flex
     gap: 24px
     flex: 1 1 auto
+    +r($xl)
+      flex-direction: column
     .b-text
       display: flex
       align-items: center
+      +r($sm)
+        display: -webkit-box
+        -webkit-line-clamp: 2
+        -webkit-box-orient: vertical
+        overflow: hidden
     .b-right
       margin-left: auto
+      +r($xl)
+        margin: 0
+        .btn
+          width: 100%
