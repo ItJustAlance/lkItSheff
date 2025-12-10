@@ -9,6 +9,11 @@
   border-bottom: 1px solid #E5E5E5
   +r($xl)
     padding: 10px 0 11px
+  +r($sm)
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
   .all
     display: flex
     align-items: center
@@ -32,8 +37,15 @@
     
   .burger-menu
     display: none
+    .--close
+      display: none
     +r($xl)
       display: block
+    &__btn.--menu-open
+      .--open
+        display: none
+      .--close
+        display: block
   .nav
     +r($xl)
       display: none

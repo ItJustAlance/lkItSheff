@@ -263,7 +263,9 @@ body
       .aside-nav__link
         background: #fff
         color: $black1000
-        
+        svg
+          fill: $black700
+          stroke: #fff
         
   
   &__link
@@ -293,7 +295,10 @@ body
       width: 20px
       height: 20px
       flex-shrink: 0
-      fill: currentColor
+      fill: none
+      stroke: currentColor
+      &.icon-ic-menu-lk
+        fill: none
       +r($xl)
         width: 24px
         height: 24px
