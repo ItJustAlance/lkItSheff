@@ -10,7 +10,15 @@
   <body>
     <header class="header">
       <div class="all">
-        <a href="#" class="logo"><img src="img/logo.svg" /></a>
+        <div class="burger-menu">
+          <div class="burger-menu__btn js-menu-open">
+            <svg class="svg-icon ic24 --open"><use xlink:href="#icon-menu-icon"></use></svg>
+            <svg class="svg-icon ic24 --close"><use xlink:href="#icon-menu-close"></use></svg>
+          </div>
+        </div>
+        <a href="#" class="logo"
+          ><svg class="svg-icon icon-logo"><use xlink:href="#icon-logo"></use></svg
+        ></a>
         <nav class="nav">
           <ul>
             <li class="nav-item">
@@ -119,11 +127,77 @@
         </div>
         <div class="header__right">
           <div class="header__notice">
-            <a href="#"
+            <a class="link-notice --no-notice --new-notice" href="#"
               ><svg class="svg-icon ic24"><use xlink:href="#icon-i-notice"></use></svg
             ></a>
+            <div class="header__notice-float">
+              <div class="header__notice-float-wrapper custom-scroll">
+                <div class="header__notice-float__header">
+                  <div class="title">Уведомления</div>
+                  <div class="btn-action"><a href="#" class="btn-clear --disabled">Очистить</a></div>
+                </div>
+                <div class="header__notice-float__body">
+                  <div class="notice-null">Уведомлений еще нет</div>
+                  <div class="header-notice-box">
+                    <div class="header-notice-box__text">Линия консультации - новое сообщение</div>
+                    <div class="header-notice-box__btn"><a href="#" class="btn --outline">Ответить</a></div>
+                  </div>
+                  <div class="header-notice-box">
+                    <div class="header-notice-box__text">Линия консультации - новое сообщение</div>
+                  </div>
+                  <div class="header-notice-box">
+                    <div class="header-notice-box__text">Линия консультации - новое сообщение</div>
+                    <div class="header-notice-box__btn"><a href="#" class="btn --outline">Ответить</a></div>
+                  </div>
+                  <div class="header-notice-box">
+                    <div class="header-notice-box__text">Линия консультации - новое сообщение</div>
+                    <div class="header-notice-box__btn"><a href="#" class="btn --outline">Ответить</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <a href="#" class="header__lk"><span>Личный кабинет</span></a>
+          <div class="header__lk">
+            <a href="#" class="header__lk-link"><span>Личный кабинет</span></a>
+            <div class="header__lk-menu">
+              <div class="header__lk-user">
+                <div class="header__lk-user__info">
+                  <a class="header__lk-user__info-link" href="#"><strong>Username</strong> Бухгалтер</a>
+                </div>
+                <div class="header__lk-user__logout">
+                  <a href="#"
+                    ><svg class="svg-icon ic24"><use xlink:href="#icon-out-exit"></use></svg
+                  ></a>
+                </div>
+              </div>
+              <ul class="header__lk-menu-list">
+                <li class="header__lk-menu__item">
+                  <a href="#" class="header__lk-menu__link"
+                    ><svg class="svg-icon icon-ic-menu-doc"><use xlink:href="#icon-ic-menu-doc"></use></svg>
+                    <span>Счета, документы</span> <span class="num">5</span></a
+                  >
+                </li>
+                <li class="header__lk-menu__item">
+                  <a href="#" class="header__lk-menu__link"
+                    ><svg class="svg-icon icon-ic-menu-bd"><use xlink:href="#icon-ic-menu-bd"></use></svg>
+                    <span>Базы данных</span></a
+                  >
+                </li>
+                <li class="header__lk-menu__item">
+                  <a href="#" class="header__lk-menu__link"
+                    ><svg class="svg-icon icon-ic-menu-user"><use xlink:href="#icon-ic-menu-user"></use></svg>
+                    <span>Пользователи</span></a
+                  >
+                </li>
+                <li class="header__lk-menu__item">
+                  <a href="#" class="header__lk-menu__link"
+                    ><svg class="svg-icon icon-ic-menu-support"><use xlink:href="#icon-ic-menu-support"></use></svg>
+                    <span>Поддержка</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -241,7 +315,7 @@
       <div class="footer-support">
         <div class="footer-support__title">Служба поддержки пользователей:</div>
         <div class="footer-support__phone">
-          <svg class="svg-icon"><use xlink:href="#icon-i-phone"></use></svg>
+          <svg class="svg-icon ic20"><use xlink:href="#icon-i-phone"></use></svg>
           <a href="tel:+7 747 150-40-81">+7 747 150-40-81</a>
         </div>
         <div class="footer-support__btn"><a href="#" class="btn --outline --full">Поддержка</a></div>
@@ -249,7 +323,7 @@
       <div class="footer-local">
         100024, Казахстан Караганда
         <strong
-          ><svg class="svg-icon"><use xlink:href="#icon-i-addr"></use></svg> мкр. Степной-2, стр. 6/1,</strong
+          ><svg class="svg-icon ic20"><use xlink:href="#icon-i-addr"></use></svg> мкр. Степной-2, стр. 6/1,</strong
         >
         офис 200
       </div>
@@ -257,7 +331,7 @@
         <div class="footer-email__title">По всем вопросам:</div>
         <div class="footer-email__link">
           <a href="#"
-            ><svg class="svg-icon"><use xlink:href="#icon-i-mail"></use></svg> info@itsheff.kz</a
+            ><svg class="svg-icon ic20"><use xlink:href="#icon-i-mail"></use></svg> info@itsheff.kz</a
           >
         </div>
       </div>
@@ -298,6 +372,202 @@
     </div>
   </div>
 </footer>
+<div class="mobile-toolbar">
+  <ul class="aside-nav__list">
+    <li class="aside-nav__item --active">
+      <a href="#" class="aside-nav__link"
+        ><svg class="svg-icon icon-ic-menu-lk"><use xlink:href="#icon-ic-menu-lk"></use></svg> <span>Кабинет</span></a
+      >
+    </li>
+    <li class="aside-nav__item --active">
+      <a href="#" class="aside-nav__link"
+        ><svg class="svg-icon icon-ic-menu-doc"><use xlink:href="#icon-ic-menu-doc"></use></svg> <span>Счета</span></a
+      >
+    </li>
+    <li class="aside-nav__item --active">
+      <a href="#" class="aside-nav__link"
+        ><svg class="svg-icon icon-ic-menu-bd"><use xlink:href="#icon-ic-menu-bd"></use></svg> <span>Базы</span></a
+      >
+    </li>
+    <li class="aside-nav__item --active">
+      <a href="#" class="aside-nav__link"
+        ><svg class="svg-icon icon-ic-menu-user"><use xlink:href="#icon-ic-menu-user"></use></svg>
+        <span>Пользователи</span></a
+      >
+    </li>
+    <li class="aside-nav__item --active">
+      <a href="#" class="aside-nav__link"
+        ><svg class="svg-icon icon-ic-menu-support"><use xlink:href="#icon-ic-menu-support"></use></svg>
+        <span>Поддержка</span></a
+      >
+    </li>
+  </ul>
+</div>
+<div class="mobile-menu__layout">
+  <div class="mobile-menu">
+    <div class="mobile-menu__menu">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <span class="mobile-menu__item-title --arr js-mobile-menu__item-title"
+            >1С Продукты <svg class="svg-icon"><use xlink:href="#icon-drop-downa-rrow"></use></svg
+          ></span>
+          <ul class="mobile-menu__submenu">
+            <li class="mobile-menu__submenu__item">
+              <span class="mobile-menu__item-title --arr js-mobile-menu__item-title"
+                >1С Онлайн <svg class="svg-icon"><use xlink:href="#icon-drop-downa-rrow"></use></svg
+              ></span>
+              <ul class="mobile-menu__submenu">
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Облачная 1С</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">1C облако что это?</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Для бухгалтеров и бухгалтерских компаний</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">1C Онлайн – сервис для Предпринимателей</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Удаленная работа в 1С</a>
+                </li>
+                <li class="mobile-menu__submenu__item"><a class="mobile-menu__submenu__link" href="#">Аренда 1С</a></li>
+                <li class="mobile-menu__submenu__item"><a class="mobile-menu__submenu__link" href="#">ИТС</a></li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Тарифы 1С онлайн</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mobile-menu__submenu__item">
+              <span class="mobile-menu__item-title --arr js-mobile-menu__item-title"
+                >Купить 1С <svg class="svg-icon"><use xlink:href="#icon-drop-downa-rrow"></use></svg
+              ></span>
+              <ul class="mobile-menu__submenu">
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Облачная 1С</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">1C облако что это?</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Для бухгалтеров и бухгалтерских компаний</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">1C Онлайн – сервис для Предпринимателей</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Удаленная работа в 1С</a>
+                </li>
+                <li class="mobile-menu__submenu__item"><a class="mobile-menu__submenu__link" href="#">Аренда 1С</a></li>
+                <li class="mobile-menu__submenu__item"><a class="mobile-menu__submenu__link" href="#">ИТС</a></li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Тарифы 1С онлайн</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mobile-menu__submenu__item">
+              <span class="mobile-menu__item-title --arr js-mobile-menu__item-title"
+                >1С Фреш <svg class="svg-icon"><use xlink:href="#icon-drop-downa-rrow"></use></svg
+              ></span>
+              <ul class="mobile-menu__submenu">
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Облачная 1С</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">1C облако что это?</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Для бухгалтеров и бухгалтерских компаний</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">1C Онлайн – сервис для Предпринимателей</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Удаленная работа в 1С</a>
+                </li>
+                <li class="mobile-menu__submenu__item"><a class="mobile-menu__submenu__link" href="#">Аренда 1С</a></li>
+                <li class="mobile-menu__submenu__item"><a class="mobile-menu__submenu__link" href="#">ИТС</a></li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Тарифы 1С онлайн</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mobile-menu__submenu__item"><span class="mobile-menu__item-title">1С Хостинг</span></li>
+            <li class="mobile-menu__submenu__item">
+              <span class="mobile-menu__item-title --arr js-mobile-menu__item-title"
+                >1С Сервер <svg class="svg-icon"><use xlink:href="#icon-drop-downa-rrow"></use></svg
+              ></span>
+              <ul class="mobile-menu__submenu">
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Облачная 1С</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">1C облако что это?</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Для бухгалтеров и бухгалтерских компаний</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">1C Онлайн – сервис для Предпринимателей</a>
+                </li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Удаленная работа в 1С</a>
+                </li>
+                <li class="mobile-menu__submenu__item"><a class="mobile-menu__submenu__link" href="#">Аренда 1С</a></li>
+                <li class="mobile-menu__submenu__item"><a class="mobile-menu__submenu__link" href="#">ИТС</a></li>
+                <li class="mobile-menu__submenu__item">
+                  <a class="mobile-menu__submenu__link" href="#">Тарифы 1С онлайн</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-menu__item"><span class="mobile-menu__item-title">Поддержка</span></li>
+        <li class="mobile-menu__item"><span class="mobile-menu__item-title">Блог</span></li>
+        <li class="mobile-menu__item"><span class="mobile-menu__item-title">Услуги+</span></li>
+        <li class="mobile-menu__item js-mobile-menu__item">
+          <span class="mobile-menu__item-title --arr js-mobile-menu__item-title"
+            >ITSheff <svg class="svg-icon"><use xlink:href="#icon-drop-downa-rrow"></use></svg
+          ></span>
+        </li>
+      </ul>
+    </div>
+    <div class="mobile-menu__footer">
+      <div class="footer-local">100024, Казахстан Караганда <strong>мкр. Степной-2, стр. 6/1, офис 200</strong></div>
+      <div class="footer-email">
+        <div class="footer-email__link"><a href="#">info@itsheff.kz</a></div>
+      </div>
+      <ul class="footer-socs">
+        <li>
+          <a href="#"
+            ><svg class="svg-icon"><use xlink:href="#icon-soc-fb"></use></svg
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><svg class="svg-icon"><use xlink:href="#icon-soc-in"></use></svg
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><svg class="svg-icon"><use xlink:href="#icon-soc-lin"></use></svg
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><svg class="svg-icon"><use xlink:href="#icon-soc-you"></use></svg
+          ></a>
+        </li>
+      </ul>
+      <div class="footer-support">
+        <div class="footer-support__title">круглосуточно без выходных</div>
+        <div class="footer-support__phone"><a href="tel:+7 747 150-40-81">+7 747 150-40-81</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu__layout-bg"></div>
+</div>
 <div class="just-modal" id="modal-support">
   <div class="just-modal__wrapper">
     <div class="just-modal__overlay"></div>

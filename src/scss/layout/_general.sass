@@ -32,7 +32,7 @@ p
 a
   color: $orangeMain500
   text-decoration: none
-  transition: all 0.3s ease
+  transition: all $transitionSpeed ease
   &:hover, &:focus
     text-decoration: none
     color: $orangeMain600
@@ -163,7 +163,10 @@ body
   margin: 0 auto
   +r($sm)
     padding: 0 16px
-    
+
+.container
+  +r($sm)
+    padding-bottom: 64px
 .container-main
   display: flex
   width: 100%
@@ -270,9 +273,8 @@ body
   
   &__link
     display: flex
-    align-items: center
     gap: 12px
-    padding: 8px 12px
+    padding: 11px 12px 9px
     border-radius: 10px
     color: $black700
     text-decoration: none
@@ -292,11 +294,12 @@ body
       display: flex
       align-items: center
     .svg-icon
-      width: 20px
-      height: 20px
+      width: 24px
+      height: 24px
       flex-shrink: 0
       fill: none
       stroke: currentColor
+      margin-top: -2px
       &.icon-ic-menu-lk
         fill: none
       +r($xl)
@@ -308,7 +311,7 @@ body
       height: 20px
       flex-shrink: 0
       object-fit: contain
-    
+      margin-top: 3px
     span:not(.aside-nav__badge)
       flex: 1 1 auto
     
@@ -323,10 +326,11 @@ body
     font-size: 12px
     font-weight: 600
     padding: 3px 8px 1px 10px
-    border-radius: 12px
+    border-radius: 2px
     min-width: 24px
     text-align: center
     flex-shrink: 0
+    line-height: 1
     +r($xl)
       font-size: 10px
       padding: 1px 6px 2px 6px

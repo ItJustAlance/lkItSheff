@@ -17,7 +17,7 @@
   .all
     display: flex
     align-items: center
-    gap: 40px
+    gap: 37px
     position: relative
     +r($sm)
       gap: 24px
@@ -26,14 +26,18 @@
     display: flex
     align-items: center
     flex-shrink: 0
-    margin-top: -3px
+    margin-top: 0
+    color: #F26135
+    &:hover
+      color: #D9481C
+    &:active
+      color: #C03B12
     +r($xl)
       margin-top: 0
-    img
+    svg
       height: 30px
-      width: auto
-      +r($sm)
-        height: 26px
+      width: 127px
+   
     
   .burger-menu
     display: none
@@ -66,7 +70,7 @@
       > a
         font-size: 16px
         font-weight: 400
-        color: $black700
+        color: $black1000
         text-decoration: none
         transition: color $transitionSpeed $ease
         display: flex
@@ -83,7 +87,7 @@
           position: absolute
           top: calc(100% + 9px)
           left: 0
-          transition: all $transitionSpeed $ease
+          transition: all 0.3s $ease
           opacity: 0
         &:hover, &.--active
           color: $black1000
@@ -96,7 +100,8 @@
             width: 12px
             transition: transform $transitionSpeed $ease
             display: inline-block
-            margin-left: 4px
+            margin-left: 2px
+            stroke: #C0C0C0
           &:hover .svg-icon
             transform: rotate(180deg)
             
@@ -158,7 +163,7 @@
         svg
           opacity: 1
           stroke: #D9D9D9
-          transition: all 0.3s ease
+          transition: all $transitionSpeed ease
           transform: translateX(0px)
         &:hover
           color: $black1000
@@ -200,7 +205,7 @@
     +r($xl)
       display: none
     a
-      color: $black700
+      color: $black1000
       text-decoration: none
       white-space: nowrap
       transition: color $transitionSpeed $ease
@@ -212,12 +217,16 @@
     align-items: center
     gap: 16px
     flex-shrink: 0
-    margin-left: 30px
+    margin-left: auto
+    margin-right: auto
     +r($xl)
       display: none
     &-btn
       +r($hd)
         display: none
+      .btn
+        padding-top: 7px
+        padding-bottom: 6px
     &-amount
       font-size: 16px
       color: $black700
@@ -232,25 +241,267 @@
   &__notice
     width: 56px
     text-align: center
+    color: $black700
+    position: relative
+    margin-bottom: -20px
+    padding-bottom: 20px
+    &::after
+      content: ""
+      height: 3px
+      width: 100%
+      background: $orangeMain500
+      display: block
+      position: absolute
+      top: calc(100% - 3px)
+      left: 0
+      transition: all 0.3s $ease
+      opacity: 0
+    &:hover
+      &::after
+        top: calc(100% - 7px)
+        opacity: 1
+      .header__notice-float
+        opacity: 1
+        visibility: visible
+    svg
+      stroke: currentColor
+    .link-notice
+      color: $black700
+      display: inline-block
+      vertical-align: top
+      position: relative
+      
+      &.--new-notice
+        &::before
+          content: ""
+          width: 8px
+          height: 8px
+          position: absolute
+          top: 1px
+          right: 3px
+          background: #F26135
+          border-radius: 50%
+      &.--no-notice
+        stroke: $black250
+    &-float
+      background: #fff
+      box-shadow: 0 4px 12px 0 #0000001A
+      border: 1px solid #D9D9D9
+      border-radius: 10px
+      width: 396px
+      padding: 7px
+      position: absolute
+      top: 100%
+      left: calc(50% - 198px)
+      display: flex
+      max-height: 70vh
+      overflow: hidden
+      opacity: 0
+      visibility: hidden
+      +r($lg)
+        display: none
+      &-wrapper
+        overflow: auto
+        
+        padding: 34px 39px
+        flex: 1 1 auto
+      &__header
+        display: flex
+        align-items: center
+        padding-bottom: 32px
+        .title
+          color: $black900
+          font-weight: 600
+        .btn-action
+          font-size: 15px
+          margin-left: auto
+          a.btn-clear
+            color: $black700
+            &.--disabled
+              color: #C0C0C0
+      &__body
+        padding: 24px 0 0
+        border-top: 1px solid #E1E4E7
+        text-align: left
+      .notice-null
+        font-weight: 600
+        font-size: 20px
+        color: #D9D9D9
+      .header-notice-box
+        display: flex
+        flex-direction: column
+        gap: 20px
+        padding: 22px 0
+        line-height: 1.2
+        & + .header-notice-box
+          border-top: 1px solid #E1E4E7
+        &:last-child
+          padding-bottom: 0
+        &__btn
+          .btn
+            width: 100%
+      
   &__lk
     display: flex
     align-items: center
-    gap: 8px
     font-size: 16px
     font-weight: 500
-    color: $black700
+    color: $black1000
     text-decoration: none
-    transition: color $transitionSpeed $ease
+    position: relative
+    padding-bottom: 20px
+    margin-bottom: -20px
     +r($lg)
       font-size: 14px
       gap: 6px
     +r($sm)
       font-size: 12px
       max-width: 65px
-    .svg-icon
+    &:hover
+      .header__lk-menu
+        visibility: visible
+        opacity: 1
+      .header__lk-link
+        color: $black1000
+        &::before
+          opacity: 1
+          top: calc(100% - 6px)
+    &-link
+      gap: 8px
+      display: flex
+      align-items: center
+      color: $black1000
+      
+      &::before
+        content: ""
+        height: 3px
+        width: 100%
+        background: $orangeMain500
+        display: block
+        position: absolute
+        top: calc(100% - 3px)
+        left: 0
+        transition: all 0.3s $ease
+        opacity: 0
+    
+      
+    &-user
+      display: flex
+      margin-bottom: 25px
+      &__info
+        flex: 1 1 auto
+        &-link
+          color: $black700
+          font-size: 15px
+          strong
+            display: block
+            color: $black900
+            font-size: 16px
+            margin-bottom: 2px
+          &:hover
+            color: currentColor
+      &__logout
+        padding-top: 5px
+        display: block
+        a
+          color: $black400
+          &:hover
+            color: $black1000
+          svg
+            stroke: currentColor
+        &:hover
+          color: $black1000
+    &-menu
+      background: #fff
+      box-shadow: 0 4px 12px 0 #0000001A
+      border: 1px solid #D9D9D9
+      border-radius: 10px
+      width: 284px
+      padding: 34px 39px
+      position: absolute
+      top: 100%
+      right: 0
+      visibility: hidden
+      opacity: 0
+      +r($xl)
+        display: none
+      &-list
+        display: flex
+        flex-direction: column
+        gap: 8px
+      &__item
+        display: block
+      &__link
+        display: flex
+        gap: 12px
+        padding: 12px 0 9px
+        border-radius: 10px
+        color: $black700
+        text-decoration: none
+        font-size: 16px
+        font-weight: 400
+        transition: all $transitionSpeed $ease
+        position: relative
+        +r($hd)
+          font-size: 15px
+        +r($xl)
+          display: flex
+          flex-direction: column
+          align-items: flex-start
+          gap: 8px
+          font-size: 11px
+        .num
+          display: inline-flex
+          align-items: center
+          justify-content: center
+          background: #F26135
+          border-radius: 4px
+          color: #fff
+          line-height: 1
+          font-size: 12px
+          font-weight: 600
+          min-width: 20px
+          margin-left: auto
+          margin-top: -2px
+          
+        &-label
+          display: flex
+          align-items: center
+        .svg-icon
+          width: 20px
+          height: 20px
+          flex-shrink: 0
+          fill: none
+          stroke: currentColor
+          margin-top: 0
+          &.icon-ic-menu-lk
+            fill: none
+          +r($xl)
+            width: 24px
+            height: 24px
+        
+        img
+          width: 20px
+          height: 20px
+          flex-shrink: 0
+          object-fit: contain
+          margin-top: 3px
+        span:not(.aside-nav__badge)
+          flex: 1 1 auto
+        
+        &:hover
+          background: #fff
+          color: $black1000
+          
+          
+    
+
+    
+      
+    // .svg-icon
       width: 20px
       height: 20px
       fill: currentColor
     
-    &:hover
+    // &:hover
       color: $orangeMain500
