@@ -30,6 +30,7 @@ const baseConfig = {
 		filename: "js/bundle.js",
 		clean: true,
 		assetModuleFilename: "assets/[name][ext]",
+		publicPath: "",
 	},
 	devtool: "source-map",
 	devServer: {
@@ -46,9 +47,20 @@ const baseConfig = {
 				test: /\.(scss|sass)$/,
 				include: path.resolve(__dirname, "src/scss"),
 				use: [
-					MiniCssExtractPlugin.loader,
-					{ loader: "css-loader", options: { sourceMap: true, url: false } },
-					{ loader: "sass-loader", options: { sourceMap: true } },
+					{
+						loader: MiniCssExtractPlugin.loader,
+					},
+					{
+						loader: "css-loader",
+						options: {
+							sourceMap: true,
+							url: false,
+						},
+					},
+					{
+						loader: "sass-loader",
+						options: { sourceMap: true },
+					},
 				],
 			},
 			
