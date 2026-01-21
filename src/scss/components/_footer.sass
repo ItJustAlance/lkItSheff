@@ -376,8 +376,7 @@
     z-index: 99
     display: none
     &.--show
-      +r($sm)
-        display: block
+      display: block
     &-bg
       background: rgba(0,0,0, .6)
       position: absolute
@@ -495,3 +494,41 @@
     margin: 0 0 35px
     justify-content: flex-start
     gap: 40px
+
+
+.mobile-modal
+  position: absolute
+  top: 47px
+  left: 0
+  bottom: 0
+  width: 70%
+  max-width: 495px
+  background: #fff
+  z-index: 1
+  display: flex
+  flex-direction: column
+  +r($sm)
+    width: 100%
+  &__layout
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    width: 100%
+    z-index: 99
+    display: none
+    &.--show
+      display: block
+    &-bg
+      background: rgba(0,0,0, .6)
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+  &-wrapper
+    padding: 40px 0 30px
+    background: $baseBg
+    margin-top: 140px
+    +r($md)
+      margin-top: 80px

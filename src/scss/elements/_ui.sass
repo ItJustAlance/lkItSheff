@@ -17,7 +17,10 @@
   font-weight: 600
   background: #89CE43
   border-radius: 5px
-  padding: 5px 8px 0
+  padding: 2px 8px
+  line-height: 1
+  display: inline-flex
+  align-items: center
   height: 25px
   &.--stop
     background: #F26135
@@ -47,3 +50,49 @@
 .xl-hidden
   +r($xl)
     display: none !important
+
+
+.block-notice
+  &-wrapper
+    overflow: auto
+    
+    padding: 27px 32px
+    flex: 1 1 auto
+  &__header
+    display: flex
+    align-items: center
+    padding-bottom: 35px
+    .title
+      color: $black900
+      font-weight: 600
+      font-size: 16px
+    .btn-action
+      font-size: 15px
+      margin-left: auto
+      a.btn-clear
+        color: $black700
+        &:hover
+          color: $black1000
+        &.--disabled
+          color: #C0C0C0
+  &__body
+    padding: 24px 0 0
+    border-top: 1px solid #E1E4E7
+    text-align: left
+  .notice-null
+    font-weight: 600
+    font-size: 20px
+    color: #D9D9D9
+  .block-notice-box
+    display: flex
+    flex-direction: column
+    gap: 20px
+    padding: 22px 0
+    line-height: 1.2
+    & + .block-notice-box
+      border-top: 1px solid #E1E4E7
+    &:last-child
+      padding-bottom: 0
+    &__btn
+      .btn
+        width: 100%
