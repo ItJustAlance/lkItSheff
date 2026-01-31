@@ -34,6 +34,9 @@
   line-height: 1.2
   position: relative
   transition: all $transitionSpeed $ease
+  +r($lg)
+    padding: 14px 14px 14px 18px
+    gap: 16px
   & > *
     z-index: 2
   
@@ -44,53 +47,79 @@
     color: #F0F2F4
     overflow: hidden
     z-index: 1
+    +r($lg)
+      display: none
+    +r($sm)
+      display: block
+      right: 16px
     svg
       width: 64px
       height: 64px
       stroke: currentColor
-      transition: all $transitionSpeed $ease
+      transition: all $transitionSpeed ease-out
+      transform: translateY(5px)
+      +r($sm)
+        transform: translateY(10px)
       &.stroke-none
         stroke: none
 
-  &:hover
+  &:not(.--no-hover):hover
     box-shadow: 0px 1px 2px 0px #0000001A
     border-color: #CBD2D9
     background: #E1E4E7
     +r($sm)
-      background: inherit
+      background: #fff
       box-shadow: 0px 1px 2px 0px #0000001A
+      border-color: #E1E4E7
     .icon-bg
       color: #CBD2D9
+      +r($sm)
+        color: #F0F2F4
       svg
         margin-bottom: 5px
         +r($sm)
           margin-bottom: 0
+  //&.--no-hover:hover
+  //  box-shadow: 0px 1px 2px 0px #0000001A
+  //  border: 1px solid #E1E4E7
+  //  background: #fff
   .num
     color: $black700
     font-size: 56px
     font-weight: 300
     line-height: .9
-
+    +r($lg)
+      font-size: 40px
+    +r($sm)
+      font-size: 48px
   .title
     font-size: 18px
     color: $black700
     font-weight: 450
-    +r($sm)
+    +r($lg)
       font-size: 17px
   p
     margin: 0
     color: #8C8C8C
     padding: 20px 0 4px
+    +r($lg)
+      padding-top: 12px
+      font-size: 14px
   .b-link
     margin-top: 10px
+    +r($lg)
+      margin-top: 6px
   .link-plus
     color: $orangeMain500
     font-size: 16px
     display: flex
     align-items: center
     gap: 8px
+    +r($lg)
+      font-size: 14px
     svg
       stroke: currentColor
+
 .box-dates
   display: flex
   gap: 24px
@@ -104,12 +133,15 @@
       flex-wrap: wrap
     
   .dates
-    +r($xl)
+    +r($lg)
       min-width: calc(50% - 24px)
       max-width: calc(50% - 24px)
       &:nth-child(2n - 2)
         .dates-wrap
           border: none
+    +r($lg)
+      min-width: 100%
+      max-width: 100%
     &-wrap
       border-right: 1px solid $black100
       padding-right: 24px
@@ -117,14 +149,21 @@
       display: flex
       flex-direction: column
       gap: 6px
+      +r($lg)
+        border: none
+        font-size: 15px
     .date-label
       font-size: 18px
       font-weight: 450
+      +r($lg)
+        font-size: 17px
   .b-right
     margin-left: auto
     +r($xl)
       margin-left: 0
-    
+    .btn
+      min-width: 137px
+      
 .box-price
   display: flex
   gap: 24px
@@ -132,11 +171,13 @@
   width: 100%
   &__header
     display: flex
-    gap: 24px
+    gap: 40px
     width: 100%
     +r($xl)
+      gap: 24px
       flex-direction: column
   &__toggler
+    padding-top: 10px
     display: none
     &.--active
       display: block
@@ -180,7 +221,13 @@
         overflow: hidden
     .b-right
       margin-left: auto
+      min-width: 135px
+      .btn
+        min-width: 137px
       +r($xl)
         margin: 0
         .btn
           width: 100%
+      &.--align-center
+        align-items: center
+        display: flex

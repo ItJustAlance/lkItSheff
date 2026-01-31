@@ -19,36 +19,39 @@
     &:before
       content: ""
       height: 2px
-      width: 100%
+      
       position: absolute
       top: 0
-      left: 0
       background: radial-gradient(96.63% 96.72% at 100% 100%, #F26135 0%, #FF9950 100%)
-      +r($xl)
-        left: 30px
-        right: 30px
-        width: auto
-        
+      left: 30px
+      right: 30px
+      width: auto
+      
   &-left
     flex: 1 1 auto
     min-width: 0
   
   &-right
-    flex: 0 0 320px
+    margin-left: 3px
+    flex: 0 0 311px
     display: flex
     flex-direction: column
-    gap: 80px
+    gap: 75px
+    +r($hd)
+      flex: 0 0 23%
+      max-width: 255px
     +r($xl)
       flex: 1 1 auto
+      max-width: 100%
       width: 100%
       flex-direction: row
       flex-wrap: wrap
-      gap: 24px
+      gap: 25px
       padding-top: 64px
       
   &-nav
     list-style: none
-    margin: 0 0 53px
+    margin: 0 0 58px
     padding: 0
     display: flex
     flex-wrap: wrap
@@ -68,17 +71,21 @@
   
   &-submenu
     display: flex
-    gap: 28px
-    
+    gap: 43px
+    +r($hd)
+      gap: 25px
     .col
+      padding-right: 5px
       flex: 1 1 calc(33% - 28px)
       max-width: calc(33% - 28px)
       display: flex
       flex-direction: column
       gap: 32px
-      
+      +r($hd)
+        flex: 1 1 calc(33% - 4px)
+        max-width: calc(33% - 4px)
     .submenu-title
-      padding: 17px 0
+      padding: 17px 0 20px
       font-size: 20px
       font-weight: 600
       &:first-child
@@ -106,10 +113,11 @@
       padding: 0
       display: flex
       flex-direction: column
-      gap: 14px
+      gap: 20px
       
       .submenu-item
         display: flex
+        line-height: 1.2
         +r($xl)
           flex-direction: column
           gap: 14px
@@ -132,22 +140,21 @@
   &-support
     position: relative
     +r($xl)
-      width: calc(33.333% - 24px)
+      width: calc(33% - 11px)
     &__btn
-      max-width: 280px
+      max-width: 275px
     
     &__title
       font-size: 16px
-      color: $black400
-      margin-bottom: 10px
+      color: $black700
+      margin-bottom: 3px
       +r($xl)
-        color: $black700
         font-size: 15px
     &__phone
       font-size: 20px
       font-weight: 600
       color: $black700
-      margin-bottom: 16px
+      margin-bottom: 19px
       position: relative
       +r($xl)
         position: static
@@ -166,7 +173,7 @@
         text-decoration: none
         transition: color $transitionSpeed $ease
         &:hover
-          color: $orangeMain500
+          color: $black1000
     
     &__btn
       .btn
@@ -176,11 +183,12 @@
   &-local
     font-size: 16px
     color: $black700
-    line-height: 1.6
-    margin-bottom: 24px
+    line-height: 1.4
+    
     +r($xl)
       position: relative
-      width: calc(33.333% - 24px)
+      margin-bottom: 24px
+      width: calc(33% - 13px)
       font-size: 15px
     strong
       font-weight: 600
@@ -202,11 +210,11 @@
     margin-bottom: 32px
     +r($xl)
       position: relative
-      width: calc(33.333% - 24px)
+      width: calc(33% - 21px)
     &__title
       font-size: 16px
       color: $black700
-      margin-bottom: 8px
+      margin-bottom: 3px
       +r($xl)
         font-size: 15px
     &__link
@@ -230,7 +238,14 @@
             left: 0
         &:hover
           color: $black1000
-  
+  &-bottom__1
+    +r($hd)
+      max-width: 47%
+  &-bottom__2
+    width: 342px
+    +r($hd)
+      flex: 1 1 23%
+      max-width: 290px
   &-socs
     list-style: none
     margin: 0 0 0 -32px
@@ -271,21 +286,27 @@
       align-items: flex-end
       justify-content: space-between
       gap: 20px
-      padding: 28px 0
+      padding: 28px 30px
       margin-top: 28px
-      border-top: 1px solid #E1E4E7
+      position: relative
+      +r($hd)
+        align-items: flex-start
       +r($xl)
         padding-left: 35px
         padding-right: 35px
-        align-items: normal
+        align-items: flex-end
         border: none
         margin-top: 0
         padding-top: 0
         flex-direction: row
         gap: 24px
+      +r($md)
+        gap: 0
       &:before
-        display: none
-      
+        display: block
+        background: #E1E4E7
+        +r($xl)
+          display: none
     &__left
       display: flex
       align-items: flex-end
@@ -294,12 +315,21 @@
         flex-direction: column
         align-items: flex-start
         width: calc(33.333% + 36px)
+      +r($md)
+        max-width: 220px
+        gap: 10px
     &__logo
       display: flex
       align-items: center
       position: relative
       top: -3px
-      
+      color: $black600
+      &:hover
+        color: $black700
+      .logo-foot
+        width: 122px
+        height: 32px
+        
       img
         height: 32px
         width: auto
@@ -307,12 +337,23 @@
     &__copyright
       font-size: 14px
       color: $black700
-    
+      span
+        +r($md)
+          display: block
+
+        
     &__right
       display: flex
-      gap: 36px
+      gap: 34px
       align-items: flex-end
-    
+      +r($hd)
+        width: 50%
+        max-width: calc(50% - 10px)
+        align-items: flex-start
+        margin-top: 14px
+      +r($md)
+        width: auto
+        max-width: 64%
     &__link
       font-size: 14px
       color: $black700
@@ -346,17 +387,29 @@
       text-align: center
     &__link
       align-items: center
-      font-size: 2.6vw
+      font-size: 2.2vw
+      padding-left: 0
+      padding-right: 0
     &__item
+      flex: 1 1 auto
+      svg
+        width: 24px
+        height: 24px
+      
       &.--active
         svg
           stroke: #fff
-          
+          &.icon-ic-menu-support
+            stroke: $black1000
+    &__icon
+      width: 24px
+      max-width: 24px
+      height: 24px
 
-          
+      
 .mobile-menu
   position: absolute
-  top: 47px
+  top: 45px
   left: 0
   bottom: 0
   width: 70%
@@ -365,8 +418,103 @@
   z-index: 1
   display: flex
   flex-direction: column
+  padding-top: 7px
+  overflow-y: auto
+  overflow-x: hidden
   +r($sm)
     width: 100%
+  
+  &-footer-wrapper
+    padding-top: 64px
+    background: #fff
+    padding-bottom: 60px
+    position: relative
+    &:before
+      content: ""
+      height: 3px
+      border-bottom: 1px solid #D9D9D9
+      width: 100%
+      display: block
+      background: radial-gradient(96.63% 96.72% at 100% 100%, #F26135 0%, #FF9950 100%)
+    
+    .footer-bottom
+      margin-bottom: 40px
+      .all
+        display: flex
+        flex-direction: column
+        margin: 0
+        padding: 0
+      
+      &__left
+        max-width: 100%
+        width: 100%
+        flex-direction: row
+        align-items: center
+      &__right
+        max-width: 100%
+        width: 100%
+        flex-direction: row
+        gap: 16px
+
+      &__link
+        font-size: 10px
+      &__1
+      
+      &__2
+        max-width: 47%
+        width: 45%
+      &__copyright
+        font-size: 10px
+        
+        span
+          display: inline
+    .mobile-menu
+      position: relative
+      top: 0
+      width: 100%
+      max-width: 100%
+      padding: 0
+      .footer-local
+        padding-left: 40px
+        margin-bottom: 60px
+        strong
+          position: relative
+          top: 0
+          left: 0
+          svg
+            top: 0
+            left: -40px
+      .footer-support
+        margin-left: 0
+        margin-right: 0
+        padding-top: 0
+        margin-bottom: 60px
+        padding-left: 40px
+        padding-right: 0
+        border: none
+        &__btn .btn
+          width: 100%
+        &__phone
+          position: relative
+          
+          svg
+            top: 0
+            left: -40px
+      .footer-email
+        padding-left: 40px
+        &__link
+          position: relative
+          svg
+            top: 0
+            left: -40px
+            
+      .footer-socs
+        text-align: center
+        justify-content: center
+        border-top: 1px solid #E1E4E7
+        border-bottom: 1px solid #E1E4E7
+        margin: 0 0 60px
+        padding: 28px 0
   &__layout
     position: fixed
     top: 0
@@ -385,59 +533,90 @@
       width: 100%
       height: 100%
   &__menu
-    flex: 1 1 auto
-    overflow: hidden
+    // flex: 1 1 auto
+    // overflow: hidden
     display: flex
   &__list
     display: flex
     flex-direction: column
     gap: 0
     width: 100%
-    overflow: auto
+    // overflow: auto
   &__item
     // padding: 22px 30px
     border-bottom: 1px solid #D9D9D9
-    
+    .menu-num
+      display: inline-flex
+      vertical-align: top
+      align-items: center
+      margin-left: auto
+      font-size: 16px
+      color: #fff
+      font-weight: 400
+      background: #F26135
+      padding: 1px 10px
+      border-radius: 12px
+      height: 23px
     &.--active
-      border-bottom: none
+      padding-bottom: 24px
+      // border-bottom: none
       & > .mobile-menu__submenu
         display: flex
       & > .mobile-menu__item-title.--arr > .svg-icon
         transform: rotate(0)
         stroke: #C0C0C0
       & .mobile-menu__submenu__item.--active
+        .mobile-menu__item-title.--arr > .svg-icon
+          transform: rotate(0)
+
         .mobile-menu__submenu
           display: flex
     &-title
       color: $black700
       font-size: 20px
       font-weight: 600
-      display: block
-      padding: 19px 30px 20px
+      display: flex
+      padding: 19px 30px 19px
       position: relative
       +r($sm)
-        padding: 19px 16px 20px
+        padding: 20px 16px 20px
       &.--arr
         & > .svg-icon
           position: absolute
           top: 23px
-          right: 46px
+          right: 34px
           transform: rotate(-90deg)
           stroke: $black700
+          transition: all linear .1s
   &__submenu
     display: none
     flex-direction: column
     gap: 18px
     padding: 0 30px
     +r($sm)
+      margin-top: 2px
       padding: 0 16px
       gap: 12px
-    .mobile-menu__item-title.--arr
-      & > .svg-icon
-        right: 17px
+    .link-more
+      font-size: 15px
+      color: #F26135
+      font-weight: 400
+      margin-left: auto
+      margin-top: 2px
+      display: none
+    .mobile-menu__item-title
+      padding-left: 28px
+      &.--arr
+        & > .svg-icon
+          right: 17px
     &__item
       background: #F0F2F4
       border-radius: 10px
+      &.--active
+        .link-more
+          display: inline-flex
+        .arr-submenu
+          display: none
     & .mobile-menu__submenu
       background: #F0F2F4
       display: none
@@ -446,6 +625,7 @@
       font-size: 16px
       gap: 4px
       padding: 8px
+      border-radius: 10px
       
       .mobile-menu__submenu__item
         flex: 1 1 auto
@@ -461,7 +641,7 @@
   &__footer
     padding: 34px 30px
     +r($sm)
-      padding: 24px 16px
+      padding: 24px 16px 0
   .footer-support
     min-width: 100%
     width: auto
@@ -475,13 +655,17 @@
       font-size: 28px
       a
         color: #424242
+
         
   .footer-local
     width: 100%
     font-size: 16px
     margin-bottom: 35px
-    strong
+    .link-address
+      font-weight: 600
       font-size: 20px
+      display: block
+      color: inherit
   .footer-email
     width: 100%
     margin-bottom: 35px
@@ -495,6 +679,50 @@
     justify-content: flex-start
     gap: 40px
 
+  &__auth
+    margin: 0 -16px
+    
+  &__registration
+    padding: 24px 0
+  &__user
+    display: flex
+    font-size: 16px
+    color: $black600
+    text-decoration: none
+    border-top: 1px solid $black150
+    &:hover
+      background: $black25
+    &-icon
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 82px
+      border-right: 1px solid $black150
+      .icon-username
+        stroke: $black700
+    &-right
+      height: 82px
+      padding: 16px 20px
+      display: flex
+      flex-direction: column
+      gap: 8px
+      color: $black600
+    .title
+      font-weight: 600
+      color: $black900
+  &__logout
+    color: #424242
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 82px
+    height: 82px
+    margin-left: auto
+    border-left: 1px solid $black150
+    svg
+      stroke: $black700
+    
+      
 
 .mobile-modal
   position: absolute

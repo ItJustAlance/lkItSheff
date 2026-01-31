@@ -1,11 +1,25 @@
-<% var data = {
-  title: "Заголовок сайта",
-  copyright: "itJustAlance"
-}; %>
+<%
+var data = {
+title: "Заголовок сайта",
+copyright: "itJustAlance"
+};
+
+var mobileFooter = _.template(require('../includes/mobile-footer.html'))(data);
+var mobileMenu = _.template(require('../includes/mobile-menu.html'))(data);
+var mobileToolbar = _.template(require('../includes/mobile-toolbar.html'))(data);
+var mobileNotice = _.template(require('../includes/mobile-notice.html'))(data);
+
+var footerHtml = _.template(require('../includes/footer.html'))({
+...data,
+mobileFooter,
+mobileMenu,
+mobileToolbar,
+mobileNotice
+});
+%>
 
 <div class="over">
-<%= _.template(require('./../includes/header.html').default)(data) %>
-
+  <%= _.template(require('../includes/header.html'))(data) %>
 <div class="container">
   <div class="all container-main">
     <div class="content-wrapper">
@@ -46,7 +60,7 @@
         <section class="section-box">
           <div class="section-box__header">
             <div class="section-box__header-title">
-              <div class="section-box__header-title-text">1С Онлайн</div>
+              <div class="section-box__header-title-text h2-title">1С Онлайн</div>
               <div class="label-status">Активна</div>
             </div>
             <div class="section-box__header-icon">
@@ -100,7 +114,7 @@
               </div>
               <div class="box-row">
                 <div class="box-col1">
-                  <div class="main-info-box">
+                  <div class="main-info-box --no-hover">
                     <div class="box-price">
                       <div class="box-price__header">
                         <div class="price">
@@ -113,7 +127,7 @@
                           <div class="b-text">
                             Коротко, как происходит списывание каждый месяц или другая инфа.
                           </div>
-                          <div class="b-right">
+                          <div class="b-right --align-center">
                             <button class="btn --outline">Детализация</button>
                           </div>
                         </div>
@@ -131,7 +145,130 @@
         <section class="section-box">
           <div class="section-box__header --red-bg">
             <div class="section-box__header-title">
-              <div class="section-box__header-title-text">1С Хостинг</div>
+              <div class="section-box__header-title-text h2-title">1С Хостинг</div>
+              <div class="label-status --stop">Остановлена</div>
+            </div>
+            <div class="section-box__header-icon">
+              <img src="/img/logo-1c.svg" alt="">
+            
+            </div>
+          </div>
+          <div class="section-box__body">
+            <div class="main-info-boxes">
+              <div class="box-row">
+                <div class="box-col2">
+                  <div class="main-info-box">
+                    <div class="num">8</div>
+                    <div class="text">
+                      <div class="title">Пользователей</div>
+                      <div class="b-link">
+                        <a class="link-plus" href="#">
+                          <svg class="svg-icon ic16">
+                            <use xlink:href="#icon-ic-plus"></use>
+                          </svg>
+                          Добавить пользователя
+                        </a>
+                      </div>
+                    </div>
+                    <div class="icon-bg">
+                      <svg class="svg-icon">
+                        <use xlink:href="#icon-users-profiles-variant"></use>
+                      </svg>
+                    </div>
+                  </div><!--end main-info-box -->
+                  <div class="main-info-box">
+                    <div class="num">6</div>
+                    <div class="text">
+                      <div class="title">Количество БД</div>
+                      <div class="b-link">
+                        <a class="link-plus" href="#">
+                          <svg class="svg-icon ic16">
+                            <use xlink:href="#icon-ic-plus"></use>
+                          </svg>
+                          Добавить базу
+                        </a>
+                      </div>
+                    </div>
+                    <div class="icon-bg">
+                      <svg class="svg-icon">
+                        <use xlink:href="#icon-databases"></use>
+                      </svg>
+                    </div>
+                  </div><!--end main-info-box -->
+                </div>
+                <div class="box-col2">
+                  <div class="main-info-box">
+                    <div class="num">2</div>
+                    <div class="text">
+                      <div class="title">Доступно бесплатных консультаций из 2</div>
+                      <p>Количество консультаций обновиться чере 27 дней</p>
+                      <div class="b-link">
+                        <a class="link-plus" href="#">
+                          <svg class="svg-icon ic16">
+                            <use xlink:href="#icon-ic-plus"></use>
+                          </svg>
+                          Оставить заявку
+                        </a>
+                      </div>
+                    </div>
+                    <div class="icon-bg">
+                      <svg class="svg-icon stroke-none">
+                        <use xlink:href="#icon-support-human"></use>
+                      </svg>
+                    </div>
+                  </div><!--end main-info-box -->
+                </div>
+              </div>
+              <div class="box-row">
+                <div class="box-col1">
+                  <div class="main-info-box --no-hover">
+                    <div class="box-price">
+                      <div class="box-price__header">
+                        <div class="price">
+                          <div class="price-wrap">
+                            <div class="price-label">58 200 ₸‬</div>
+                            в месяц
+                          </div>
+                        </div>
+                        <div class="info-text">
+                          <div class="b-text">
+                            Коротко, как происходит списывание каждый месяц или другая инфа.
+                          </div>
+                          <div class="b-right">
+                            <button class="btn --outline --full">Свернуть</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="box-price__toggler --active">
+                        <div class="table-table">
+                          <div class="row">
+                            <div class="col first">39 200 ₸</div>
+                            <div class="col text"><strong>1С Онлайн:</strong> 4900 x 8 (1 пользователь - 500₸) = 39200₸</div>
+                          </div>
+                          
+                          <div class="row">
+                            <div class="col first">0 ₸</div>
+                            <div class="col text"><strong>Платная консультация:</strong> 0 ₸</div>
+                          </div>
+                          
+                          <div class="row">
+                            <div class="col first">6 000 ₸</div>
+                            <div class="col text"><strong>Доступ RDP:</strong> 2 (1 - пользователь 3000₸) = 6000 ₸</div>
+                          </div>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div><!--end main-info-box -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-box">
+          <div class="section-box__header --red-bg">
+            <div class="section-box__header-title">
+              <div class="section-box__header-title-text h2-title">1С Хостинг</div>
               <div class="label-status --stop">Остановлена</div>
             </div>
             <div class="section-box__header-icon">
@@ -207,7 +344,7 @@
               </div>
               <div class="box-row">
                 <div class="box-col1">
-                  <div class="main-info-box">
+                  <div class="main-info-box --no-hover">
                     <div class="box-price">
                       <div class="box-price__header">
                         <div class="price">
@@ -221,7 +358,7 @@
                             Коротко, как происходит списывание каждый месяц или другая инфа.
                           </div>
                           <div class="b-right">
-                            <button class="btn --outline">Свернуть</button>
+                            <button class="btn --outline --full">Свернуть</button>
                           </div>
                         </div>
                       </div>
@@ -254,130 +391,7 @@
         <section class="section-box">
           <div class="section-box__header --red-bg">
             <div class="section-box__header-title">
-              <div class="section-box__header-title-text">1С Хостинг</div>
-              <div class="label-status --stop">Остановлена</div>
-            </div>
-            <div class="section-box__header-icon">
-              <img src="/img/logo-1c.svg" alt="">
-            
-            </div>
-          </div>
-          <div class="section-box__body">
-            <div class="main-info-boxes">
-              <div class="box-row">
-                <div class="box-col2">
-                  <div class="main-info-box">
-                    <div class="num">8</div>
-                    <div class="text">
-                      <div class="title">Пользователей</div>
-                      <div class="b-link">
-                        <a class="link-plus" href="#">
-                          <svg class="svg-icon ic16">
-                            <use xlink:href="#icon-ic-plus"></use>
-                          </svg>
-                          Добавить пользователя
-                        </a>
-                      </div>
-                    </div>
-                    <div class="icon-bg">
-                      <svg class="svg-icon">
-                        <use xlink:href="#icon-users-profiles-variant"></use>
-                      </svg>
-                    </div>
-                  </div><!--end main-info-box -->
-                  <div class="main-info-box">
-                    <div class="num">6</div>
-                    <div class="text">
-                      <div class="title">Количество БД</div>
-                      <div class="b-link">
-                        <a class="link-plus" href="#">
-                          <svg class="svg-icon ic16">
-                            <use xlink:href="#icon-ic-plus"></use>
-                          </svg>
-                          Добавить базу
-                        </a>
-                      </div>
-                    </div>
-                    <div class="icon-bg">
-                      <svg class="svg-icon">
-                        <use xlink:href="#icon-databases"></use>
-                      </svg>
-                    </div>
-                  </div><!--end main-info-box -->
-                </div>
-                <div class="box-col2">
-                  <div class="main-info-box">
-                    <div class="num">2</div>
-                    <div class="text">
-                      <div class="title">Доступно бесплатных консультаций из 2</div>
-                      <p>Количество консультаций обновиться чере 27 дней</p>
-                      <div class="b-link">
-                        <a class="link-plus" href="#">
-                          <svg class="svg-icon ic16">
-                            <use xlink:href="#icon-ic-plus"></use>
-                          </svg>
-                          Добавить пользователя
-                        </a>
-                      </div>
-                    </div>
-                    <div class="icon-bg">
-                      <svg class="svg-icon stroke-none">
-                        <use xlink:href="#icon-support-human"></use>
-                      </svg>
-                    </div>
-                  </div><!--end main-info-box -->
-                </div>
-              </div>
-              <div class="box-row">
-                <div class="box-col1">
-                  <div class="main-info-box">
-                    <div class="box-price">
-                      <div class="box-price__header">
-                        <div class="price">
-                          <div class="price-wrap">
-                            <div class="price-label">58 200 ₸‬</div>
-                            в месяц
-                          </div>
-                        </div>
-                        <div class="info-text">
-                          <div class="b-text">
-                            Коротко, как происходит списывание каждый месяц или другая инфа.
-                          </div>
-                          <div class="b-right">
-                            <button class="btn --outline">Свернуть</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="box-price__toggler --active">
-                        <div class="table-table">
-                          <div class="row">
-                            <div class="col first">39 200 ₸</div>
-                            <div class="col text"><strong>1С Онлайн:</strong> 4900 x 8 (1 пользователь - 500₸) = 39200₸</div>
-                          </div>
-                          
-                          <div class="row">
-                            <div class="col first">0 ₸</div>
-                            <div class="col text"><strong>Платная консультация:</strong> 0 ₸</div>
-                          </div>
-                          
-                          <div class="row">
-                            <div class="col first">6 000 ₸</div>
-                            <div class="col text"><strong>Доступ RDP:</strong> 2 (1 - пользователь 3000₸) = 6000 ₸</div>
-                          </div>
-                        
-                        </div>
-                      </div>
-                    </div>
-                  </div><!--end main-info-box -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section-box">
-          <div class="section-box__header --red-bg">
-            <div class="section-box__header-title">
-              <div class="section-box__header-title-text">1С Фреш - Базовый</div>
+              <div class="section-box__header-title-text h2-title">1С Фреш - Базовый</div>
               <div class="label-status">Активна</div>
             </div>
             <div class="section-box__header-icon">
@@ -388,7 +402,7 @@
             <div class="main-info-boxes">
               <div class="box-row">
                 <div class="box-col1">
-                  <div class="main-info-box">
+                  <div class="main-info-box --no-hover">
                     <div class="box-dates">
                       <div class="box-dates__header">
                         <div class="dates">
@@ -410,7 +424,7 @@
                           </div>
                         </div>
                         <div class="b-right">
-                          <button class="btn">Продлить</button>
+                          <button class="btn --outline">Продлить</button>
                         </div>
                       </div>
                     </div>
@@ -423,7 +437,7 @@
         <section class="section-box">
           <div class="section-box__header --red-bg">
             <div class="section-box__header-title">
-              <div class="section-box__header-title-text">1С Фреш - Базовый</div>
+              <div class="section-box__header-title-text h2-title">1С Фреш - Базовый</div>
               <div class="label-status">Активна</div>
             </div>
             <div class="section-box__header-icon">
@@ -434,7 +448,7 @@
             <div class="main-info-boxes">
               <div class="box-row">
                 <div class="box-col1">
-                  <div class="main-info-box">
+                  <div class="main-info-box --no-hover">
                     <div class="box-price">
                       <div class="box-price__header">
                         <div class="price">
@@ -447,7 +461,7 @@
                           <div class="b-text">
                             Коротко, как происходит списывание каждый месяц или другая инфа.
                           </div>
-                          <div class="b-right">
+                          <div class="b-right --align-center">
                             <button class="btn --outline">Детализация</button>
                           </div>
                         </div>
@@ -465,7 +479,7 @@
         <section class="section-box">
           <div class="section-box__header --blue-bg">
             <div class="section-box__header-title">
-              <div class="section-box__header-title-text">Текст в две строки Текст в две строкиТекст в две строки Текст в две строки без</div>
+              <div class="section-box__header-title-text h2-title">Текст в две строки Текст в две строкиТекст в две строки Текст в две строки без</div>
               <div class="label-status">Активна</div>
             </div>
             <div class="section-box__header-icon">
@@ -507,7 +521,7 @@
         <section class="section-box">
           <div class="section-box__header">
             <div class="section-box__header-title">
-              <div class="section-box__header-title-text">Noname product без логотипа</div>
+              <div class="section-box__header-title-text h2-title">Noname product без логотипа</div>
             </div>
             
           </div>
@@ -546,7 +560,7 @@
         <section class="section-box">
           <div class="section-box__header --blue-bg">
             <div class="section-box__header-title">
-              <div class="section-box__header-title-text">Подписки Microsoft</div>
+              <div class="section-box__header-title-text h2-title">Подписки Microsoft</div>
             </div>
             <div class="section-box__header-icon">
               <img src="img/microsoft.svg" alt="">
@@ -576,13 +590,13 @@
                       <div class="number-checker">
                         <button class="number-checker__btn">
                           <svg class="svg-icon">
-                            <use xlink:href="#icon-ic-plus"></use>
+                            <use xlink:href="#icon-ic-minus"></use>
                           </svg>
                         </button>
                         <input class="number-checker__input" value="1" type="text">
                         <button class="number-checker__btn">
                           <svg class="svg-icon">
-                            <use xlink:href="#icon-ic-minus"></use>
+                            <use xlink:href="#icon-ic-plus"></use>
                           </svg>
                         </button>
                       </div>
@@ -615,13 +629,13 @@
                       <div class="number-checker">
                         <button class="number-checker__btn">
                           <svg class="svg-icon">
-                            <use xlink:href="#icon-ic-plus"></use>
+                            <use xlink:href="#icon-ic-minus"></use>
                           </svg>
                         </button>
                         <input class="number-checker__input" value="1" type="text">
                         <button class="number-checker__btn">
                           <svg class="svg-icon">
-                            <use xlink:href="#icon-ic-minus"></use>
+                            <use xlink:href="#icon-ic-plus"></use>
                           </svg>
                         </button>
                       </div>
@@ -654,13 +668,13 @@
                       <div class="number-checker">
                         <button class="number-checker__btn">
                           <svg class="svg-icon">
-                            <use xlink:href="#icon-ic-plus"></use>
+                            <use xlink:href="#icon-ic-minus"></use>
                           </svg>
                         </button>
                         <input class="number-checker__input" value="1" type="text">
                         <button class="number-checker__btn">
                           <svg class="svg-icon">
-                            <use xlink:href="#icon-ic-minus"></use>
+                            <use xlink:href="#icon-ic-plus"></use>
                           </svg>
                         </button>
                       </div>
@@ -693,13 +707,13 @@
                       <div class="number-checker">
                         <button class="number-checker__btn">
                           <svg class="svg-icon">
-                            <use xlink:href="#icon-ic-plus"></use>
+                            <use xlink:href="#icon-ic-minus"></use>
                           </svg>
                         </button>
                         <input class="number-checker__input" value="1" type="text">
                         <button class="number-checker__btn">
                           <svg class="svg-icon">
-                            <use xlink:href="#icon-ic-minus"></use>
+                            <use xlink:href="#icon-ic-plus"></use>
                           </svg>
                         </button>
                       </div>
@@ -732,13 +746,13 @@
                       <div class="number-checker">
                         <button class="number-checker__btn">
                           <svg class="svg-icon">
-                            <use xlink:href="#icon-ic-plus"></use>
+                            <use xlink:href="#icon-ic-minus"></use>
                           </svg>
                         </button>
                         <input class="number-checker__input" value="1" type="text">
                         <button class="number-checker__btn">
                           <svg class="svg-icon">
-                            <use xlink:href="#icon-ic-minus"></use>
+                            <use xlink:href="#icon-ic-plus"></use>
                           </svg>
                         </button>
                       </div>
@@ -771,13 +785,13 @@
                       <div class="number-checker">
                         <button class="number-checker__btn">
                           <svg class="svg-icon">
-                            <use xlink:href="#icon-ic-plus"></use>
+                            <use xlink:href="#icon-ic-minus"></use>
                           </svg>
                         </button>
                         <input class="number-checker__input" value="1" type="text">
                         <button class="number-checker__btn">
                           <svg class="svg-icon">
-                            <use xlink:href="#icon-ic-minus"></use>
+                            <use xlink:href="#icon-ic-plus"></use>
                           </svg>
                         </button>
                       </div>
@@ -810,13 +824,13 @@
                       <div class="number-checker">
                         <button class="number-checker__btn">
                           <svg class="svg-icon">
-                            <use xlink:href="#icon-ic-plus"></use>
+                            <use xlink:href="#icon-ic-minus"></use>
                           </svg>
                         </button>
                         <input class="number-checker__input" value="1" type="text">
                         <button class="number-checker__btn">
                           <svg class="svg-icon">
-                            <use xlink:href="#icon-ic-minus"></use>
+                            <use xlink:href="#icon-ic-plus"></use>
                           </svg>
                         </button>
                       </div>
@@ -834,73 +848,8 @@
       
     </main>
     </div>
-    <aside class="aside-left">
-      <div class="aside-nav">
-        <ul class="aside-nav__list">
-          <li class="aside-nav__item --active">
-            <a href="#" class="aside-nav__link">
-              <svg class="svg-icon icon-ic-menu-lk">
-                <use xlink:href="#icon-ic-menu-lk"></use>
-              </svg>
-              <span>Личный кабинет</span>
-            </a>
-          </li>
-          <li class="aside-nav__item">
-            <a href="#" class="aside-nav__link">
-              <svg class="svg-icon icon-ic-menu-doc">
-                <use xlink:href="#icon-ic-menu-doc"></use>
-              </svg>
-              <span>Счета, документы</span>
-            </a>
-          </li>
-          <li class="aside-nav__item">
-            <a href="#" class="aside-nav__link">
-              <svg class="svg-icon icon-ic-menu-bd">
-                <use xlink:href="#icon-ic-menu-bd"></use>
-              </svg>
-              <span>Базы данных</span>
-            </a>
-          </li>
-          <li class="aside-nav__item  --active">
-            <a href="#" class="aside-nav__link">
-              <svg class="svg-icon icon-ic-menu-user">
-                <use xlink:href="#icon-ic-menu-user"></use>
-              </svg>
-              <span>Пользователи</span>
-            </a>
-          </li>
-          <li class="aside-nav__item --active">
-            <a href="#" class="aside-nav__link">
-              <svg class="svg-icon icon-ic-menu-support">
-                <use xlink:href="#icon-ic-menu-support"></use>
-              </svg>
-              <span>Поддержка</span>
-            </a>
-          </li>
-        </ul>
-        <ul class="aside-nav__list">
-          <li class="aside-nav__item">
-            <a href="#" class="aside-nav__link">
-              <svg class="svg-icon">
-                <use xlink:href="#icon-ic-menu-store"></use>
-              </svg>
-              <span class="aside-nav__link-label">
-              <span>Услуги+</span>
-              <span class="aside-nav__badge">243</span>
-                </span>
-            </a>
-          </li>
-        </ul>
-        <ul class="aside-nav__list xl-hidden">
-          <li class="aside-nav__item">
-            <a href="#" class="aside-nav__link">
-              <img src="img/ic-menu-dw.svg" alt="1C" class="aside-nav__icon-img">
-              <span>Программа для входа 1С</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </aside>
+    <%= _.template(require('./../includes/aside-left.html').default)(data) %>
+    
     <aside class="aside-right">
       <div class="aside-box --banner --congrats">
         <div class="aside-box__image">
@@ -1001,6 +950,5 @@
   </pre>
   Контент. -->
 </div>
-
-<%= _.template(require('./../includes/footer.html').default)(data) %>
+  <%= footerHtml %>
 </div>

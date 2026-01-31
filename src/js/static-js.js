@@ -2,8 +2,10 @@ import $ from "jquery";
 
 $(function() {
   console.log($);
+	var win_w = $(document).width();
 	
 	$(".js-menu-open").on("click", function (){
+		$("body").toggleClass("lock")
 		$(this).toggleClass("--menu-open");
 		$(".mobile-menu__layout").toggleClass("--show")
 	});
@@ -20,8 +22,17 @@ $(function() {
     setTimeout(() => ($("#" + modal).addClass("in")), 300);
     return false
   });
-  $(".just-modal__overlay, .js-just-modal__close").on("click", function (){
-    $("body").removeClass("lock just-modal--default")
-    $(".just-modal").removeClass("open in");
-  });
+	$(".just-modal__overlay, .js-just-modal__close").on("click", function (){
+		$("body").removeClass("lock just-modal--default")
+		$(".just-modal").removeClass("open in");
+	});
+	
+	$(".js-open-mobile-notice").on("click", function (){
+		if(win_w < 1024){
+			$(".js-open-mobile-notice-wrapper").addClass("active")
+			$("#mobile-notice").addClass("--show");
+		}
+	});
+	
+	
 });

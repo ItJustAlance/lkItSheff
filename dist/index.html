@@ -175,52 +175,55 @@
         
         
         <div class="header__right">
-          <div class="header__notice">
-            <a class="link-notice --no-notice --new-notice" href="#">
+          <div class="header__notice js-open-mobile-notice-wrapper">
+            <a class="link-notice --no-notice --new-notice js-open-mobile-notice" href="#">
               <svg class="svg-icon ic24">
               <use xlink:href="#icon-i-notice"></use>
             </svg>
+            <svg class="svg-icon ic24 --close">
+              <use xlink:href="#icon-menu-close"></use>
+            </svg>
             </a>
-            <div class="header__notice-float">
-              <div class="header__notice-float-wrapper custom-scroll">
-                <div class="header__notice-float__header">
+            <div class="header__notice-float block-notice">
+              <div class="block-notice-wrapper custom-scroll">
+                <div class="block-notice__header">
                   <div class="title">Уведомления</div>
                   <div class="btn-action">
                     <a href="#" class="btn-clear --disabled">Очистить</a>
                   </div>
                 </div>
-                <div class="header__notice-float__body">
+                <div class="block-notice__body">
                   <div class="notice-null">Уведомлений еще нет</div>
-                  <div class="header-notice-box">
-                    <div class="header-notice-box__text">Линия консультации - новое сообщение</div>
-                    <div class="header-notice-box__btn">
+                  <div class="block-notice-box">
+                    <div class="block-notice-box__text">Линия консультации - новое сообщение</div>
+                    <div class="block-notice-box__btn">
                       <a href="#" class="btn --outline">Ответить</a>
                     </div>
                   </div>
-                  <div class="header-notice-box">
-                    <div class="header-notice-box__text">Линия консультации - новое сообщение</div>
-                    <div class="header-notice-box__btn">
+                  <div class="block-notice-box">
+                    <div class="block-notice-box__text">Линия консультации - новое сообщение</div>
+                    <div class="block-notice-box__btn">
                       <a href="#" class="btn --outline">Ответить</a>
                     </div>
                   </div>
-                  <div class="header-notice-box">
-                    <div class="header-notice-box__text">Линия консультации - новое сообщение</div>
-                    <div class="header-notice-box__btn">
+                  <div class="block-notice-box">
+                    <div class="block-notice-box__text">Линия консультации - новое сообщение</div>
+                    <div class="block-notice-box__btn">
                       <a href="#" class="btn --outline">Ответить</a>
                     </div>
                   </div>
-                  <div class="header-notice-box">
-                    <div class="header-notice-box__text">Линия консультации - новое сообщение</div>
+                  <div class="block-notice-box">
+                    <div class="block-notice-box__text">Линия консультации - новое сообщение</div>
                   </div>
-                  <div class="header-notice-box">
-                    <div class="header-notice-box__text">Линия консультации - новое сообщение</div>
-                    <div class="header-notice-box__btn">
+                  <div class="block-notice-box">
+                    <div class="block-notice-box__text">Линия консультации - новое сообщение</div>
+                    <div class="block-notice-box__btn">
                       <a href="#" class="btn --outline">Ответить</a>
                     </div>
                   </div>
-                  <div class="header-notice-box">
-                    <div class="header-notice-box__text">Линия консультации - новое сообщение</div>
-                    <div class="header-notice-box__btn">
+                  <div class="block-notice-box">
+                    <div class="block-notice-box__text">Линия консультации - новое сообщение</div>
+                    <div class="block-notice-box__btn">
                       <a href="#" class="btn --outline">Ответить</a>
                     </div>
                   </div>
@@ -339,7 +342,7 @@
         <section class="section-box">
           <div class="section-box__header">
             <div class="section-box__header-title">
-              <div class="section-box__header-title-text">1С Онлайн</div>
+              <div class="section-box__header-title-text h2-title">1С Онлайн</div>
               <div class="label-status">Активна</div>
             </div>
             <div class="section-box__header-icon">
@@ -393,7 +396,7 @@
               </div>
               <div class="box-row">
                 <div class="box-col1">
-                  <div class="main-info-box">
+                  <div class="main-info-box --no-hover">
                     <div class="box-price">
                       <div class="box-price__header">
                         <div class="price">
@@ -406,7 +409,7 @@
                           <div class="b-text">
                             Коротко, как происходит списывание каждый месяц или другая инфа.
                           </div>
-                          <div class="b-right">
+                          <div class="b-right --align-center">
                             <button class="btn --outline">Детализация</button>
                           </div>
                         </div>
@@ -424,7 +427,7 @@
         <section class="section-box">
           <div class="section-box__header --red-bg">
             <div class="section-box__header-title">
-              <div class="section-box__header-title-text">1С Хостинг</div>
+              <div class="section-box__header-title-text h2-title">1С Хостинг</div>
               <div class="label-status --stop">Остановлена</div>
             </div>
             <div class="section-box__header-icon">
@@ -500,7 +503,7 @@
               </div>
               <div class="box-row">
                 <div class="box-col1">
-                  <div class="main-info-box">
+                  <div class="main-info-box --no-hover">
                     <div class="box-price">
                       <div class="box-price__header">
                         <div class="price">
@@ -514,7 +517,7 @@
                             Коротко, как происходит списывание каждый месяц или другая инфа.
                           </div>
                           <div class="b-right">
-                            <button class="btn --outline">Свернуть</button>
+                            <button class="btn --outline --full">Свернуть</button>
                           </div>
                         </div>
                       </div>
@@ -547,7 +550,7 @@
         <section class="section-box">
           <div class="section-box__header --red-bg">
             <div class="section-box__header-title">
-              <div class="section-box__header-title-text">1С Хостинг</div>
+              <div class="section-box__header-title-text h2-title">1С Хостинг</div>
               <div class="label-status --stop">Остановлена</div>
             </div>
             <div class="section-box__header-icon">
@@ -623,7 +626,7 @@
               </div>
               <div class="box-row">
                 <div class="box-col1">
-                  <div class="main-info-box">
+                  <div class="main-info-box --no-hover">
                     <div class="box-price">
                       <div class="box-price__header">
                         <div class="price">
@@ -637,7 +640,7 @@
                             Коротко, как происходит списывание каждый месяц или другая инфа.
                           </div>
                           <div class="b-right">
-                            <button class="btn --outline">Свернуть</button>
+                            <button class="btn --outline --full">Свернуть</button>
                           </div>
                         </div>
                       </div>
@@ -670,7 +673,7 @@
         <section class="section-box">
           <div class="section-box__header --red-bg">
             <div class="section-box__header-title">
-              <div class="section-box__header-title-text">1С Фреш - Базовый</div>
+              <div class="section-box__header-title-text h2-title">1С Фреш - Базовый</div>
               <div class="label-status">Активна</div>
             </div>
             <div class="section-box__header-icon">
@@ -681,7 +684,7 @@
             <div class="main-info-boxes">
               <div class="box-row">
                 <div class="box-col1">
-                  <div class="main-info-box">
+                  <div class="main-info-box --no-hover">
                     <div class="box-dates">
                       <div class="box-dates__header">
                         <div class="dates">
@@ -716,7 +719,7 @@
         <section class="section-box">
           <div class="section-box__header --red-bg">
             <div class="section-box__header-title">
-              <div class="section-box__header-title-text">1С Фреш - Базовый</div>
+              <div class="section-box__header-title-text h2-title">1С Фреш - Базовый</div>
               <div class="label-status">Активна</div>
             </div>
             <div class="section-box__header-icon">
@@ -727,7 +730,7 @@
             <div class="main-info-boxes">
               <div class="box-row">
                 <div class="box-col1">
-                  <div class="main-info-box">
+                  <div class="main-info-box --no-hover">
                     <div class="box-price">
                       <div class="box-price__header">
                         <div class="price">
@@ -740,7 +743,7 @@
                           <div class="b-text">
                             Коротко, как происходит списывание каждый месяц или другая инфа.
                           </div>
-                          <div class="b-right">
+                          <div class="b-right --align-center">
                             <button class="btn --outline">Детализация</button>
                           </div>
                         </div>
@@ -758,7 +761,7 @@
         <section class="section-box">
           <div class="section-box__header --blue-bg">
             <div class="section-box__header-title">
-              <div class="section-box__header-title-text">Текст в две строки Текст в две строкиТекст в две строки Текст в две строки без</div>
+              <div class="section-box__header-title-text h2-title">Текст в две строки Текст в две строкиТекст в две строки Текст в две строки без</div>
               <div class="label-status">Активна</div>
             </div>
             <div class="section-box__header-icon">
@@ -800,7 +803,7 @@
         <section class="section-box">
           <div class="section-box__header">
             <div class="section-box__header-title">
-              <div class="section-box__header-title-text">Noname product без логотипа</div>
+              <div class="section-box__header-title-text h2-title">Noname product без логотипа</div>
             </div>
             
           </div>
@@ -839,7 +842,7 @@
         <section class="section-box">
           <div class="section-box__header --blue-bg">
             <div class="section-box__header-title">
-              <div class="section-box__header-title-text">Подписки Microsoft</div>
+              <div class="section-box__header-title-text h2-title">Подписки Microsoft</div>
             </div>
             <div class="section-box__header-icon">
               <img src="img/microsoft.svg" alt="">
@@ -1128,72 +1131,104 @@
     </main>
     </div>
     <aside class="aside-left">
-      <div class="aside-nav">
-        <ul class="aside-nav__list">
-          <li class="aside-nav__item --active">
-            <a href="#" class="aside-nav__link">
-              <svg class="svg-icon icon-ic-menu-lk">
-                <use xlink:href="#icon-ic-menu-lk"></use>
-              </svg>
-              <span>Личный кабинет</span>
-            </a>
-          </li>
-          <li class="aside-nav__item">
-            <a href="#" class="aside-nav__link">
-              <svg class="svg-icon icon-ic-menu-doc">
-                <use xlink:href="#icon-ic-menu-doc"></use>
-              </svg>
-              <span>Счета, документы</span>
-            </a>
-          </li>
-          <li class="aside-nav__item">
-            <a href="#" class="aside-nav__link">
-              <svg class="svg-icon icon-ic-menu-bd">
-                <use xlink:href="#icon-ic-menu-bd"></use>
-              </svg>
-              <span>Базы данных</span>
-            </a>
-          </li>
-          <li class="aside-nav__item  --active">
-            <a href="#" class="aside-nav__link">
-              <svg class="svg-icon icon-ic-menu-user">
-                <use xlink:href="#icon-ic-menu-user"></use>
-              </svg>
-              <span>Пользователи</span>
-            </a>
-          </li>
-          <li class="aside-nav__item --active">
-            <a href="#" class="aside-nav__link">
-              <svg class="svg-icon icon-ic-menu-support">
-                <use xlink:href="#icon-ic-menu-support"></use>
-              </svg>
-              <span>Поддержка</span>
-            </a>
-          </li>
-        </ul>
-        <ul class="aside-nav__list">
-          <li class="aside-nav__item">
-            <a href="#" class="aside-nav__link">
-              <svg class="svg-icon">
-                <use xlink:href="#icon-ic-menu-store"></use>
-              </svg>
-              <span class="aside-nav__link-label">
+  <div class="aside-nav">
+    <ul class="aside-nav__list">
+      <li class="aside-nav__item --active">
+        <a href="#" class="aside-nav__link">
+          <span class="aside-nav__icon">
+          <svg class="svg-icon icon-m1">
+            <use xlink:href="#icon-m1"></use>
+          </svg>
+          <svg class="svg-icon icon-m1-a --hover">
+            <use xlink:href="#icon-m1-a"></use>
+          </svg>
+          </span>
+          <span>Личный кабинет</span>
+        </a>
+      </li>
+      <li class="aside-nav__item">
+        <a href="#" class="aside-nav__link">
+          <span class="aside-nav__icon">
+          <svg class="svg-icon icon-m2">
+            <use xlink:href="#icon-m2"></use>
+          </svg>
+          <svg class="svg-icon icon-m2-a --hover">
+            <use xlink:href="#icon-m2-a"></use>
+          </svg>
+          </span>
+          <span>Счета, документы</span>
+        </a>
+      </li>
+      <li class="aside-nav__item">
+        <a href="#" class="aside-nav__link">
+          <span class="aside-nav__icon">
+          <svg class="svg-icon icon-m3">
+            <use xlink:href="#icon-m3"></use>
+          </svg>
+          <svg class="svg-icon icon-m3-a --hover">
+            <use xlink:href="#icon-m3-a"></use>
+          </svg>
+          </span>
+          <span>Базы данных</span>
+        </a>
+      </li>
+      <li class="aside-nav__item  --active">
+        <a href="#" class="aside-nav__link">
+          <span class="aside-nav__icon">
+          <svg class="svg-icon icon-m4">
+            <use xlink:href="#icon-m4"></use>
+          </svg>
+          <svg class="svg-icon icon-m4-a --hover">
+            <use xlink:href="#icon-m4-a"></use>
+          </svg>
+          </span>
+          <span>Пользователи</span>
+        </a>
+      </li>
+      <li class="aside-nav__item --active">
+        <a href="#" class="aside-nav__link">
+          <span class="aside-nav__icon">
+          <svg class="svg-icon icon-m5">
+            <use xlink:href="#icon-m5"></use>
+          </svg>
+          <svg class="svg-icon icon-m5-a --hover">
+            <use xlink:href="#icon-m5-a"></use>
+          </svg>
+          </span>
+          <span>Поддержка</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="aside-nav__list">
+      <li class="aside-nav__item">
+        <a href="#" class="aside-nav__link">
+          <span class="aside-nav__icon">
+            <svg class="svg-icon icon-m6">
+              <use xlink:href="#icon-m6"></use>
+            </svg>
+            <svg class="svg-icon icon-m6-a --hover">
+              <use xlink:href="#icon-m6-a"></use>
+            </svg>
+          </span>
+          <span class="aside-nav__link-label">
               <span>Услуги+</span>
               <span class="aside-nav__badge">243</span>
-                </span>
-            </a>
-          </li>
-        </ul>
-        <ul class="aside-nav__list xl-hidden">
-          <li class="aside-nav__item">
-            <a href="#" class="aside-nav__link">
-              <img src="img/ic-menu-dw.svg" alt="1C" class="aside-nav__icon-img">
-              <span>Программа для входа 1С</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </aside>
+          </span>
+        </a>
+      </li>
+    </ul>
+    <ul class="aside-nav__list xl-hidden">
+      <li class="aside-nav__item">
+        <a href="#" class="aside-nav__link">
+          <img src="img/ic-menu-dw.svg" alt="1C" class="aside-nav__icon-img">
+          <span>Программа для входа 1С</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
+
+    
     <aside class="aside-right">
       <div class="aside-box --banner --congrats">
         <div class="aside-box__image">
@@ -1488,13 +1523,22 @@
         <div class="all">
           <div class="footer-bottom__left">
             <a href="#" class="footer-bottom__logo">
-              <img src="img/logo-foot.svg" alt="SHEFF">
+              <svg class="svg-icon logo-foot">
+                <use xlink:href="#icon-logo"></use>
+              </svg>
+              
             </a>
-            <div class="footer-bottom__copyright">© 2011-2024 ITSheff. Все права защищены</div>
+            <div class="footer-bottom__copyright">© 2011-2024 ITSheff. <span>Все права защищены</span></div>
           </div>
           <div class="footer-bottom__right">
-            <a href="#" class="footer-bottom__link">Соглашение публичной оферты ТОО "ITsheff.kz"</a>
-            <a href="#" class="footer-bottom__link">Соглашение публичной оферты ИП SAAS</a>
+            <div class="footer-bottom__1">
+              <a href="#" class="footer-bottom__link">Соглашение публичной оферты ТОО "ITsheff.kz"</a>
+            </div>
+            <div class="footer-bottom__2">
+              <a href="#" class="footer-bottom__link">Соглашение публичной оферты ИП SAAS</a>
+            </div>
+            
+            
           </div>
         </div>
       </div>
@@ -1504,41 +1548,66 @@
       <ul class="aside-nav__list">
         <li class="aside-nav__item --active">
           <a href="#" class="aside-nav__link">
-            <svg class="svg-icon icon-ic-menu-lk">
-              <use xlink:href="#icon-ic-menu-lk"></use>
-            </svg>
+          <span class="aside-nav__icon">
+          <svg class="svg-icon icon-m1">
+            <use xlink:href="#icon-m1"></use>
+          </svg>
+          <svg class="svg-icon icon-m1-a --hover">
+            <use xlink:href="#icon-m1-a"></use>
+          </svg>
+          </span>
             <span>Кабинет</span>
+          </a>
+        </li>
+        <li class="aside-nav__item">
+          <a href="#" class="aside-nav__link">
+          <span class="aside-nav__icon">
+          <svg class="svg-icon icon-m2">
+            <use xlink:href="#icon-m2"></use>
+          </svg>
+          <svg class="svg-icon icon-m2-a --hover">
+            <use xlink:href="#icon-m2-a"></use>
+          </svg>
+          </span>
+            <span>Счета</span>
+          </a>
+        </li>
+        <li class="aside-nav__item">
+          <a href="#" class="aside-nav__link">
+          <span class="aside-nav__icon">
+          <svg class="svg-icon icon-m3">
+            <use xlink:href="#icon-m3"></use>
+          </svg>
+          <svg class="svg-icon icon-m3-a --hover">
+            <use xlink:href="#icon-m3-a"></use>
+          </svg>
+          </span>
+            <span>Базы</span>
           </a>
         </li>
         <li class="aside-nav__item  --active">
           <a href="#" class="aside-nav__link">
-            <svg class="svg-icon icon-ic-menu-doc">
-              <use xlink:href="#icon-ic-menu-doc"></use>
-            </svg>
-            <span>Счета</span>
-          </a>
-        </li>
-        <li class="aside-nav__item --active">
-          <a href="#" class="aside-nav__link">
-            <svg class="svg-icon icon-ic-menu-bd">
-              <use xlink:href="#icon-ic-menu-bd"></use>
-            </svg>
-            <span>Базы</span>
-          </a>
-        </li>
-        <li class="aside-nav__item --active">
-          <a href="#" class="aside-nav__link">
-            <svg class="svg-icon icon-ic-menu-user">
-              <use xlink:href="#icon-ic-menu-user"></use>
-            </svg>
+          <span class="aside-nav__icon">
+          <svg class="svg-icon icon-m4">
+            <use xlink:href="#icon-m4"></use>
+          </svg>
+          <svg class="svg-icon icon-m4-a --hover">
+            <use xlink:href="#icon-m4-a"></use>
+          </svg>
+          </span>
             <span>Пользователи</span>
           </a>
         </li>
         <li class="aside-nav__item --active">
           <a href="#" class="aside-nav__link">
-            <svg class="svg-icon icon-ic-menu-support">
-              <use xlink:href="#icon-ic-menu-support"></use>
-            </svg>
+          <span class="aside-nav__icon">
+          <svg class="svg-icon icon-m5">
+            <use xlink:href="#icon-m5"></use>
+          </svg>
+          <svg class="svg-icon icon-m5-a --hover">
+            <use xlink:href="#icon-m5-a"></use>
+          </svg>
+          </span>
             <span>Поддержка</span>
           </a>
         </li>
@@ -1560,9 +1629,10 @@
                 <li class="mobile-menu__submenu__item">
                 <span class="mobile-menu__item-title --arr js-mobile-menu__item-title">
                 1С Онлайн
-                  <svg class="svg-icon">
+                  <svg class="svg-icon arr-submenu">
                     <use xlink:href="#icon-drop-downa-rrow"></use>
                   </svg>
+                  <a href="#" class="link-more">Подробнее</a>
                 </span>
                   <ul class="mobile-menu__submenu">
                     <li class="mobile-menu__submenu__item">
@@ -1586,9 +1656,10 @@
                 <li class="mobile-menu__submenu__item">
                 <span class="mobile-menu__item-title --arr js-mobile-menu__item-title">
                 Купить 1С
-                  <svg class="svg-icon">
+                  <svg class="svg-icon arr-submenu">
                     <use xlink:href="#icon-drop-downa-rrow"></use>
                   </svg>
+                  <a href="#" class="link-more">Подробнее</a>
                 </span>
                   <ul class="mobile-menu__submenu">
                     <li class="mobile-menu__submenu__item">
@@ -1612,9 +1683,10 @@
                 <li class="mobile-menu__submenu__item">
                 <span class="mobile-menu__item-title --arr js-mobile-menu__item-title">
                 1С Фреш
-                  <svg class="svg-icon">
+                  <svg class="svg-icon arr-submenu">
                     <use xlink:href="#icon-drop-downa-rrow"></use>
                   </svg>
+                  <a href="#" class="link-more">Подробнее</a>
                 </span>
                   <ul class="mobile-menu__submenu">
                     <li class="mobile-menu__submenu__item">
@@ -1643,9 +1715,10 @@
                 <li class="mobile-menu__submenu__item">
                 <span class="mobile-menu__item-title --arr js-mobile-menu__item-title">
                 1С Сервер
-                  <svg class="svg-icon">
+                  <svg class="svg-icon arr-submenu">
                     <use xlink:href="#icon-drop-downa-rrow"></use>
                   </svg>
+                  <a href="#" class="link-more">Подробнее</a>
                 </span>
                   <ul class="mobile-menu__submenu">
                     <li class="mobile-menu__submenu__item">
@@ -1675,7 +1748,7 @@
             </li>
             <li class="mobile-menu__item">
               <span class="mobile-menu__item-title">
-              Блог
+              Блог <span class="menu-num">+2</span>
               </span>
             </li>
             <li class="mobile-menu__item">
@@ -1697,8 +1770,8 @@
         <div class="mobile-menu__footer">
             <div class="footer-local">
               100024, Казахстан Караганда
-              <strong>
-                мкр. Степной-2, стр. 6/1, офис 200</strong>
+              <a class="link-address" target="_blank" href="https://2gis.kz/karaganda?m=73.083283%2C49.815641%2F11">
+                мкр. Степной-2, стр. 6/1, офис 200</a>
             </div>
             <div class="footer-email">
               <div class="footer-email__link">
@@ -1736,10 +1809,119 @@
               </div>
               
             </div><!--end footer-support -->
+            <div class="mobile-menu__registration">
+              <a href="#" class="btn --outline --full">Регистрация</a>
+            </div>
+            <div class="mobile-menu__auth">
+              <div class="b-row">
+                <a href="#" class="mobile-menu__user">
+                  <div class="mobile-menu__user-icon">
+                    <svg class="svg-icon ic24">
+                      <use xlink:href="#icon-gift-present"></use>
+                    </svg>
+                  </div>
+                  <div class="mobile-menu__user-right">
+                    <div class="title">14 дней осталось</div>
+                    Платный тариф в подарок
+                  </div>
+                </a>
+                
+              </div>
+              <div class="b-row">
+                <a href="#" class="mobile-menu__user">
+                  <div class="mobile-menu__user-icon">
+                    <svg class="svg-icon ic24">
+                      <use xlink:href="#icon-coin-tenge"></use>
+                    </svg>
+                  </div>
+                  <div class="mobile-menu__user-right">
+                  <div class="title">21 500 ₸</div>
+                    на счету
+                  </div>
+                  
+                </a>
+              </div>
+              <div class="b-row">
+                <div class="mobile-menu__user">
+                  <a href="#" class="mobile-menu__user-icon">
+                    <svg class="svg-icon ic24 icon-username">
+                      <use xlink:href="#icon-users-profiles-variant"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="mobile-menu__user-right">
+                  <span class="title">Username</span>
+                    Бухгалтер
+                  </a>
+                  <a href="#" class="mobile-menu__logout">
+                    <svg class="svg-icon ic24">
+                      <use xlink:href="#icon-out-exit"></use>
+                    </svg>
+                  </a>
+                </div>
+                
+              </div>
+            </div><!--end mobile-menu__auth -->
         </div>
       </div><!--end mobile-menu -->
       <div class="mobile-menu__layout-bg"></div>
     </div><!--end mobile-menu__layout -->
+    
+    <div id="mobile-notice" class="mobile-modal__layout">
+      <div class="mobile-modal__layout-bg"></div>
+      <div class="mobile-modal">
+        
+        <div class="mobile-modal__wrapper">
+          <div class="block-notice footer__notice-float">
+            <div class="block-notice-wrapper custom-scroll">
+              <div class="block-notice__header">
+                <div class="title">Уведомления</div>
+                <div class="btn-action">
+                  <a href="#" class="btn-clear --disabled">Очистить</a>
+                </div>
+              </div>
+              <div class="block-notice__body">
+                <div class="notice-null">Уведомлений еще нет</div>
+                <div class="block-notice-box">
+                  <div class="block-notice-box__text">Линия консультации - новое сообщение</div>
+                  <div class="block-notice-box__btn">
+                    <a href="#" class="btn --outline">Ответить</a>
+                  </div>
+                </div>
+                <div class="block-notice-box">
+                  <div class="block-notice-box__text">Линия консультации - новое сообщение</div>
+                  <div class="block-notice-box__btn">
+                    <a href="#" class="btn --outline">Ответить</a>
+                  </div>
+                </div>
+                <div class="block-notice-box">
+                  <div class="block-notice-box__text">Линия консультации - новое сообщение</div>
+                  <div class="block-notice-box__btn">
+                    <a href="#" class="btn --outline">Ответить</a>
+                  </div>
+                </div>
+                <div class="block-notice-box">
+                  <div class="block-notice-box__text">Линия консультации - новое сообщение</div>
+                </div>
+                <div class="block-notice-box">
+                  <div class="block-notice-box__text">Линия консультации - новое сообщение</div>
+                  <div class="block-notice-box__btn">
+                    <a href="#" class="btn --outline">Ответить</a>
+                  </div>
+                </div>
+                <div class="block-notice-box">
+                  <div class="block-notice-box__text">Линия консультации - новое сообщение</div>
+                  <div class="block-notice-box__btn">
+                    <a href="#" class="btn --outline">Ответить</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </div><!--end footer__notice-float -->
+        </div>
+      </div><!--end mobile-modal -->
+    </div><!-- end mobile-menu__layout -->
+    
     
     <div class="just-modal" id="modal-support">
       <div class="just-modal__wrapper">
