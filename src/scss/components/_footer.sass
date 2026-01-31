@@ -423,12 +423,37 @@
   overflow-x: hidden
   +r($sm)
     width: 100%
-  
+    
+  .mobile-menu__item.--active
+    .mobile-menu-footer__submenu
+      display: flex
+  &-footer
+    &__submenu
+      font-size: 16px
+      margin: 0
+      padding: 0 16px
+      display: none
+      flex-direction: column
+      &__item
+        display: block
+        width: 100%
+      &__link
+        display: block
+        border-radius: 10px
+        padding: 14px 20px
+        color: $black900
+        &:hover
+          background: #F8F8F8
+        &.--active
+          background: #E1E4E7
   &-footer-wrapper
     padding-top: 64px
     background: #fff
     padding-bottom: 60px
     position: relative
+    display: none
+    +r($sm)
+      display: block
     &:before
       content: ""
       height: 3px
@@ -458,8 +483,6 @@
 
       &__link
         font-size: 10px
-      &__1
-      
       &__2
         max-width: 47%
         width: 45%

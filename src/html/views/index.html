@@ -16,6 +16,9 @@ mobileMenu,
 mobileToolbar,
 mobileNotice
 });
+
+var asideLeftHtml = _.template(require('../includes/aside-left.html'))();
+
 %>
 
 <div class="over">
@@ -848,7 +851,8 @@ mobileNotice
       
     </main>
     </div>
-    <%= _.template(require('./../includes/aside-left.html').default)(data) %>
+    
+    <%= asideLeftHtml %>
     
     <aside class="aside-right">
       <div class="aside-box --banner --congrats">
