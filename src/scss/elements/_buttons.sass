@@ -62,11 +62,20 @@ button
     color: #fff
     border-color: $orangeMain700
     background: $orangeMain700
-
-
-
-
-
+  &.disabled
+    cursor: default
+    background: #E5E5E5
+    color: #C0C0C0
+    border-color: #E5E5E5
+  &.--min
+    height: 28px
+    padding: 4px 20px
+  &.--big
+    height: 52px
+    font-size: 18px
+    +r($lg)
+      font-size: 14px
+      height: 36px
 .btn-link-icon
   display: inline-flex
   justify-content: center
@@ -81,3 +90,23 @@ button
   .svg-icon
     width: 15px
     height: 15px
+
+    
+.toggle-btn
+  border-radius: 20px
+  background: $black25
+  font-size: 15px
+  color: $black700
+  border: none
+  height: 36px
+  display: inline-flex
+  vertical-align: top
+  padding: 8px 10px
+  align-items: center
+  justify-content: center
+  &.--full
+    width: 100%
+  &:hover
+    background: $black100
+  &:active
+    background: $black150

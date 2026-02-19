@@ -23,7 +23,7 @@
   align-items: center
   height: 25px
   &.--stop
-    background: #F26135
+    background: $orangeMain500
     
 .number-checker
   position: relative
@@ -50,6 +50,34 @@
 .xl-hidden
   +r($xl)
     display: none !important
+
+.lg-hidden
+  +r($lg)
+    display: none !important
+
+.lg-visible
+  display: none
+  +r($lg)
+    display: block !important
+
+.md-hidden
+  +r($md)
+    display: none !important
+
+.md-visible
+  display: none
+  +r($md)
+    display: block !important
+
+.sm-hidden
+  +r($md)
+    display: none !important
+
+.sm-visible
+  display: none
+  +r($md)
+    display: block !important
+
 
 
 .block-notice
@@ -96,3 +124,295 @@
     &__btn
       .btn
         width: 100%
+
+
+
+
+.table-m
+  border-collapse: collapse
+  text-align: left
+  width: 100%
+  color: $black700
+  tr
+  th
+    background: $black25
+    font-size: 16px
+    font-weight: 600
+    padding: 12px 8px
+    box-shadow: 0 1px 0 #E5E5E5
+    +r($lg)
+      font-size: 14px
+    &:first-child
+      border-top-left-radius: 10px
+      border-bottom-left-radius: 10px
+      &.md-hidden + th
+        +r($md)
+          border-top-left-radius: 10px
+          border-bottom-left-radius: 10px
+    &:last-child
+      border-top-right-radius: 10px
+      border-bottom-right-radius: 10px
+  
+  td
+    padding: 12px 8px
+    font-size: 15px
+    font-weight: 400
+    border-bottom: 1px solid #E5E5E5
+    vertical-align: middle
+    +r($lg)
+      font-size: 12px
+  .text-black-250
+    color: $black250
+
+.table-s
+  border-collapse: collapse
+  text-align: left
+  width: 100%
+  color: $black700
+  tr
+  th
+    background: $black25
+    font-size: 16px
+    font-weight: 600
+    padding: 12px 8px
+    box-shadow: 0 1px 0 #E5E5E5
+    +r($lg)
+      font-size: 14px
+    &:first-child
+      border-top-left-radius: 10px
+      border-bottom-left-radius: 10px
+      &.md-hidden + th
+        +r($md)
+          border-top-left-radius: 10px
+          border-bottom-left-radius: 10px
+    &:last-child
+      border-top-right-radius: 10px
+      border-bottom-right-radius: 10px
+  
+  td
+    padding: 12px 8px
+    font-size: 15px
+    font-weight: 400
+    border-bottom: 1px solid #E5E5E5
+    vertical-align: middle
+    +r($lg)
+      font-size: 14px
+  .text-black-250
+    color: $black250
+
+.title__table-s-h2
+  padding: 10px
+  font-size: 20px
+  font-weight: 450
+  +r($lg)
+    font-size: 18px
+  
+  
+
+.tabs-block
+  display: flex
+  flex-direction: column
+  flex: 1 1 auto
+  &__header
+    +r($lg)
+      display: none
+  &__body
+    display: flex
+    flex-direction: column
+    flex: 1 1 auto
+  .tab-list
+    display: flex
+    margin: 0
+    padding: 0
+    list-style: none
+    border-bottom: 1px solid #E5E5E5
+    .tab-item
+      padding: 26px 16px
+      position: relative
+      display: flex
+      gap: 15px
+      cursor: pointer
+      &:before
+        height: 3px
+        background: $orangeMain500
+        opacity: 0
+        content: ""
+        position: absolute
+        bottom: -4px
+        left: 0
+        width: 100%
+        transition: all 0.3s $ease
+      &.--active, &:hover
+        &:before
+          bottom: 0
+          opacity: 1
+        
+      &__num
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        vertical-align: top
+        background: #FEE0CC
+        padding: 0 2px
+        height: 21px
+        min-width: 21px
+        border-radius: 5px
+        line-height: 20px
+        color: #9A3110
+        font-size: 12px
+        font-weight: 600
+  .tab-box
+    padding-top: 28px
+    display: none
+    flex-direction: column
+    flex: 1 1 auto
+    +r($lg)
+      padding-top: 0
+    &.--show
+      display: flex
+      +r($lg)
+        padding-bottom: 29px
+        border-bottom: 3px solid #F26135
+  .tab-accordion-mobile
+    display: none
+    font-size: 16px
+    border-bottom: 1px solid $black250
+    min-height: 55px
+    align-items: center
+    padding: 8px
+    position: relative
+    &__label
+      margin-right: 12px
+    &__num
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      vertical-align: top
+      background: #FEE0CC
+      padding: 0 2px
+      height: 21px
+      min-width: 21px
+      border-radius: 5px
+      line-height: 20px
+      color: #9A3110
+      font-size: 12px
+      font-weight: 600
+    &:before
+      content: ""
+      background: url(../img/left-next-arrow.svg) 50% 50% no-repeat
+      width: 16px
+      height: 16px
+      display: block
+      position: absolute
+      top: calc(50% - 8px)
+      right: 8px
+      transform: rotate(90deg)
+    +r($lg)
+      display: flex
+    &.--active
+      color: $black1000
+      border-bottom-color: rgba(255,255,255, 0)
+      &:before
+        transform: rotate(0deg)
+      
+.box-doc
+  text-align: center
+  display: inline-flex
+  flex-direction: column
+  padding: 12px
+  border-radius: 4px
+  color: $black700
+  +r($md)
+    padding: 6px
+  &:hover
+    background: #F8F8F8
+    color: $black1000
+  &__list
+    display: flex
+    gap: 8px
+  &__icon
+    display: block
+    .svg-icon
+      width: 24px
+      height: 24px
+  &__label
+    display: block
+    text-align: center
+    margin-top: 5px
+
+    
+.pagination-box
+  display: flex
+  margin-top: 28px
+  &-more
+    margin-top: 28px
+    text-align: center
+    .btn
+      width: 100%
+      max-width: 327px
+      font-weight: 600
+  &.--right
+    justify-content: flex-end
+  
+.pagination-list
+  display: flex
+  margin: 0
+  padding: 0
+  gap: 6px
+  list-style: none
+  &__item
+    &-link
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 36px
+      height: 36px
+      background: $black25
+      color: $black700
+      font-size: 15px
+      border-radius: 50%
+      &:hover, &.--active
+        background: $orangeMain500
+        color: #fff
+
+        
+        
+.actions-btns
+  &__more
+    position: relative
+    &.--active
+      .actions-btns__more-float
+        display: block
+    &-btn
+      cursor: pointer
+      &:hover, &:active
+        svg
+          stroke: $black1000
+      svg
+        stroke: $black400
+    &-float
+      position: absolute
+      border: 1px solid #E5E5E5
+      box-shadow: 0px 4px 12px 0px #0000001F
+      background: #fff
+      padding: 13px 16px
+      top: -14px
+      right: calc(100% - 12px)
+      display: none
+      
+      &-list
+        margin: 0
+        padding: 0
+        list-style: none
+        display: flex
+        gap: 12px
+        &__item
+          font-size: 14px
+          white-space: nowrap
+          a
+            color: $black700
+
+
+
+  
+.toggle-btn

@@ -176,6 +176,14 @@ body
     flex-wrap: wrap
   +r($xl)
     padding: 0
+  &.--align-none
+    align-items: unset
+    .content-wrapper
+      display: flex
+    .content
+      flex: 1 1 auto
+      display: flex
+      flex-direction: column
   .content-wrapper
     order: 1
     flex: 1 1 auto
@@ -463,7 +471,7 @@ body
     .day
       font-size: 36px
       font-weight: bold
-      background: radial-gradient(96.63% 96.72% at 100% 100%, #F26135 0%, #FF9950 100%)
+      background: radial-gradient(96.63% 96.72% at 100% 100%, $orangeMain500 0%, #FF9950 100%)
       -webkit-background-clip: text
       -webkit-text-fill-color: transparent
       line-height: 1
@@ -597,9 +605,9 @@ body
       +r($sm)
         min-height: 40px
       &.--red-bg
-        background: radial-gradient(105.85% 568.67% at 103.28% 615%, #D7181F 10%, #F8F8F8 100%)
+        background: radial-gradient(105.85% 568.67% at 103.28% 615%, #D7181F 10%, $black25 100%)
       &.--blue-bg
-        background: radial-gradient(105.85% 568.67% at 103.28% 615%, #009DFF 10%, #F8F8F8 100%)
+        background: radial-gradient(105.85% 568.67% at 103.28% 615%, #009DFF 10%, $black25 100%)
       +r($xl)
         background: none !important
       &-title

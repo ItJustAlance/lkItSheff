@@ -1,0 +1,197 @@
+<%
+var data = {
+title: "Заголовок сайта",
+copyright: "itJustAlance"
+};
+
+var mobileFooter = _.template(require('../includes/mobile-footer.html'))(data);
+var mobileMenu = _.template(require('../includes/mobile-menu.html'))(data);
+var mobileToolbar = _.template(require('../includes/mobile-toolbar.html'))(data);
+var mobileNotice = _.template(require('../includes/mobile-notice.html'))(data);
+
+var footerHtml = _.template(require('../includes/footer.html'))({
+...data,
+mobileFooter,
+mobileMenu,
+mobileToolbar,
+mobileNotice
+});
+
+var asideLeftHtml = _.template(require('../includes/aside-left.html'))();
+
+%>
+
+<div class="over">
+  <%= _.template(require('../includes/header.html'))(data) %>
+  <div class="container">
+    <div class="all container-main  --align-none">
+      <div class="content-wrapper">
+        <main class="content">
+          <div class="section-documents">
+            <div class="tabs-block">
+              <div class="tabs-block__header">
+                <ul class="tab-list">
+                  <li class="tab-item"><span class="tab-item__label">Счета и документы</span><span
+                          class="tab-item__num">3</span></li>
+                  <li class="tab-item"><span class="tab-item__label">Акт сверки взаиморасчетов</span></li>
+                  <li class="tab-item  --active"><span class="tab-item__label">Ваши реквизиты</span></li>
+                </ul>
+              </div>
+              
+              <div class="tabs-block__body">
+                <div class="tab-accordion-mobile"><span class="tab-accordion-mobile__label">Счета и документы</span></div>
+                <div class="tab-box">
+                
+                </div><!--end tab-box -->
+                <div class="tab-accordion-mobile"><span class="tab-accordion-mobile__label">Акт сверки взаиморасчетов</span></div>
+                <div class="tab-box">
+                  контент 2
+                
+                </div><!--end tab-box -->
+                <div class="tab-accordion-mobile --active"><span class="tab-accordion-mobile__label">Ваши реквизиты</span></div>
+                <div class="tab-box  --show">
+                  <div class="document-details-box">
+                    <div class="document-details-box__row">
+                      <div class="form-ownership">
+                        <div class="form-ownership__body">
+                          <div class="b-colum">
+                            <div class="form-ownership__row">
+                              <div class="form-ownership__label">Форма собственности:</div>
+                              <div class="form-ownership__value">Частная</div>
+                            </div>
+                            <div class="form-ownership__row">
+                              <div class="form-ownership__label">ФИО:</div>
+                              <div class="form-ownership__value">Фамилия Имя Отчество</div>
+                            </div>
+                            <div class="form-ownership__row">
+                              <div class="form-ownership__label">ИИН:</div>
+                              <div class="form-ownership__value">123456789123</div>
+                            </div>
+                          </div>
+                          <div class="b-colum">
+                            <div class="form-ownership__row">
+                              <div class="form-ownership__label">Почтовый адрес:</div>
+                              <div class="form-ownership__value">
+                                050043, Казахстан,
+                                г. Алматы, ул. Жарокова, 124, кв. 503
+                              </div>
+                            </div>
+                            <div class="form-ownership__row">
+                              <div class="form-ownership__label">Юридический адрес:</div>
+                              <div class="form-ownership__value">050043, Казахстан, г. Алматы, Орбита-2, д. 31, кв. 85</div>
+                            </div>
+                            
+                          </div>
+                          <div class="b-colum">
+                            <div class="form-ownership__row">
+                              <div class="form-ownership__label">БИН:</div>
+                              <div class="form-ownership__value">170840036479</div>
+                            </div>
+                            <div class="form-ownership__row">
+                              <div class="form-ownership__label">Банковские реквизиты:</div>
+                              <div class="form-ownership__value">IRTYKZKA KZ8296502F0008883959</div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <div class="form-ownership__bottom">
+                          <div class="form-ownership__row">
+                            <div class="b-btn"><button disabled class="btn disabled">Сменить реквизиты</button> <span class="btn-status">проверяем данные....</span></div>
+                          </div>
+                        </div>
+                      </div><!--end form-ownership -->
+                      <div class="form-subscribe">
+                        <div class="form-subscribe__title">Подписки:</div>
+                        <div class="form-subscribe__list">
+                          <div class="form-subscribe__box">
+                            <div class="form-subscribe__box-title">Приложения Microsoft 365 Business</div>
+                            <div class="form-subscribe__box-text"><span>начало: 22.09.2025</span> <span>количество: 16</span></div>
+                            <div class="form-subscribe__box-actions">
+                              <a href="#" class="action-link">
+                                <svg class="svg-icon --ic-document">
+                                  <use xlink:href="#icon-ic-document"></use>
+                                </svg>
+                                Оферта
+                              </a>
+                              <a href="#" class="action-link">
+                                <svg class="svg-icon --cancel">
+                                  <use xlink:href="#icon-cancel"></use>
+                                </svg>
+                                Отписаться
+                              </a>
+                            </div>
+                          </div><!--end form-subscribe__box -->
+                          <div class="form-subscribe__box">
+                            <div class="form-subscribe__box-title">1С Онлайн</div>
+                            <div class="form-subscribe__box-text">начало: 22.09.2025</div>
+                            <div class="form-subscribe__box-actions">
+                              <a href="#" class="action-link">
+                                <svg class="svg-icon">
+                                  <use xlink:href="#icon-ic-document"></use>
+                                </svg>
+                                Оферта
+                              </a>
+                              <a href="#" class="action-link">
+                                <svg class="svg-icon">
+                                  <use xlink:href="#icon-cancel"></use>
+                                </svg>
+                                Отписаться
+                              </a>
+                            </div>
+                          </div><!--end form-subscribe__box -->
+                          <div class="form-subscribe__box">
+                            <div class="form-subscribe__box-title">1С Онлайн</div>
+                            <div class="form-subscribe__box-text">начало: 22.09.2025</div>
+                            <div class="form-subscribe__box-actions">
+                              <a href="#" class="action-link">
+                                <svg class="svg-icon">
+                                  <use xlink:href="#icon-ic-document"></use>
+                                </svg>
+                                Оферта
+                              </a>
+                              <a href="#" class="action-link">
+                                <svg class="svg-icon">
+                                  <use xlink:href="#icon-cancel"></use>
+                                </svg>
+                                Отписаться
+                              </a>
+                            </div>
+                          </div><!--end form-subscribe__box -->
+                        </div>
+                      </div><!--end form-subscribe -->
+                    </div>
+                    <div class="document-details-box__row">
+                    
+                    </div>
+                  
+                  
+                  </div><!--end document-details-box -->
+                </div><!--end tab-box -->
+              </div><!--end tabs-block__body -->
+            </div><!--end tabs-block-->
+          </div><!--end section-documents -->
+        
+        
+        </main>
+      </div>
+      
+      <%= asideLeftHtml %>
+    
+    
+    </div><!--end all -->
+    
+    <!-- br><br>
+    <div class="btns">
+      <a class="btn js-btn-modal" href="#" data-modal="modal-support">Модальное окно</a>
+    </div>
+    <br><br>
+    <pre>
+      для запуска модального окна,
+      добавляем класс "js-btn-modal"
+      для указания id модального окна пишем аттрибут data-modal="modal-support"
+      &#706;a class="js-btn-modal" href="#" data-modal="modal-support"&#707;Модальное окно&#706;/a&#707;
+    </pre>
+    Контент. -->
+  </div>
+  <%= footerHtml %>
+</div>

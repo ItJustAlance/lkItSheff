@@ -1,0 +1,258 @@
+<%
+var data = {
+title: "Заголовок сайта",
+copyright: "itJustAlance"
+};
+
+var mobileFooter = _.template(require('../includes/mobile-footer.html'))(data);
+var mobileMenu = _.template(require('../includes/mobile-menu.html'))(data);
+var mobileToolbar = _.template(require('../includes/mobile-toolbar.html'))(data);
+var mobileNotice = _.template(require('../includes/mobile-notice.html'))(data);
+
+var footerHtml = _.template(require('../includes/footer.html'))({
+...data,
+mobileFooter,
+mobileMenu,
+mobileToolbar,
+mobileNotice
+});
+
+var asideLeftHtml = _.template(require('../includes/aside-left.html'))();
+
+%>
+
+<div class="over">
+  <%= _.template(require('../includes/header.html'))(data) %>
+  <div class="container">
+    <div class="all container-main  --align-none">
+      <div class="content-wrapper">
+        <main class="content">
+          <div class="section-documents">
+            <div class="tabs-block">
+              <div class="tabs-block__header">
+                <ul class="tab-list">
+                  <li class="tab-item"><span class="tab-item__label">Счета и документы</span></li>
+                  <li class="tab-item --active"><span class="tab-item__label">Акт сверки взаиморасчетов</span></li>
+                  <li class="tab-item"><span class="tab-item__label">Ваши реквизиты</span></li>
+                </ul>
+              </div>
+              
+              <div class="tabs-block__body">
+                <div class="tab-accordion-mobile"><span class="tab-accordion-mobile__label">Счета и документы</span></div>
+                <div class="tab-box">
+                
+                </div><!--end tab-box -->
+                <div class="tab-accordion-mobile --active"><span class="tab-accordion-mobile__label">Акт сверки взаиморасчетов</span></div>
+                <div class="tab-box --show">
+                  <div class="document-act-box">
+                    <div class="reconciliation-statement-box">
+                      <div class="reconciliation-statement-box__form">
+                        <div class="reconciliation-statement-box__form-title">
+                          Заказать акт сверки
+                        </div>
+                        <div class="reconciliation-statement-box__form-form">
+                          <div class="b-row --align-bottom">
+                            <div class="b-col3">
+                              <div class="form-field">
+                                <div class="form-field__label">Начало периода:</div>
+                                <div class="form-field__input">
+                                  <div class="input-box --input-date-box">
+                                    <input type="text" placeholder="01/12/1999" class="input">
+                                    <button class="btn-calendar">
+                                      <svg class="svg-icon">
+                                        <use xlink:href="#icon-calendar"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div><!--end form-field -->
+                            
+                            </div>
+                            <div class="b-col3">
+                              <div class="form-field">
+                                <div class="form-field__label">Завершение периода:</div>
+                                <div class="form-field__input">
+                                  <div class="input-box --input-date-box">
+                                    <input type="text" placeholder="01/12/1999" class="input">
+                                    <button class="btn-calendar">
+                                      <svg class="svg-icon">
+                                        <use xlink:href="#icon-calendar"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div><!--end form-field -->
+                            </div>
+                            <div class="b-col3">
+                              <div class="b-input">
+                                <input type="submit" class="btn --big --full" value="Заказать">
+                              </div>
+                            </div>
+                          </div><!-- end b-row -->
+                        </div><!-- end reconciliation-statement-box__form-form -->
+                        <div class="reconciliation-statement-box__form-filter">
+                          <div class="b-row --align-bottom">
+                            <div class="b-col3">
+                              <button class="toggle-btn --full">За последние 7 <span class="lg-hidden">дней</span><span class="lg-visible">д.</span></button>
+                            </div>
+                            <div class="b-col3">
+                              <button class="toggle-btn --full">За последний <span class="lg-hidden">месяц</span><span class="lg-visible">м.</span></button>
+                            </div>
+                            <div class="b-col3">
+                              <button class="toggle-btn --full">За последние 3 <span class="lg-hidden">месяца</span><span class="lg-visible">м.</span></button>
+                            </div>
+                          </div><!-- end b-row -->
+                        </div><!--end reconciliation-statement-box__form-filter -->
+                      </div>
+
+                    </div><!--end reconciliation-statement-box -->
+                  </div><!--end document-act-box -->
+                  <div class="document-act-complited-box">
+                    <div class="title__table-s-h2">Готовые акты сверки:</div>
+                    <div class="table-wrapper sm-hidden">
+                      <table class="table-s table-document-act">
+                        <tr>
+                          <th>Начало <span class="lg-hidden">периода</span></th>
+                          <th>Завершение <span class="lg-hidden">периода</span></th>
+                          <th>Дата исполнения</th>
+                          <th class="cell-action">Действие</th>
+                        </tr>
+                        <tr>
+                          <td>1.05.2018</td>
+                          <td>22.05.2018</td>
+                          <td>
+                            23.05.2018  <span class="lg-hidden text-black-250">15:16</span>
+                          </td>
+                          <td>
+                            <div class="actions-btns">
+                              <button  class="btn --min btn-pay">Скачать</button>
+                              <a class="link-podpis" href="#">Получить подписанный</a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1.05.2018</td>
+                          <td>22.05.2018</td>
+                          <td>
+                            23.05.2018  <span class="lg-hidden text-black-250">15:16</span>
+                          </td>
+                          <td>
+                            <div class="actions-btns">
+                              <button  class="btn --min btn-pay">Скачать</button>
+                              <a class="link-podpis" href="#">Получить подписанный</a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1.05.2018</td>
+                          <td>22.05.2018</td>
+                          <td>
+                            23.05.2018  <span class="lg-hidden text-black-250">15:16</span>
+                          </td>
+                          <td>
+                            <div class="actions-btns">
+                              <button  class="btn --min btn-pay">Скачать</button>
+                              <a class="link-podpis" href="#">Получить подписанный</a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1.05.2018</td>
+                          <td>22.05.2018</td>
+                          <td>
+                            23.05.2018  <span class="lg-hidden text-black-250">15:16</span>
+                          </td>
+                          <td>
+                            <div class="actions-btns">
+                              <button  class="btn --min btn-pay">Скачать</button>
+                              <a class="link-podpis" href="#">Получить подписанный</a>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="table-wrapper sm-visible">
+                      <table class="table-s table-document-act">
+                        <tr>
+                          <th>Начало</th>
+                          <th>Завершение</th>
+                          <th class="cell-action">Действие</th>
+                        </tr>
+                        <tr>
+                          <td>1.05.2018</td>
+                          <td>22.05.2018</td>
+                          <td>
+                            <div class="actions-btns">
+                              <button  class="btn --min btn-pay">Скачать</button>
+                              <div class="actions-btns__more">
+                                <div class="actions-btns__more-btn">
+                                  <svg class="svg-icon">
+                                    <use xlink:href="#icon-table-more"></use>
+                                  </svg>
+                                </div>
+                                <div class="actions-btns__more-float">
+                                  <ul class="actions-btns__more-float-list">
+                                    <li class="actions-btns__more-float-list__item"><a href="#">Получить подписанный</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            
+                            </div><!--end actions-btns -->
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1.05.2018</td>
+                          <td>22.05.2018</td>
+                          <td>
+                            <div class="actions-btns">
+                              <button  class="btn --min btn-pay">Скачать</button>
+                              <div class="actions-btns__more --active">
+                                <div class="actions-btns__more-btn">
+                                  <svg class="svg-icon">
+                                    <use xlink:href="#icon-table-more"></use>
+                                  </svg>
+                                </div>
+                                <div class="actions-btns__more-float">
+                                  <ul class="actions-btns__more-float-list">
+                                    <li class="actions-btns__more-float-list__item"><a href="#">Получить подписанный</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            
+                            </div><!--end actions-btns -->
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    
+                    
+                    <div class="pagination-box --right lg-hidden">
+                      <ul class="pagination-list">
+                        <li class="pagination-list__item"><a href="#" class="pagination-list__item-link --active">1</a></li>
+                        <li class="pagination-list__item"><a href="#" class="pagination-list__item-link">2</a></li>
+                        <li class="pagination-list__item"><a href="#" class="pagination-list__item-link">3</a></li>
+                        <li class="pagination-list__item"><a href="#" class="pagination-list__item-link">4</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                </div><!--end tab-box -->
+                <div class="tab-accordion-mobile"><span class="tab-accordion-mobile__label">Ваши реквизиты</span></div>
+                <div class="tab-box">
+                  контент 3
+                  
+                </div><!--end tab-box -->
+              </div><!--end tabs-block__body -->
+            </div><!--end tabs-block-->
+          </div><!--end section-documents -->
+        
+        
+        </main>
+      </div>
+      
+      <%= asideLeftHtml %>
+      
+    </div><!--end all -->
+  </div>
+  <%= footerHtml %>
+</div>
