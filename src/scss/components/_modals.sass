@@ -12,6 +12,7 @@
   padding: 0
   font-size: 16px
   overflow: auto
+  line-height: 1.3
   &.modal-form-normal
     .just-modal
       &__container
@@ -36,28 +37,11 @@
         top: 0
         animation: show-wrapper .3s linear 0s 1
 
-  &.mobile-modal-bottom
-    +r(md)
-      padding: 16px 0 0
-      align-items: flex-end
-      .just-modal
-        &__wrapper
-          width: 100%
-          max-width: 600px
-          top: auto
-          padding: 0
-          margin: 12px 0 0
-          align-items: flex-end
-          &:before
-            display: none
-        &__body
-          width: 100%
-          border-radius: 12px 12px 0 0
-
+  
   &.in
     .just-modal
       &__wrapper
-        +r(md)
+        +r($md)
           opacity: 1
           bottom: 0
           top: auto
@@ -89,7 +73,9 @@
     opacity: 0
     +r($md)
       padding: 20px 0
-
+      width: 100%
+    
+      
     &:before
       display: block
       content: ""
@@ -99,28 +85,43 @@
       height: min-content
   &__container
     position: relative
-    max-width: 480px
+    max-width: 600px
     width: 100%
   &__body
     width: 100%
-    padding: 50px 40px 32px
-    background: $baseBg
-    box-shadow: -2px 2px 14px 0px rgba(27, 27, 27, 0.10)
-    border-radius: 16px
+    padding: 12px 0
+    background: #fff
+    box-shadow: 0px 8px 24px 0px #00000024
+    border-radius: 24px
     position: relative
-    font-size: 15px
+    font-size: 16px
     +r($sm)
       padding-left: 12px
       padding-right: 12px
+      border-radius: 0
   &__header
-    padding-bottom: 20px
+    padding: 0 32px
+    display: flex
+    flex-direction: column
+    gap: 2px
+    +r($sm)
+      padding-left: 0
+      padding-right: 0
+  &__content
+    padding: 20px 32px
+    +r($sm)
+      padding-left: 0
+      padding-right: 0
   &-title
-    text-transform: uppercase
-    padding-bottom: 12px
-    padding-top: 32px
-
+    font-size: 20px
+    padding-top: 11px
+    color: $black900
+    
   &-subtitle
     padding-bottom: 12px
+    font-size: 14px
+    color: $black700
+    
   &__close
     position: absolute
     top: 24px
@@ -130,16 +131,56 @@
     svg
       width: 24px
       height: 24px
-      fill: rgba(0, 0, 39, 0.38)
+      stroke: #C0C0C0
     &:hover
       svg
-        fill: #3478F6
+        stroke: $black1000
 
   &-form
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 60px
+    +r($sm)
+      gap: 40px
+      overflow: hidden
+    .toggle-btn
+      padding-left: 23px
+      padding-right: 23px
+    &__body
+      display: flex
+      flex-direction: column
+      gap: 28px
+      +r($sm)
+        gap: 20px
+      &.--form-l
+        gap: 35px
+    &__h2
+      font-size: 18px
+    &__col
+      padding-left: 20px
+      padding-right: 20px
     &__row
-      padding-bottom: 18px
+      padding-bottom: 0
+      display: flex
+      margin: 0 -20px
+      flex-wrap: wrap
+      +r($sm)
+        gap: 20px
+      .just-modal-form__row
+        margin-left: -8px
+        margin-right: -8px
+        .just-modal-form
+          &__col
+            padding-left: 8px
+            padding-right: 8px
+        
       &.pb-32
         padding-bottom: 32px
+      &.--section + .just-modal-form__row
+        margin-top: 26px
+        +r($xs)
+          margin-top: 18px
     .label
       padding-bottom: 4px
       display: block
@@ -152,46 +193,71 @@
     .btn
       font-size: 15px
       font-weight: 400
-
+      svg
+        stroke: currentColor
     &__btns
       padding-top: 16px
       margin-left: -10px
       margin-right: -10px
       display: flex
-    &__col2
-      max-width: 50%
-      min-width: 50%
-      padding: 0 10px
-
-
-
-.modal-covering-letter
-  .just-modal
-    &__body
-      padding: 40px 32px
-      +r($sm)
-        padding: 32px 12px
-  .--covering-letter
-    min-height: 205px
+    
+    //&__col1
+    //  max-width: 100%
+    //  min-width: 100%
+    //  padding: 0 20px
+    //&__col2
+    //  max-width: 50%
+    //  min-width: 50%
+    //  padding: 0 20px
+    //&__col3
+    //  max-width: 33.333%
+    //  min-width: 33.333%
+    //  padding: 0 20px
+    //&__col4
+    //  max-width: 25%
+    //  min-width: 25%
+    //  padding: 0 20px
+    //&__col5
+    //  max-width: 20%
+    //  min-width: 20%
+    //  padding: 0 20px
+    //&__col6
+    //  max-width: 16.666%
+    //  min-width: 16.666%
+    //  padding: 0 20px
+    //&__col7
+    //  max-width: 66.666%
+    //  min-width: 66.666%
+    //  padding: 0 20px
+    
+    &__bottom
+      display: flex
+      flex-direction: column
+      gap: 20px
+      .just-modal-form__row
+        padding-bottom: 0
+    .form-bottom-btns
+      display: flex
+      gap: 24px
+      
 
 
 .modal-big
   .just-modal
     &__container
       max-width: 860px
-    &__body
-      padding-top: 80px
-      +r($sm)
-        padding: 54px 12px 32px
+
 .modal-middle
   .just-modal
     &__container
       max-width: 630px
-    &__body
-      padding: 18px 32px
-      +r($sm)
-        padding: 18px 12px
 
+.modal-small
+  .just-modal
+    &__container
+      max-width: 400px
+
+      
 .modal-anons
   .anons-img
     margin-bottom: 32px
@@ -234,153 +300,49 @@
 
 
 
+    
+    
+    
+    
+  
+  
+  
+  
+/** разные модалки **/
 
-// модалка выезжает справа
+.modal-documents
+  &__progress
+    margin-bottom: 55px
 
-.just-modal--right
-  .just-modal
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    z-index: 101
-    display: none
-    text-align: center
-    background: 0
-    padding: 0
-    font-size: 14px
-    overflow: hidden
-
-    &.open
-      display: block !important
-      opacity: 1
-      background: rgba(0, 62, 91, 0.40)
-      animation: show-over .3s linear 0s 1
-      .just-modal
-        &__overlay
-          opacity: 1
-
-    &.in
-      .just-modal
-        &__wrapper
-          opacity: 1
-          right: 0
-          animation: show-wrapper-right-left .3s linear 0s 1
-    &__overlay
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      z-index: 0
-      background: rgba(0,0,0,0)
-      opacity: 0
-      transition: all $transitionSpeed ease
-
-    &__wrapper
-      max-width: 630px
-      width: 70%
-      text-align: left
-      height: 100vh
-      padding: 0
-      align-items: center
-      justify-content: center
-      position: relative
-      display: flex
-      margin: 0 0 0 auto
-      right: -100vw
-      opacity: 0
-
-    &__container
-      width: 100%
-      height: 100%
-    &__body
-      width: 100%
-      padding: 80px 40px 40px
-      background: #fff
-      position: relative
-      height: 100%
-    &__close
-      &-wrapper
-        position: absolute
-        top: 0
-        left: 0
-        right: 0
-        background: $clrGrey20
-        display: flex
-        align-items: center
-        justify-content: flex-end
-        padding: 8px
-      svg
-        fill: rgba(0, 0, 39, 0.38)
-      &:hover
-        svg
-          fill: $clrGrey90
-
-
-.modal-data
-  &-wrapper
-    display: flex
-    overflow: hidden
-    position: relative
-    flex-direction: column
-    height: 100%
-  &-header
-    &__title
-      font-size: 28px
-      padding-bottom: 32px
-      color: $clrGrey90
-      font-weight: 500
-  &-content
-    overflow: auto
-    flex: 1 1 auto
-  &-row
-    padding-bottom: 32px
-  &-subtitle
-    font-weight: 500
-    padding-bottom: 12px
-  &-comment
-    background: $clrGrey20
-    font-size: 16px
-    font-weight: 300
-    padding: 24px
-    margin-bottom: 32px
-  &-footer
-    &__btns
-      display: flex
-      gap: 32px
-      padding-top: 32px
-      justify-content: flex-end
-
-
-.modal-review
-  .just-modal__body
-    background: #fff
-.review-list
-  overflow: auto
-  max-height: 80vh
-  margin: 40px -20px 0 0
-  padding-right: 20px
-.review-item
-  background: $baseBg
-  margin-bottom: 18px
-  border-radius: 16px
-  padding: 24px 18px
-  .name
-    font-size: 18px
-    font-weight: 600
-  .text-gray
-    color: $clrGrey60
+.modal-success-box
+  display: flex
+  flex-direction: column
+  gap: 22px
+  margin: 0 auto
+  width: 100%
+  max-width: 350px
+  padding: 0 0 64px
   &__header
-    display: flex
-    padding-bottom: 12px
+    text-align: center
+    color: #5FA931
+    .status-text
+      font-size: 28px
+      font-weight: 600
+      
+  &__icon
+    margin-bottom: 6px
+    svg
+      width: 60px
+      height: 60px
+  
+  &__content
+    text-align: center
+  
+
+.modal-cancel-subscribe
+  padding: 54px 0
+  text-align: center
   &__title
-    font-size: 18px
+    padding-bottom: 30px
+    font-size: 20px
     font-weight: 600
-  &__date
-    margin-left: auto
-    color: $clrGrey60
-  &__text
-    padding-bottom: 18px
-  &__bottom

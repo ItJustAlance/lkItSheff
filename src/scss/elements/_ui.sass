@@ -413,6 +413,73 @@
             color: $black700
 
 
-
+.progress-steps
+  display: flex
+  gap: 20px
+  align-items: flex-end
+  &__step
+    font-size: 14px
+    color: $black400
+    display: flex
+    flex-direction: column
+    gap: 9px
+    flex: 1 1 0
+    &:after
+      content: ""
+      display: block
+      background: $black150
+      height: 8px
+      border-radius: 4px
+    &.--active
+      color: $orangeMain500
+      &:after
+        background: $orangeMain500
   
-.toggle-btn
+.tabs
+  &-wrapper
+    .tab-box
+      display: none
+      &.--show
+        display: flex
+  &-list
+    margin: 0 0 60px
+    padding: 0
+    list-style: none
+    display: flex
+    gap: 12px
+    &__item
+      flex: 1 1 auto
+      .toggle-btn
+        width: 100%
+        text-align: center
+      &.--active
+        .toggle-btn
+          background: $orangeMain500
+
+          
+.alert-box
+  background: #FFF8EC
+  padding: 24px
+  position: relative
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  font-size: 16px
+  color: $black1000
+  border-radius: 10px
+  
+  &:after
+    content: ""
+    position: absolute
+    top: 24px
+    bottom: 24px
+    left: 0
+    border-left: 4px solid #F57C52
+    
+  &__title
+    color: $orangeMain500
+    
+  &__text
+
+.mb20
+  margin-bottom: 20px

@@ -34,5 +34,12 @@ $(function() {
 		}
 	});
 	
+	if($(".js-tabs").length>0) {
+		$('.js-tabs').delegate('li.js-tab-item:not(.active)', 'click', function () {
+			$(this).addClass('active').siblings().removeClass('active')
+				.parents('.js-tabs-wrapper').find('.js-tab-box').eq($(this).index()).addClass("--show").siblings('.js-tab-box').removeClass("--show");
+		})
+	}
+	
 	
 });

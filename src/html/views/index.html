@@ -71,8 +71,22 @@ var asideLeftHtml = _.template(require('../includes/aside-left.html'))();
         <li><a href="documents-act.html">Документы - Акт сверки взаиморасчетов</a></li>
         <li><a href="documents-recvizite-fz.html">Документы - Ваши реквизиты ФЗ</a></li>
         <li><a href="documents-recvizite-yr.html">Документы - Ваши реквизиты ЮР</a></li>
-
       </ul>
+      <h2>Модальные окна</h2>
+      <ul class="m-list">
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal1">Сменить реквизиты физика, Сменить реквизиты юрика - 1</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal2">Сменить реквизиты юрика - 2</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal3">Сменить реквизиты юрика - 3</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal4">Сменить реквизиты юрика - 4</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal5">Перейти на платный тариф, окно готово</a></li>
+      </ul>
+      
+      <div class="alert-box --yellow">
+        <div class="alert-box__title">Внимание!</div>
+        <div class="alert-box__text">
+          Просьба указывать корректные реквизиты компании, для выписки бухгалтерских документов!
+        </div>
+      </div><!--end message-box -->
       <div class="bbox-list">
         <div class="bbox-item">
           <div class="bbox-item__title">Toggle Button M</div>

@@ -42,8 +42,12 @@ button
     background: none
     color: $orangeMain500
     border-color: $orangeMain500
+  
   &.--full
     width: 100%
+  &.--auto
+    flex: 1 1 auto
+    
   &:focus, &:active
     outline: none
   &:hover
@@ -67,15 +71,31 @@ button
     background: #E5E5E5
     color: #C0C0C0
     border-color: #E5E5E5
+  &.--icon
+    padding-left: 10px
+    padding-right: 10px
   &.--min
     height: 28px
     padding: 4px 20px
   &.--big
     height: 52px
     font-size: 18px
+    min-width: 52px
     +r($lg)
       font-size: 14px
       height: 36px
+      
+  &.--link
+    background: none
+    color: $orangeMain500
+    border-color: rgba(255,255,255, 0)
+    padding: 0
+    height: auto
+    &:hover, &:active
+      color: #D9481C
+      border-color: rgba(255,255,255, 0)
+      background: none
+      
 .btn-link-icon
   display: inline-flex
   justify-content: center
@@ -102,6 +122,7 @@ button
   display: inline-flex
   vertical-align: top
   padding: 8px 10px
+  min-width: 100px
   align-items: center
   justify-content: center
   &.--full
@@ -110,3 +131,11 @@ button
     background: $black100
   &:active
     background: $black150
+  &.--active
+    background: $orangeMain500
+    color: #fff
+
+.toggle-btns-box
+  display: flex
+  flex-wrap: wrap
+  gap: 16px

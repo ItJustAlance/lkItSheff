@@ -23,10 +23,25 @@
     border-color: $black150
     background: $black25
     color: $black150
-
+  &.--input-m
+    height: 36px
+    padding: 10px 16px
+    
 .input-box
   position: relative
   width: 100%
+  display: flex
+  padding: 0
+  align-items: center
+  .input
+    border: none
+    background: none
+    height: 50px
+  &__input
+    flex: 1 1 auto
+    padding: 0 8px
+  &__action
+    padding-right: 8px
   .btn-calendar
     position: absolute
     top: 4px

@@ -1,7 +1,29 @@
-<head><link href="css/style.bundle.css" rel="stylesheet"></head>
-
-
-<div class="container">внутренняя страница страница.</div>
-
-<!-- %= _.template(require('../includes/footer.html'))(data) % -->
-<script src="js/bundle.js"></script>
+<head>
+  <link href="css/style.bundle.css" rel="stylesheet" /></head
+><style>
+  .bbox-list {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .bbox-item {
+    width: 100%;
+  }
+</style>
+<div class="container">
+  <div class="bbox-list">
+    <div class="bbox-item">
+      <div class="bbox-item__title">Toggle Button M</div>
+      <div class="bbox-item__body">
+        <div class="toggle-btns-box">
+          <button class="toggle-btn">За последние 7 дней</button>
+          <button class="toggle-btn">За последний месяц</button>
+          <button class="toggle-btn">За последние 3 месяца</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/runtime.js"></script>
+<script src="js/vendors.js"></script>
+<script src="js/main.js"></script>
