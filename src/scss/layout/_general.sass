@@ -323,6 +323,8 @@ body
       font-size: 15px
       padding-left: 10px
       padding-right: 10px
+      padding-top: 10px
+      padding-bottom: 10px
     +r($xl)
       display: flex
       flex-direction: column
@@ -360,14 +362,19 @@ body
         height: 24px
     span:not(.aside-nav__badge)
       flex: 1 1 auto
-    
+    &.--programm-1c
+      svg
+        fill: #F26135
+      &:hover
+        svg
+          fill: #D9481C
     &:hover
-      background: #fff
+      // background: #fff
       color: $black1000
 
-      .svg-icon
+      //.svg-icon
         opacity: 0
-      .svg-icon.--hover
+      //.svg-icon.--hover
         opacity: 1
   &__badge
     background: url(../img/menu-label.svg) 0 0 no-repeat

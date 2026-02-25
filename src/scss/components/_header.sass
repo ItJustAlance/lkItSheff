@@ -146,6 +146,7 @@
       display: flex
       flex-direction: column
       gap: 56px
+      padding-right: 20px
       &.--col3, &.--col4
         flex: 1 1 calc(16% - 28px)
         max-width: calc(16% - 28px)
@@ -234,13 +235,14 @@
     &-amount
       font-size: 16px
       color: $black1000
-  
+      a
+        color: inherit
   &__right
     display: flex
     align-items: center
     gap: 32px
     flex-shrink: 0
-    +r($lg + 1)
+    +r($xl)
       margin-left: auto
     &.--no-auth
       margin-left: auto
@@ -290,7 +292,14 @@
       position: relative
       .svg-icon.--close
         display: none
+      &.--no-notice
+        stroke: $black250
+        color: $black250
+      
       &.--new-notice
+        color: $black700
+        stroke: $black700
+        
         &::before
           content: ""
           width: 8px
@@ -300,8 +309,7 @@
           right: 3px
           background: $orangeMain500
           border-radius: 50%
-      &.--no-notice
-        stroke: $black250
+      
     &-float
       background: #fff
       box-shadow: 0 4px 12px 0 #0000001A
@@ -380,6 +388,8 @@
             color: $black900
             font-size: 16px
             margin-bottom: 2px
+            overflow: hidden
+            max-width: 200px
           &:hover
             color: currentColor
       &__logout

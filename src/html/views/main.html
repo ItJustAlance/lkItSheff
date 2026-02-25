@@ -573,7 +573,12 @@ var asideLeftHtml = _.template(require('../includes/aside-left.html'))();
             <div class="main-subscribe-list">
               <div class="main-subscribe-box">
                 <div class="main-subscribe-box__wrapper">
-                  <div class="label-status">Активна</div>
+                  <div class="label-status --shutdown">
+                    <svg class="svg-icon">
+                      <use xlink:href="#icon-attention"></use>
+                    </svg>
+                    На отключение
+                  </div>
                   <div class="main-subscribe-box__image">
                     <img src="img/subs-1.svg" alt="">
                   </div>

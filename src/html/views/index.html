@@ -26,6 +26,8 @@ var asideLeftHtml = _.template(require('../includes/aside-left.html'))();
     .bbox-item {width: 100%; margin: 30px 0}
     .bbox-item__title {font-weight: 600; margin-bottom: 15px;}
     .m-list {display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px;}
+    .index-section {margin: 40px 0}
+    .btn {white-space: normal !important}
 </style>
 
 <div class="over">
@@ -80,6 +82,42 @@ var asideLeftHtml = _.template(require('../includes/aside-left.html'))();
         <li><a class="btn js-btn-modal" href="#" data-modal="modal4">Сменить реквизиты юрика - 4</a></li>
         <li><a class="btn js-btn-modal" href="#" data-modal="modal5">Перейти на платный тариф, окно готово</a></li>
       </ul>
+      <h2>Шапка уведомления</h2>
+      <div class="index-section">
+        <div class="header__notice js-open-mobile-notice-wrapper">
+          <a class="link-notice --new-notice js-open-mobile-notice" href="#">
+            <svg class="svg-icon ic24">
+              <use xlink:href="#icon-i-notice"></use>
+            </svg>
+            <svg class="svg-icon ic24 --close">
+              <use xlink:href="#icon-menu-close"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="header__notice js-open-mobile-notice-wrapper">
+          <a class="link-notice js-open-mobile-notice" href="#">
+            <svg class="svg-icon ic24">
+              <use xlink:href="#icon-i-notice"></use>
+            </svg>
+            <svg class="svg-icon ic24 --close">
+              <use xlink:href="#icon-menu-close"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="header__notice js-open-mobile-notice-wrapper">
+          <a class="link-notice --no-notice js-open-mobile-notice" href="#">
+            <svg class="svg-icon ic24">
+              <use xlink:href="#icon-i-notice"></use>
+            </svg>
+            <svg class="svg-icon ic24 --close">
+              <use xlink:href="#icon-menu-close"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      
+      
       
       <div class="alert-box --yellow">
         <div class="alert-box__title">Внимание!</div>
