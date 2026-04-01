@@ -1,0 +1,452 @@
+<%
+var data = {
+title: "Заголовок сайта",
+copyright: "itJustAlance"
+};
+
+var mobileFooter = _.template(require('../includes/mobile-footer.html'))(data);
+var mobileMenu = _.template(require('../includes/mobile-menu.html'))(data);
+var mobileToolbar = _.template(require('../includes/mobile-toolbar.html'))(data);
+var mobileNotice = _.template(require('../includes/mobile-notice.html'))(data);
+
+var footerHtml = _.template(require('../includes/footer.html'))({
+...data,
+mobileFooter,
+mobileMenu,
+mobileToolbar,
+mobileNotice
+});
+
+var asideLeftHtml = _.template(require('../includes/aside-left.html'))();
+
+%>
+
+<div class="over">
+  <%= _.template(require('../includes/header.html'))(data) %>
+  <div class="container">
+    <div class="all container-main --align-none">
+      <div class="content-wrapper">
+        <main class="content">
+          <div class="title-page-box">
+            <div class="title-page-box__title">Мои базы данных</div>
+            <div class="title-page-box__right">
+              <a href="#" class="btn">
+                <svg class="svg-icon ic16 --stroke sm-hidden">
+                  <use xlink:href="#icon-ic-plus"></use>
+                </svg>
+                Добавить базу
+              </a>
+            </div>
+          </div><!--end title-page-box-->
+          <div class="main-section-list">
+            <section class="section-box">
+              <div class="section-box__header">
+                <div class="section-box__header-toggler-title">
+                  <div class="section-box__header-title">
+                    <div class="section-box__header-title-text h2-title">Название БД №1</div>
+                    <div class="section-box__header-subtitle-text"><div class="b-label">Серверный тип</div> <div class="b-label-text">dev-group-ka : pwpjvav_avtocenter_test</div></div>
+                  </div>
+                  <div class="section-box__header-actions">
+                    <div class="progress-box">
+                      <div class="progress-box__label">1.8 из 5 ГБ</div>
+                      <div class="progress-box__progress">
+                        <div style="width: 23%" class="progress-box__progress-bar"></div>
+                      </div>
+                    </div>
+                    <div class="section-box__header-actions__btn">
+                      <button class="section-box__togggler-btn --active">
+                        <svg class="svg-icon ic28">
+                          <use xlink:href="#icon-picker"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div><!--end section-box__header-actions-->
+                </div><!--end section-box__header-toggler-title -->
+              </div><!--end section-box__header-->
+              <div class="section-box__body">
+                <div class="panel-bd-box">
+                  <div class="panel-bd">
+                    <div class="panel-bd__list">
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-rename"></use>
+                        </svg>
+                        Переименовать
+                      </button>
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-update-refresh"></use>
+                        </svg>
+                        <span class="btn__label">
+                        Обновить <span class="opacity-75">(авто)</span>
+                      </span>
+                      </button>
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20 --stroke">
+                          <use xlink:href="#icon-users-profiles-variant"></use>
+                        </svg>
+                        Доступ
+                      </button>
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-databases-DB"></use>
+                        </svg>
+                        Архив
+                      </button>
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-trash"></use>
+                        </svg>
+                        Удалить
+                      </button>
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-cloud-download"></use>
+                        </svg>
+                        Скачать
+                      </button>
+                    </div>
+                    <div class="panel-bd__btn">
+                      <button class="btn --outline">Открыть</button>
+                    </div>
+                  </div><!-- end panel-bd -->
+                </div><!--end panel-bd-box -->
+                
+              </div>
+            </section>
+            <section class="section-box">
+              <div class="section-box__header">
+                <div class="section-box__header-toggler-title">
+                  <div class="section-box__header-title">
+                    <div class="section-box__header-title-text h2-title">Название БД №2. Если название длинное, то пишем в две строкиание длинное, то пишем в две строки</div>
+                    <div class="section-box__header-subtitle-text"><div class="b-label">Файловый тип</div></div>
+                  </div>
+                  <div class="section-box__header-actions">
+                    <div class="progress-box">
+                      <div class="progress-box__label">1.8 из 5 ГБ</div>
+                      <div class="progress-box__progress">
+                        <div style="width: 63%" class="progress-box__progress-bar"></div>
+                      </div>
+                    </div>
+                    <div class="section-box__header-actions__btn">
+                      <button class="section-box__togggler-btn">
+                        <svg class="svg-icon ic28">
+                          <use xlink:href="#icon-picker"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div><!--end section-box__header-actions-->
+                </div><!--end section-box__header-toggler-title -->
+              </div><!--end section-box__header-->
+              <div class="section-box__body">
+                <div class="panel-bd-box">
+                  <div class="panel-bd">
+                    <div class="panel-bd__list">
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-rename"></use>
+                        </svg>
+                        Переименовать
+                      </button>
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-update-refresh"></use>
+                        </svg>
+                        <span class="btn__label">
+                        Обновить
+                      </span>
+                      </button>
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20 --stroke">
+                          <use xlink:href="#icon-users-profiles-variant"></use>
+                        </svg>
+                        Доступ
+                      </button>
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-databases-DB"></use>
+                        </svg>
+                        Архив
+                      </button>
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-trash"></use>
+                        </svg>
+                        Удалить
+                      </button>
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-cloud-download"></use>
+                        </svg>
+                        Скачать
+                      </button>
+                      
+                    </div>
+                    <div class="panel-bd__btn">
+                      <button class="btn --outline">Открыть</button>
+                    </div>
+                  </div><!-- end panel-bd -->
+                </div><!--end panel-bd-box -->
+              
+              </div>
+            </section>
+            <section class="section-box">
+              <div class="section-box__header">
+                <div class="section-box__header-toggler-title">
+                  <div class="section-box__header-title">
+                    <div class="section-box__header-title-text h2-title">DropDown надо на фронте вычислять и скрывать или какойто плагин прикручивать</div>
+                    <div class="section-box__header-subtitle-text"><div class="b-label">Файловый тип</div></div>
+                  </div>
+                  <div class="section-box__header-actions">
+                    <div class="progress-box">
+                      <div class="progress-box__label">1.8 из 5 ГБ &nbsp;&nbsp; +250₸</div>
+                      <div class="progress-box__progress">
+                        <div style="width: 63%" class="progress-box__progress-bar"></div>
+                      </div>
+                    </div>
+                    <div class="section-box__header-actions__btn">
+                      <button class="section-box__togggler-btn">
+                        <svg class="svg-icon ic28">
+                          <use xlink:href="#icon-picker"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div><!--end section-box__header-actions-->
+                </div><!--end section-box__header-toggler-title -->
+              </div><!--end section-box__header-->
+              <div class="section-box__body">
+                <div class="panel-bd-box">
+                  <div class="panel-bd">
+                    <div class="panel-bd__list">
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-rename"></use>
+                        </svg>
+                        Переименовать
+                      </button>
+                      
+                      <div class="btn-dropdown">
+                        <button class="btn --dropdown">
+                          <svg class="svg-icon ic20">
+                            <use xlink:href="#icon-drop-down-arrow"></use>
+                          </svg>
+                          Еще
+                        </button>
+                        <div class="btn-dropdown__dropdown">
+                          <ul class="btn-dropdown__dropdown-list">
+                            <li class="btn-dropdown__dropdown-item">
+                              <button class="btn --link">
+                                <svg class="svg-icon ic20">
+                                  <use xlink:href="#icon-trash"></use>
+                                </svg>
+                                Удалить
+                              </button>
+                            </li>
+                            <li class="btn-dropdown__dropdown-item">
+                              <button class="btn --link">
+                                <svg class="svg-icon ic20">
+                                  <use xlink:href="#icon-cloud-download"></use>
+                                </svg>
+                                Скачать
+                              </button>
+                            </li>
+                          </ul>
+                        </div><!-- end btn-dropdown__dropdown -->
+                      </div><!--end btn-dropdown -->
+                    </div>
+                    <div class="panel-bd__btn">
+                      <button class="btn --outline">Открыть</button>
+                    </div>
+                  </div><!-- end panel-bd -->
+                </div><!--end panel-bd-box -->
+              
+              </div>
+            </section>
+            <section class="section-box">
+              <div class="section-box__header">
+                <div class="section-box__header-toggler-title">
+                  <div class="section-box__header-title">
+                    <div class="section-box__header-title-text h2-title">Название БД №2. Если название длинное, то пишем в две строкиание длинное, то пишем в две строки</div>
+                    <div class="section-box__header-subtitle-text"><div class="b-label">Файловый тип</div></div>
+                  </div>
+                  <div class="section-box__header-actions">
+                    <div class="progress-box">
+                      <div class="progress-box__label">1.8 из 5 ГБ</div>
+                      <div class="progress-box__progress">
+                        <div style="width: 63%" class="progress-box__progress-bar"></div>
+                      </div>
+                    </div>
+                    <div class="section-box__header-actions__btn">
+                      <button class="section-box__togggler-btn">
+                        <svg class="svg-icon ic28">
+                          <use xlink:href="#icon-picker"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div><!--end section-box__header-actions-->
+                </div><!--end section-box__header-toggler-title -->
+              </div><!--end section-box__header-->
+              <div class="section-box__body">
+                <div class="panel-bd-box">
+                  <div class="panel-bd">
+                    <div class="panel-bd__list">
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-rename"></use>
+                        </svg>
+                        Переименовать
+                      </button>
+                      <button class="btn --link --disabled">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-update-refresh"></use>
+                        </svg>
+                        <span class="btn__label">
+                        Обновить
+                      </span>
+                      </button>
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20 --stroke">
+                          <use xlink:href="#icon-users-profiles-variant"></use>
+                        </svg>
+                        Доступ
+                      </button>
+                      <button class="btn --link --disabled">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-databases-DB"></use>
+                        </svg>
+                        Архив
+                      </button>
+                      <button class="btn --link">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-trash"></use>
+                        </svg>
+                        Удалить
+                      </button>
+                      <button class="btn --link --disabled">
+                        <svg class="svg-icon ic20">
+                          <use xlink:href="#icon-cloud-download"></use>
+                        </svg>
+                        Скачать
+                      </button>
+                    </div>
+                    <div class="panel-bd__btn">
+                      <button class="btn --outline">Открыть</button>
+                    </div>
+                  </div><!-- end panel-bd -->
+                  <div class="panel-bd__info">
+                    <table class="table-m --lg-fz16">
+                      <tr>
+                        <th class="--no-bg" colspan="2">Запланированные изменения </th>
+                      </tr>
+                      <tr>
+                        <td class="td-delete">
+                          <button class="btn-delete">
+                            <svg class="svg-icon ic16 --stroke">
+                              <use xlink:href="#icon-menu-close"></use>
+                            </svg>
+                          </button>
+                        </td>
+                        <td>Переименование “Название БД №3” → “Название БД №33”</td>
+                      </tr>
+                      <tr>
+                        <td class="td-delete">
+                          <button class="btn-delete">
+                            <svg class="svg-icon ic16 --stroke">
+                              <use xlink:href="#icon-menu-close"></use>
+                            </svg>
+                          </button>
+                        </td>
+                        <td>Переименование “Название БД №3” → “Название БД №33”</td>
+                      </tr>
+                      <tr>
+                        <td class="td-delete">
+                          <button class="btn-delete">
+                            <svg class="svg-icon ic16 --stroke">
+                              <use xlink:href="#icon-menu-close"></use>
+                            </svg>
+                          </button>
+                        </td>
+                        <td>Доступ пользователей изменены. Бестерекова Гаухар - gbesterekova → доступно     Ирина Охлопкова - irinaokhlopkova → недоступно</td>
+                      </tr>
+                      <tr>
+                        <td class="td-delete">
+                          <button class="btn-delete">
+                            <svg class="svg-icon ic16 --stroke">
+                              <use xlink:href="#icon-menu-close"></use>
+                            </svg>
+                          </button>
+                        </td>
+                        <td>Переименование “Название БД №3” → “Название БД №33”</td>
+                      </tr>
+                    </table>
+                    
+                    
+                  </div><!--end panel-bd__info -->
+                </div><!--end panel-bd-box -->
+                
+              </div>
+            </section>
+            <section class="section-box">
+              <div class="section-box__header">
+                <div class="section-box__header-toggler-title">
+                  <div class="section-box__header-title">
+                    <div class="section-box__header-title-text h2-title">Название БД №4. Ограниченные функции БД для пользователя</div>
+
+                  </div>
+                  <div class="section-box__header-actions --sm-center">
+                    <button class="btn --outline --max200 --sm-full">Открыть</button>
+                    <div class="section-box__header-actions__btn">
+                      <button class="section-box__togggler-btn">
+                        <svg class="svg-icon ic28">
+                          <use xlink:href="#icon-picker"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div><!--end section-box__header-actions-->
+                </div><!--end section-box__header-toggler-title -->
+              </div><!--end section-box__header-->
+              
+            </section>
+          </div><!--end main-section-list -->
+          <div class="actions-pagination-box --sm-center">
+            <div class="actions-left">
+              <button class="btn --outline --sm-full">
+                <svg class="svg-icon ic16 --stroke">
+                  <use xlink:href="#icon-ic-plus"></use>
+                </svg>
+                Добавить базу
+              </button>
+            </div>
+            <div class="pagination-box --right">
+              <ul class="pagination-list">
+                <li class="pagination-list__item"><a href="#" class="pagination-list__item-link --active">1</a></li>
+                <li class="pagination-list__item"><a href="#" class="pagination-list__item-link">2</a></li>
+                <li class="pagination-list__item"><a href="#" class="pagination-list__item-link">3</a></li>
+                <li class="pagination-list__item"><a href="#" class="pagination-list__item-link">4</a></li>
+              </ul>
+            </div>
+          </div><!--end actions-pagination-box -->
+          
+        </main>
+      </div>
+      
+      <%= asideLeftHtml %>
+    
+    
+    </div><!--end all -->
+    
+    <!-- br><br>
+    <div class="btns">
+      <a class="btn js-btn-modal" href="#" data-modal="modal-support">Модальное окно</a>
+    </div>
+    <br><br>
+    <pre>
+      для запуска модального окна,
+      добавляем класс "js-btn-modal"
+      для указания id модального окна пишем аттрибут data-modal="modal-support"
+      &#706;a class="js-btn-modal" href="#" data-modal="modal-support"&#707;Модальное окно&#706;/a&#707;
+    </pre>
+    Контент. -->
+  </div>
+  <%= footerHtml %>
+</div>

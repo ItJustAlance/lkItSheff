@@ -73,6 +73,9 @@ var asideLeftHtml = _.template(require('../includes/aside-left.html'))();
         <li><a href="documents-act.html">Документы - Акт сверки взаиморасчетов</a></li>
         <li><a href="documents-recvizite-fz.html">Документы - Ваши реквизиты ФЗ</a></li>
         <li><a href="documents-recvizite-yr.html">Документы - Ваши реквизиты ЮР</a></li>
+        <li><a href="bd.html">БД</a></li>
+        <li><a href="bd-clear.html">БД - пусто</a></li>
+        <li><a href="bd-infograph.html">БД - рекомендации</a></li>
       </ul>
       <h2>Модальные окна</h2>
       <ul class="m-list">
@@ -81,6 +84,23 @@ var asideLeftHtml = _.template(require('../includes/aside-left.html'))();
         <li><a class="btn js-btn-modal" href="#" data-modal="modal3">Сменить реквизиты юрика - 3</a></li>
         <li><a class="btn js-btn-modal" href="#" data-modal="modal4">Сменить реквизиты юрика - 4</a></li>
         <li><a class="btn js-btn-modal" href="#" data-modal="modal5">Перейти на платный тариф, окно готово</a></li>
+        <li>страница БД</li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal7">База успешно создана</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal8">Добавить базу</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal9">Создать новую БД</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal10">БД 10</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal11">БД 11</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal12">БД 12</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal13">БД 13</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal14">БД 14</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal15">БД 15</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal16">БД 16</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal17">БД 17</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal18">БД 18</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal19">БД 19</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal20">БД 20 - архив</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal20">БД 21 - удалить</a></li>
+        <li><a class="btn js-btn-modal" href="#" data-modal="modal20">БД 22</a></li>
       </ul>
       <h2>Шапка уведомления</h2>
       <div class="index-section">
@@ -117,8 +137,14 @@ var asideLeftHtml = _.template(require('../includes/aside-left.html'))();
       </div>
       
       
-      
-      
+      <h2>Прогресс</h2>
+      <div class="progress-box">
+        <div class="progress-box__label">1.8 из 5 ГБ</div>
+        <div class="progress-box__progress">
+          <div style="width: 23%" class="progress-box__progress-bar"></div>
+        </div>
+      </div>
+      <h2>Уведомление</h2>
       <div class="alert-box --yellow">
         <div class="alert-box__title">Внимание!</div>
         <div class="alert-box__text">

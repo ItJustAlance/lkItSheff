@@ -180,6 +180,8 @@ body
     align-items: unset
     .content-wrapper
       display: flex
+      flex-direction: column
+      gap: 24px
     .content
       flex: 1 1 auto
       display: flex
@@ -578,17 +580,31 @@ body
 
 
 .title-page
-  font-size: 24px
-  border-bottom: 1px solid #E5E5E5
-  margin-bottom: 27px
-  padding-bottom: 15px
-  +r($xl)
-    margin-bottom: 19px
-    padding-bottom: 9px
-    font-size: 22px
-  +r($sm)
-    font-size: 20px
-    padding-bottom: 13px
+  &-box
+    border-bottom: 1px solid #E5E5E5
+    margin-bottom: 27px
+    padding-bottom: 15px
+    display: flex
+    +r($xl)
+      margin-bottom: 19px
+      padding-bottom: 9px
+    +r($sm)
+      padding-bottom: 13px
+    +r($xss)
+      flex-wrap: wrap
+      gap: 18px
+    &__title
+      font-size: 24px
+      +r($xl)
+        font-size: 22px
+        display: flex
+        align-items: center
+      +r($sm)
+        font-size: 20px
+    &__right
+      margin-left: auto
+      +r($xss)
+        width: 100%
 .main-section-list
   display: flex
   flex-direction: column
@@ -622,9 +638,10 @@ body
         color: $black700
         font-weight: 450
         display: flex
+        flex-wrap: wrap
         align-items: center
         padding-left: 20px
-        gap: 20px
+        gap: 5px 20px
         margin-right: 12px
         +r($lg)
           padding-left: 15px
@@ -635,6 +652,19 @@ body
           -webkit-line-clamp: 2
           -webkit-box-orient: vertical
           overflow: hidden
+        &-action
+          margin-left: auto
+          display: flex
+          gap: 36px
+          
+      &-toggler-title
+        padding: 13px 17px 13px 0
+        display: flex
+        width: 100%
+        +r($md - 1)
+          flex-direction: column
+          gap: 20px
+        
       &-icon
         margin-left: auto
         min-width: 114px
@@ -642,3 +672,53 @@ body
         align-items: flex-end
         +r($xl)
           display: none
+    
+      &-subtitle-text
+        font-size: 14px
+        display: flex
+        flex-wrap: wrap
+        gap: 20px
+        width: 100%
+        .b-label
+          display: inline-block
+          vertical-align: top
+          &-text
+            display: inline-block
+            vertical-align: top
+      &-actions
+        display: flex
+        align-items: center
+        flex: 1 1 auto
+        justify-content: flex-end
+        +r($md - 1)
+          padding-left: 10px
+        +r($sm)
+          justify-content: center
+        .btn.--max200
+          width: 100%
+          max-width: 200px
+        .progress-box
+          width: 125px
+          +r($md - 1)
+            margin-top: 28px
+            width: 100%
+            flex-direction: row
+            flex-wrap: wrap
+            align-items: center
+            .progress-box__progress
+              flex: 1 1 auto
+        &__btn
+          margin-left: 37px
+          +r($md - 1)
+            display: none
+    
+      
+    &__togggler-btn
+      border: none
+      background: none
+      cursor: pointer
+      color: #D9D9D9
+      &.--active
+        color: $black700
+        &:hover
+          color: $black1000

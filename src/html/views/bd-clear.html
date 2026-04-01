@@ -1,0 +1,80 @@
+<%
+var data = {
+title: "Заголовок сайта",
+copyright: "itJustAlance"
+};
+
+var mobileFooter = _.template(require('../includes/mobile-footer.html'))(data);
+var mobileMenu = _.template(require('../includes/mobile-menu.html'))(data);
+var mobileToolbar = _.template(require('../includes/mobile-toolbar.html'))(data);
+var mobileNotice = _.template(require('../includes/mobile-notice.html'))(data);
+
+var footerHtml = _.template(require('../includes/footer.html'))({
+...data,
+mobileFooter,
+mobileMenu,
+mobileToolbar,
+mobileNotice
+});
+
+var asideLeftHtml = _.template(require('../includes/aside-left.html'))();
+
+%>
+
+<div class="over">
+  <%= _.template(require('../includes/header.html'))(data) %>
+  <div class="container">
+    <div class="all container-main --align-none">
+      <div class="content-wrapper">
+        <main class="content">
+          <div class="title-page-box">
+            <div class="title-page-box__title">Мои базы данных</div>
+            <div class="title-page-box__right">
+              <a href="#" class="btn">
+                <svg class="svg-icon ic16 --stroke sm-hidden">
+                  <use xlink:href="#icon-ic-plus"></use>
+                </svg>
+                Добавить базу
+              </a>
+            </div>
+          </div><!--end title-page-box-->
+          <div class="main-section-bd-clear">
+            <div class="main-section-bd-clear__btns">
+              <a href="" class="btn --outline --big">
+                <svg class="svg-icon ic20 --stroke">
+                  <use xlink:href="#icon-ic-plus"></use>
+                </svg>
+                Создать новую БД
+              </a>
+              <a href="" class="btn --big">
+                <svg class="svg-icon ic20 --stroke">
+                  <use xlink:href="#icon-upload"></use>
+                </svg>
+                Загрузить свою БД
+              </a>
+            </div>
+          
+          </div><!--end main-section-bd-clear -->
+        </main>
+      </div>
+      
+      <%= asideLeftHtml %>
+    
+    
+    </div><!--end all -->
+    
+    <!-- br><br>
+    <div class="btns">
+      <a class="btn js-btn-modal" href="#" data-modal="modal-support">Модальное окно</a>
+    </div>
+    <br><br>
+    <pre>
+      для запуска модального окна,
+      добавляем класс "js-btn-modal"
+      для указания id модального окна пишем аттрибут data-modal="modal-support"
+      &#706;a class="js-btn-modal" href="#" data-modal="modal-support"&#707;Модальное окно&#706;/a&#707;
+    </pre>
+    Контент. -->
+  </div>
+  <%= footerHtml %>
+</div>

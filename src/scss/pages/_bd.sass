@@ -1,0 +1,162 @@
+.panel-bd
+  display: flex
+  gap: 0 40px
+  +r($xs)
+    gap: 0 16px
+  +r($xss)
+    flex-wrap: wrap
+    gap: 16px
+  &-box
+    border: 1px solid #E1E4E7
+    box-shadow: 0px 1px 2px 0px #0000001A
+    padding: 28px 24px
+    background: #fff
+    border-radius: 10px
+    display: flex
+    flex-direction: column
+  &__list
+    display: flex
+    align-items: center
+    gap: 40px
+    .btn
+      font-weight: 400
+      color: $black700
+      &:hover
+        color: $black1000
+      .opacity-75
+        opacity: 0.75
+      &.--disabled
+        opacity: .2
+        pointer-events: none
+    +r(1390)
+      .btn:nth-child(6)
+        display: none
+    +r(1290)
+      .btn:nth-child(5)
+        display: none
+    +r(1090)
+      .btn:nth-child(4)
+        display: none
+    +r(900)
+      .btn:nth-child(3)
+        display: none
+    +r(770)
+      .btn:nth-child(2), .btn:nth-child(1)
+        display: none
+    .btn-dropdown
+      .btn
+        display: flex
+
+        
+  &__btn
+    flex: 1 1 auto
+    display: flex
+    justify-content: flex-end
+    .btn
+      width: 100%
+      max-width: 220px
+      
+  
+  &__info
+    .btn-delete
+      background: none
+      border: none
+      cursor: pointer
+      width: 16px
+      color: $black700
+      &:hover
+        color: $black1000
+    .td-delete
+      width: 20px
+
+      
+.main-section
+  &-bd-clear
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 20px
+    flex: 1 1 auto
+    &__btns
+      display: flex
+      flex-direction: column
+      gap: 28px
+      max-width: 400px
+      width: 100%
+      .btn
+        width: 100%
+
+.bd-infograph
+  &-list
+    display: flex
+    margin: 0 -32px
+    +r($lg)
+      flex-direction: column
+      gap: 32px
+      margin: 0
+  &__item
+    padding: 0 32px
+    border-left: 1px solid #E5E5E5
+    border-right: 1px solid #E5E5E5
+    margin: 0 -1px
+    max-width: 33.333%
+    min-width: 33.333%
+    display: flex
+    +r($lg)
+      min-width: 100%
+      max-width: 100%
+      margin: 0
+      border: none
+      border-bottom: 1px solid #E5E5E5
+      padding: 0 0 32px
+    &:first-child
+      border-left: none
+    &:last-child
+      padding-bottom: 0
+      border: none
+      
+      
+    .img
+      height: 60px
+    &-wrapper
+      display: flex
+      flex-direction: column
+      gap: 16px
+      flex: 1 1 auto
+    &-title-box
+      display: flex
+      flex-direction: column
+      color: #8C8C8C
+      font-size: 14px
+      line-height: 1.2
+      gap: 12px
+      .title
+        color: #424242
+        font-size: 16px
+        font-weight: 600
+      .subtitle
+        min-height: 34px
+    &-bottom
+      margin-top: 2px
+      display: flex
+      align-items: center
+      gap: 24px
+      +r(1340)
+        flex-direction: column
+        align-items: normal
+        margin-top: auto
+    .price
+      display: flex
+      align-items: center
+      gap: 8px
+      &-val
+        font-size: 20px
+        font-weight: 400
+      &-info
+        color: #8C8C8C
+        font-size: 10px
+        width: 45px
+        line-height: 1.1
+    .b-btn
+      .btn
+        min-width: 168px

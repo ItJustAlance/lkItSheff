@@ -42,9 +42,16 @@ button
     background: none
     color: $orangeMain500
     border-color: $orangeMain500
+  &.--clear
+    background: none
+    color: $orangeMain500
+    border-color: $orangeMain500
   
   &.--full
     width: 100%
+  &.--sm-full
+    +r($sm)
+      width: 100%
   &.--auto
     flex: 1 1 auto
     

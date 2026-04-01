@@ -39,7 +39,8 @@
     svg
       height: 30px
       width: 127px
-   
+      +r($xss)
+        width: 115px
     
   .burger-menu
     display: none
@@ -244,6 +245,8 @@
     flex-shrink: 0
     +r($xl)
       margin-left: auto
+    +r($xss)
+      gap: 12px
     &.--no-auth
       margin-left: auto
       gap: 20px
@@ -292,6 +295,7 @@
       position: relative
       .svg-icon.--close
         display: none
+        stroke: currentColor
       &.--no-notice
         stroke: $black250
         color: $black250
