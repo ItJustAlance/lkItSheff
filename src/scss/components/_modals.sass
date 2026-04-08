@@ -354,6 +354,8 @@
   max-width: 440px
   padding: 80px 0
   align-items: center
+  &.p-0
+    padding: 0
   *.py-60
     padding: 60px 0
   .status-text
@@ -429,11 +431,29 @@
   &-item
     border: 1px solid #E1E4E7
     border-radius: 8px
+    &__user-data
+      display: flex
+      width: 100%
+      font-size: 15px
+      align-items: center
+      &__label
+        min-width: 190px
+        max-width: 190px
+      &__value
+        flex: 1 1 auto
+        background: #F8F8F8
+        border-radius: 8px
+        display: flex
+        align-items: center
+        padding: 8px 12px
+        gap: 12px
     &__body
       padding: 23px
       display: flex
       gap: 16px
       align-items: center
+      &.p-8
+        padding: 8px
     &__bottom
       background: #F8F8F8
       border-radius: 0 0 8px 8px
@@ -483,11 +503,20 @@
   flex-direction: column
   gap: 80px
   
+.modal-box-hor-gap-60
+  display: flex
+  flex-direction: column
+  gap: 60px
+
 .modal-box-hor-gap-40
   display: flex
   flex-direction: column
   gap: 40px
 
+.min-240
+  justify-content: center
+  min-height: 240px
+  
 .just-modal-form
   .--modal-reconciliation-statement-box
     max-width: 456px
@@ -545,3 +574,86 @@
   color: #424242
   &__subtitle
     font-size: 16px
+
+    
+.modal-message-mail
+  display: flex
+  gap: 20px
+  width: 100%
+  max-width: 400px
+  margin: 0 auto
+  &.mt-40
+    margin-top: 40px
+  &__img
+    max-width: 38px
+    min-width: 38px
+
+  &__text
+    font-size: 20px
+
+    
+.modal-reg-box-message
+  display: flex
+  flex-direction: column
+  gap: 40px
+  border: 2px solid #E1E4E7
+  border-radius: 12px
+  background: #F8F8F8
+  padding: 60px
+  
+  &__title
+    font-size: 20px
+    font-weight: 600
+    color: #4F5962
+    text-align: center
+    
+  &__btns
+    width: 100%
+    max-width: 360px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    gap: 20px
+
+    
+.btn-text-15
+  text-align: center
+  font-size: 15px
+  color: #5C5C5C
+  border: none
+  outline: none
+  background: none
+
+.modal-box-img-login
+  text-align: center
+  background: #F0F2F4
+  padding: 40px
+  border-radius: 20px
+
+  
+.modal-how-launch
+  &-item
+    width: 100%
+    max-width: 280px
+    display: flex
+    gap: 20px
+    margin: 0 auto
+    &:hover
+      color: #000
+      .svg-icon
+        fill: #2C333A
+  &__title
+    font-size: 16px
+    font-weight: 600
+    margin-bottom: 2px
+    display: block
+  &__icon
+    min-width: 40px
+    max-width: 40px
+    .svg-icon
+      width: 40px
+      height: 40px
+      fill: #7D8892
+  &__right
+    font-size: 15px
+    text-align: left

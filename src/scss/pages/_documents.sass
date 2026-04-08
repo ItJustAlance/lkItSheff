@@ -25,7 +25,7 @@
     justify-content: center
     min-height: 30vh
     text-align: center
-    gap: 20px
+    gap: 7px
     font-size: 16px
     +r($lg)
       width: 100%
@@ -122,7 +122,7 @@
         min-width: 0
         display: flex
         flex-direction: column
-        gap: 16px
+        gap: 12px
         +r($lg)
           flex: 1 1 auto
         &__title
@@ -135,7 +135,7 @@
         &__box
           border: 1px solid $black100
           border-radius: 8px
-          padding: 14px 16px
+          padding: 16px 16px
           width: 50%
           max-width: 330px
           flex: 1 1 50%
@@ -161,6 +161,10 @@
               font-size: 12px
               color: $orangeMain500
               gap: 4px
+              &:hover
+                color: $orangeMain600
+              &:active
+                color: $orangeMain700
               svg
                 fill: none
                 stroke: currentColor

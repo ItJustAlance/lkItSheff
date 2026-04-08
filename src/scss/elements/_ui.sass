@@ -149,10 +149,13 @@
     background: $black25
     font-size: 16px
     font-weight: 600
-    padding: 12px 8px
+    padding: 15px 20px
     box-shadow: 0 1px 0 #E5E5E5
     +r($lg)
       font-size: 14px
+    +r($sm)
+      padding-left: 8px
+      padding-right: 8px
     &:first-child
       border-top-left-radius: 10px
       border-bottom-left-radius: 10px
@@ -168,16 +171,23 @@
       border: none
       box-shadow: none
   td
-    padding: 12px 8px
+    padding: 20px 20px
     font-size: 15px
     font-weight: 400
     border-bottom: 1px solid #E5E5E5
     vertical-align: middle
     +r($lg)
       font-size: 12px
+    +r($sm)
+      padding-left: 8px
+      padding-right: 8px
   .text-black-250
     color: $black250
 
+  .box-doc__list
+    margin-top: -12px
+    margin-bottom: -12px
+    
 .table-s
   border-collapse: collapse
   text-align: left
@@ -240,6 +250,8 @@
     padding: 0
     list-style: none
     border-bottom: 1px solid #E5E5E5
+    &.--m
+      font-size: 16px
     .tab-item
       padding: 26px 16px
       position: relative
@@ -257,6 +269,7 @@
         width: 100%
         transition: all 0.3s $ease
       &.--active, &:hover
+        color: #000
         &:before
           bottom: 0
           opacity: 1
@@ -311,23 +324,27 @@
       color: #9A3110
       font-size: 12px
       font-weight: 600
-    &:before
+    .arr
       content: ""
-      background: url(../img/left-next-arrow.svg) 50% 50% no-repeat
+      color: #8C8C8C
       width: 16px
       height: 16px
       display: block
       position: absolute
       top: calc(50% - 8px)
       right: 8px
-      transform: rotate(90deg)
+      transform: rotate(0deg)
     +r($lg)
       display: flex
+    &:hover
+      .arr
+        color: #424242
     &.--active
       color: $black1000
       border-bottom-color: rgba(255,255,255, 0)
-      &:before
-        transform: rotate(0deg)
+      .arr
+        color: #C0C0C0
+        transform: rotate(90deg)
       
 .box-doc
   text-align: center
@@ -338,12 +355,16 @@
   color: $black700
   +r($md)
     padding: 6px
+    
   &:hover
     background: #F8F8F8
     color: $black1000
   &__list
     display: flex
     gap: 8px
+    +r($md)
+      flex-wrap: wrap
+    
   &__icon
     display: block
     .svg-icon
@@ -436,7 +457,11 @@
       color: $black700
       font-size: 15px
       border-radius: 50%
-      &:hover, &.--active
+      &:hover
+        background: #E5E5E5
+      &:active
+        background: #D9D9D9
+      &.--active
         background: $orangeMain500
         color: #fff
 
@@ -524,12 +549,12 @@
           
 .alert-box
   background: #FFF8EC
-  padding: 24px
+  padding: 20px 24px
   position: relative
   overflow: hidden
   display: flex
   flex-direction: column
-  font-size: 16px
+  font-size: 15px
   color: $black1000
   border-radius: 10px
   &.--red
@@ -553,9 +578,10 @@
   &__title
     color: $orangeMain500
     font-weight: 600
-    margin-bottom: 20px
-    font-size: 20px
-
+    margin-bottom: 6px
+    &.--big-text
+      font-size: 20px
+      margin-bottom: 15px
 .mb20
   margin-bottom: 20px
 
@@ -565,6 +591,8 @@
   display: flex
   flex-direction: column
   gap: 10px
+  .progress-img
+    margin-bottom: 10px
   &__label
     font-size: 14px
   &__progress
